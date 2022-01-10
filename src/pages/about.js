@@ -14,7 +14,7 @@ const AboutPage = () => {
             <p>Tietokone on aika tyhmä, eli se ei osaa tehdä mitään muuta kuin mitä ihminen on ohjelmoinut tietokoneen
                 tekemään. Toisaalta tietokone on hyvä apuri, sillä se ei koskaan väsy eikä tee virheitä suorittaessaan käskyjä täysin orjallisesti.          </p>
             <p>Tällä kurssilla käytämme <code>Python</code>-nimistä ohjelmointikieltä, mutta samat periaatteet pätevät riippumatta ohjelmointikielestä. Pythonin tulkkaamisen
-            hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".</p>
+                hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".</p>
 
             <Segment title="1. Eka ohjelma">
                 <p>Alla on ehkäpä yksinkertaisin mahdollinen ohjelma. Ohjelmassa on vain yksi käsky, joka tulostaa tekstin <code>Hello, world!</code></p>
@@ -48,8 +48,8 @@ const AboutPage = () => {
                 <p>Ohjelma näyttää yksinkertaiselta (ja onkin) mutta on syytä täsmestää muutamaa seikkaa:</p>
 
                 <p>Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.
-                    Rivi <code>a = 3</code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska 
-                    muuttujaa <code>a</code> ei ole aiemmin käytetty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.</p>
+                    Rivi <code>a = 3</code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
+                    muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.</p>
 
                 <p>Lisäksi on syytä kiinnittää huomiota rivin 5 käskyyn <code>c = a + b</code>.</p>
                 <p>Tietokone suorittaa käskyn seuraavasti:</p>
@@ -69,10 +69,11 @@ const AboutPage = () => {
 
             <Segment title="3. Useampi argumentti print-funktiolle">
                 <p>Olet kenties matematiikassa oppinut jotain funktioista ja erityisesti että funktiolle "syötetään" arvo (input), jolloin funktio pullauttaa jonkin
-                    toisen arvon "ulos" (output). Käyttämämme <code>print</code> on funktio, jolle voi antaa "inputtina" useamman arvon, jolloin nämä tulostuvat samalle riville.
+                    toisen arvon "ulos" (output). Käyttämämme <code>print</code> on <em>funktio</em>, jolle voi antaa "inputtina" useamman arvon, jolloin nämä arvot tulostuvat samalle riville
+                    (Myöhemmin perehdymme siihen miksi käsky <code>print</code> ei oikeastaan ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan).
                 </p>
 
-                <p>Jos print-funktiolle annetaan useampi inputti, nämä tulee erottaa toisistaan pilkulla.</p>
+                <p>Jos print-funktiolle annetaan useampi inputti (<em>argumentti</em>), nämä tulee erottaa toisistaan pilkulla.</p>
 
                 <p>Katselmoidaan alla olevaa esimerkkiä: Suorita ohjelma!</p>
                 <iframe src="https://trinket.io/embed/python3/6ff25d8c71?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
@@ -83,8 +84,30 @@ const AboutPage = () => {
                 <p>Lisää ohjelmaan vielä kolmas muuttuja nimeltä <code>fav_animal</code> ja aseta tälle vaikka arvo <code>"pupu"</code>. Ohjelman tulee tulostaa muuttujien avulla
                     (esimerkiksi) teksti <code>tyypin Tumppu lempiväri on sininen ja suosikkieläin on pupu.</code></p>
             </Segment>
+            <Segment title="4. Peruslaskutoimitukset">
+                <p> Ohjelmointikielessä yleensä - ja niin Pythonissakin - on "sisäänrakennettuna" useimmiten 5 eri laskutoimitusta, jotka ovat kerto, jako, plus ja miinus, sekä kummallinen modulo,
+                    joka on "jakojäännös" (ja jonka unohdamme samantien). Pythonissa on lisäksi sisäänrakennettuna potenssilasku, harvinaista kyllä. Laskutoimitukset merkitään seuraavasti:               </p>
+                <ul>
+                    <li>Kertolasku: <code>*</code></li>
+                    <li>Jakolasku: <code>/</code></li>
+                    <li>pluslasku: <code>+</code></li>
+                    <li>miinuslasku: <code>-</code></li>
+                    <li>Potenssilasku: <code>2**3</code> tarkoittaa "2 potenssiin 3".</li>                    
+                    
+                </ul>
+                <p>Alla on esimerkki laskutoimitusten käytöstä. Huomaa <code>import</code> käsky jolla otetaan käyttöön <code>math</code> <em>kirjasto</em>, joka sisältää useita hyödyllisiä
+                matematiikkaan liittyviä funktioita! </p>
+                <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <h4>Tehtävä 4.1</h4>
+                <p>Kokeile laskea "kymmenen potenssiin viisi". Muistathan printata tuloksen.</p>
+                <h4>Tehtävä 4.2</h4>
+                <p>Suoraan syvään päähän: Jos suorakulmion kateettien pituudet ovat 2 ja 3, laske hypotenuusan pituus Pythonin ja Pythagoraan lauseen avulla. Käytä muuttujia!</p>
+                <h4>Tehtävä 4.3</h4>
+                <p>Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka arvoksi on valmiiksi 
+                asetettu et ikinä arvaa mikä)</p>
+            </Segment>
 
-            <Segment title="*4. Kontekstivapaa kieli">
+            <Segment title="*5. Kontekstivapaa kieli">
                 <p>Tarkastellaan ensin alla olevaa ohjelmaa. Tässä vaiheessa lienee jo selvää mitä ohjelma tekee mutta kokeile silti ajaa ohjelma.</p>
                 <iframe src="https://trinket.io/embed/python3/f8538f5976?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <p>Entäpä toimiiko tämä seuraavasti? Kokeile ajaa ohjelma.</p>
@@ -95,19 +118,19 @@ const AboutPage = () => {
                 <p>Kontekstivapaa kielioppi tekee ohjelmointikielien käyttämisestä hyvin joustavaa! Alla oleva esimerkki laskee hypotenuusan pituuden suorakulmaiselle kolmiolle, jonka
                     sivun pituudet ovat 3 ja 4.</p>
                 <iframe src="https://trinket.io/embed/python3/b736899201" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <p>Ei ole väliä vaikka et ymmärtäisikään ohjelmakoodia mutta koodi toimii aikalailla siten että "muuttujan a ja b arvot annetaan funktioille, jotka laskevat lukujen neliöt,
+                <p>Ei ole väliä vaikka et ymmärtäisikään ohjelmakoodia mutta koodi toimii aikalailla siten että lasketaan muttujien a ja b neliöt,
                     jotka summataan, ja summa syötetään neliöjuuri-funktiolle ja jonka tulos syötetään print-funktiolle, joka tulostaa neliöjuuren arvon". Tämän kaltaisen ohjelmakoodin kirjoittaminen vaatii kuitenkin harjaantumista,
                     eikä kannata säikähtää.
                 </p>
 
                 <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <code>2x + 1</code> mikään ei estä sinua sijoittamasta
-                muuttujan <code>x</code> tilalle vaikkapa lauseketta <code>y + 1</code>, jolloin saadaan lauseke <code>2(y + 1) + 1</code>. Konteksivapaa siis tarkoittaa sitä, että
-                "riippumatta siitä mitä <code>x</code>:n 'ympärillä' on (konteksti) voit silti sijoittaa <code>x</code>:n tilalle lausekkeen <code>y + 1</code>". Joitain rajoituksia
-                kontekstivapaissakin kieliopeissa on: et voi esimerkiksi sijoittaa lausekkeessa <code>2x + 1</code> muuttujan <code>x</code> tilalle yhtälöä <code> y = 1 </code>,
-                koska <code>2(y = 1) + 1</code> rikkoo matematiikan "kielioppisääntöjä". Samalla tavalla ohjelmointikielissä voi kirjoittaa käskyjä jotka rikkovat ohjelmointikielen 
-                kielioppisääntöjä. Tällöin tietokone ei suorita ohjelmaa koska tietokone ei osaa tulkita mitä sen pitäisi tehdä.
-                 </p>
-                 <p>Tällöin kääntäjä antaa virheilmoituksen <code>syntax error</code>, joka tarkoittaa "kielioppivirhe!"</p>
+                    muuttujan <code>x</code> tilalle vaikkapa lauseketta <code>y + 1</code>, jolloin saadaan lauseke <code>2(y + 1) + 1</code>. Konteksivapaa siis tarkoittaa sitä, että
+                    "riippumatta siitä mitä <code>x</code>:n 'ympärillä' on (konteksti) voit silti sijoittaa <code>x</code>:n tilalle lausekkeen <code>y + 1</code>". Joitain rajoituksia
+                    kontekstivapaissakin kieliopeissa on: et voi esimerkiksi sijoittaa lausekkeessa <code>2x + 1</code> muuttujan <code>x</code> tilalle yhtälöä <code> y = 1 </code>,
+                    koska <code>2(y = 1) + 1</code> rikkoo matematiikan "kielioppisääntöjä". Samalla tavalla ohjelmointikielissä voi kirjoittaa käskyjä jotka rikkovat ohjelmointikielen
+                    kielioppisääntöjä. Tällöin tietokone ei suorita ohjelmaa koska tietokone ei osaa tulkita mitä sen pitäisi tehdä.
+                </p>
+                <p>Tällöin kääntäjä antaa virheilmoituksen <code>syntax error</code>, joka tarkoittaa "kielioppivirhe!"</p>
             </Segment>
 
 
