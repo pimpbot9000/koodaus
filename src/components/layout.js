@@ -9,7 +9,7 @@ const Layout = ({ pageTitle, children }) => {
         <>
             <Navbar bg="light">
                 <Container>
-                    <Navbar.Brand href="#home">Koodikouliminen</Navbar.Brand>
+                    <Navbar.Brand href="#home">Koodikoirakoulu</Navbar.Brand>
                 </Container>
             </Navbar>
             <br></br>
