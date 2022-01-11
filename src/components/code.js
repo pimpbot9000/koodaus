@@ -5,7 +5,8 @@ const Code = ({ children }) => {
         backgroundColor: "#bda",
         padding: "2px 10px 2px 10px",
         borderRadius: "5px",
-        marginBottom: "2px"
+        marginBottom: "2px",
+        fontStyle: "normal"
     }
     return (
         <span style={style}>

@@ -65,6 +65,16 @@ const MathPage = () => {
         <iframe src="https://trinket.io/embed/python3/640b2f64a1?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
         </Segment>
         
+        <Segment title="4. Yhtälöparin ratkaisu, Never Again!">
+            <p>Viimeisenä muttei vähäisipänä, yhtäklöparin ratkaisu.</p>
+            <p> Ensimmäisenä otat kynän ja paperin käteen ja ratkaiset yhtälöparin ns. yleisessä muodossa. Alla on lineaarinen yhtälöpari esitettynä yleisessä muodossa:</p>
+            <Code>ax + bx = c</Code><br/>
+            <Code>dx + ex = f</Code>
+            <p>(Tässä varsinaisesti tietokone ei ratkaise yhtälöparia. Sinä ratkaiset yhtälöparin mutta tietokone laskee vakioiden avulla yhtälöparin ratkaisujen lukuarvot.)</p>
+            <h4>Tehtävä 4.1</h4>
+            <p>Laajenna alla olevaa koodia siten, ettei sinun tarvitse ratkaista enää yhtään yhtälöparia käsin!</p>
+            <iframe src="https://trinket.io/embed/python3/62e5a77638?runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        </Segment>
     </Layout>
 }
 

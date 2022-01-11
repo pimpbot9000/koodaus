@@ -133,7 +133,7 @@ const AboutPage = () => {
                 <p>Alla on esimerkki laskutoimitusten käytöstä.</p>
                 <Obs>Alla olevassa koodissa <code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
                     matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).
-                    Python on suorittu ohjelmointikieli osittain siksi että Pythonille löytyy lukematon määrä erilaisia kirjastoja, joten pyörää ei tarvitse keksiä
+                    Python on suosittu ohjelmointikieli osittain siksi että Pythonille löytyy lukematon määrä erilaisia kirjastoja, joten jokaista pyörää ei tarvitse keksiä
                     uudestaan. Tässä <a href="https://xkcd.com/413/">nörttisarjakuvassa</a> vitsaillaan sille että Pythonille löytyy kaikki mahdollinen ja mahdoton valmiiksi
                     toteutettuna kirjastoina.</Obs>
                 <br />
@@ -195,11 +195,11 @@ const AboutPage = () => {
                     sivun pituudet ovat 3 ja 4.</p>
                 <iframe src="https://trinket.io/embed/python3/b736899201" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-                <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <code>2x + 1</code> mikään ei estä sinua sijoittamasta
-                    muuttujan <code>x</code> tilalle vaikkapa lauseketta <code>y + 1</code>, jolloin saadaan lauseke <code>2(y + 1) + 1</code>. Konteksivapaa siis tarkoittaa sitä, että
-                    "riippumatta siitä mitä <code>x</code>:n 'ympärillä' on (konteksti) voit silti sijoittaa <code>x</code>:n tilalle lausekkeen <code>y + 1</code>". Joitain rajoituksia
-                    kontekstivapaissakin kieliopeissa on: et voi esimerkiksi sijoittaa lausekkeessa <code>2x + 1</code> muuttujan <code>x</code> tilalle yhtälöä <code> y = 1 </code>,
-                    koska <code>2(y = 1) + 1</code> rikkoo matematiikan "kielioppisääntöjä". Samalla tavalla ohjelmointikielissä voi kirjoittaa käskyjä jotka rikkovat ohjelmointikielen
+                <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <Code>2x + 1</Code> mikään ei estä sinua sijoittamasta
+                    muuttujan <code>x</code> tilalle vaikkapa lauseketta <Code>y + 1</Code>, jolloin saadaan lauseke <Code>2(y + 1) + 1</Code>. Konteksivapaa siis tarkoittaa sitä, että
+                    "riippumatta siitä mitä <code>x</code>:n 'ympärillä' on (konteksti) voit silti sijoittaa muuttujan <code>x</code> tilalle lausekkeen <Code>y + 1</Code>". Joitain rajoituksia
+                    kontekstivapaissakin kieliopeissa on: et voi esimerkiksi sijoittaa lausekkeessa <Code>2x + 1</Code> muuttujan <code>x</code> tilalle yhtälöä <Code> y = 1 </Code>,
+                    koska <Code>2(y = 1) + 1</Code> rikkoo matematiikan "kielioppisääntöjä". Samalla tavalla ohjelmointikielissä voi kirjoittaa käskyjä jotka rikkovat ohjelmointikielen
                     kielioppisääntöjä. Tällöin tietokone ei suorita ohjelmaa koska tietokone ei osaa tulkita mitä sen pitäisi tehdä.
                 </p>
                 <p>Tällöin kääntäjä antaa virheilmoituksen <code>syntax error</code>, joka tarkoittaa "kielioppivirhe!"</p>
