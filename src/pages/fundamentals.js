@@ -4,18 +4,37 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
+import Quote from '../components/quote'
 
 const AboutPage = () => {
     return (
         <Layout pageTitle="Never send a human to do a machines job!">
-
+            <p>(Agent Smith, <em>The Matrix</em>, 1999)</p>
             <p>Tietokonetta ohjelmoidaan kirjoittamalla lähdekoodia jollain ohjelmointikielellä. Lähdekoodi käännetään (tai tulkataan!) tietokoneen ymmärtämään
-                muotoon, jonka jälkeen tietokone osaa ajaa ohjelman. Täsmällisemmin sanonuttuna lähdekoodin avulla tietokoneelle kirjoitetaan joukko <code>käskyjä</code>,
+                muotoon, jonka jälkeen tietokone osaa ajaa eli suorittaa ohjelman. Täsmällisemmin sanonuttuna lähdekoodin avulla tietokoneelle kirjoitetaan joukko <code>käskyjä</code>,
                 jotka tietokone suorittaa järjestyksessä alusta loppuun.</p>
-            <p>Tietokone on aika tyhmä, eli se ei osaa tehdä mitään muuta kuin mitä ihminen on ohjelmoinut tietokoneen
-                tekemään. Toisaalta tietokone on hyvä apuri, sillä se ei koskaan väsy eikä tee virheitä suorittaessaan käskyjä täysin orjallisesti.          </p>
-            <p>Tällä kurssilla käytämme <code>Python</code>-nimistä ohjelmointikieltä, mutta samat periaatteet pätevät riippumatta ohjelmointikielestä. Pythonin tulkkaamisen
-                hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".</p>
+            <p>Tietokone on aika tyhmä, eli se ei osaa tehdä muuta kuin mitä ihminen on ohjelmoinut tietokoneen
+                tekemään. Toisaalta tietokone on hyvä ja uskollinen apuri, sillä se ei koskaan väsy eikä tee virheitä suorittaessaan käskyjä täysin orjallisesti. 
+                Niinkuin vuoden 1984 SciFi-klassikkoelokuvasa <em>The Terminator</em> todettiin:</p>
+
+            <Quote>
+            That terminator is out there, it cant be bargained with, it cant be reasoned with, it doesn't feel pity or remorse or fear, and it absolutely will not stop... ever, untill you are dead!
+            </Quote>
+
+            <p>Sen lisäksi että tietokone ei tee virheitä (ellei joku koodari ole mokannut), tietokone pystyy tekemään asioita uskomattoman nopeasti, joka oikeastaan 
+                tekee tietokoneesta niin hyödyllisen kapistuksen.
+            </p>
+            <p>Tällä kurssilla käytämme <code>Python</code>-nimistä ohjelmointikieltä, mutta samat periaatteet pätevät riippumatta ohjelmointikielestä ja riippumatta siitä
+            ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajarobotteja. Pythonin tulkkaamisen
+                hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia". 
+                Python onkin nykypäivänä yksi käytetyimmästä ohjelmointikielestä koska se on niin "ihmisystävällinen".</p>
+            
+            <Obs>
+                Tekoälyn avulla tietokone voi nykyään oppia tekemään asioita, mutta tekoälyalgoritmitkin on joku ihminen ohjelmoinut. Tosin teko"älykin" on hyvin 
+                rajattua: jos algoritmi oppii
+                suosittelemaan sinulle TikTok-videoita aiemmin tykkäämiesi videoiden perusteella (oppimaan), ei se muuta osaa tehdä.
+
+            </Obs>
 
             <Segment title="1. Eka ohjelma">
                 <p>Alla on ehkäpä yksinkertaisin mahdollinen ohjelma. Ohjelmassa on vain yksi käsky, joka tulostaa tekstin <code>Hello, world!</code></p>
@@ -63,7 +82,7 @@ const AboutPage = () => {
                 <Obs>
                     Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
                     <ul>
-                        <li>Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim <code>mun_muuttuja</code>.</li>
+                        <li>Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim. <code>mun_muuttuja</code>.</li>
                         <li>Muuttujien nimessä ei saa olla ääkkösiä (ä, ö, å)</li>
                         <li>Muuttujan nimessä saa olla numeroita mutta muuttujan nimi ei saa alkaa numerolla</li>
                     </ul>
@@ -71,12 +90,12 @@ const AboutPage = () => {
                     mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi.</p>
                 </Obs>
                 <h4>Tehtävä 2.1</h4>
-                <p>Lisää koodiin muuttuja <code>d</code> johon lasketaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
-                    Laita ohjelma myös tulostamaan muuttujan <code>d</code> arvo.
+                <p>Lisää koodiin muuttuja <code>d</code> johon sijoitetaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
+                    Käske tietokonetta myös tulostamaan muuttujan <code>d</code> arvo, jotta näet mitä tapahtuu.
                 </p>
                 <h4>Tehtävä 2.2</h4>
                 <p>Muokkaa ohjelmaa siten että muuttujan <code>etunimi</code> arvoksi asetetaan <code>"jasu"</code> ja muuttujan <code>sukunimi</code> arvoksi asetetaan <code>"petteri"</code>.
-                    Lisäksi, muuttujan <code>kokonimi</code> arvoksi asetetaan muuttujien <code>etunimi</code> ja <code>sukunimi</code> summa. Aja koodi ja ihmettele tulosta!</p>
+                    Lisäksi, muuttujan <code>koko_nimi</code> arvoksi asetetaan muuttujien <code>etunimi</code> ja <code>sukunimi</code> summa (??). Aja koodi ja ihmettele tulosta!</p>
             </Segment>
 
             <Segment title="3. Useampi argumentti print-funktiolle">
@@ -108,8 +127,8 @@ const AboutPage = () => {
 
                 </ul>
                 <p>Alla on esimerkki laskutoimitusten käytöstä.</p>
-                <Obs><code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
-                    matematiikkaan liittyviä funktioita! </Obs>
+                <Obs>Alla olevassa koodissa <code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
+                    matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).</Obs>
                 <br />
                 <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <h4>Tehtävä 4.1</h4>
@@ -118,7 +137,7 @@ const AboutPage = () => {
                 <p>Suoraan syvään päähän: Jos suorakulmion kateettien pituudet ovat 2 ja 3, laske hypotenuusan pituus Pythonin ja Pythagoraan lauseen avulla. Käytä muuttujia kateettien
                     pituuksina!</p>
                 <h4>Tehtävä 4.3</h4>
-                <p>Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka arvoksi on valmiiksi
+                <p>Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>math</code>-kirjastosta tuotu <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka arvoksi on valmiiksi
                     asetettu et ikinä arvaa mikä)</p>
             </Segment>
 

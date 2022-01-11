@@ -8,7 +8,7 @@ const FunctionsPage = () => {
     return <Layout pageTitle="Funktiot">
         <p>Edellisessä osassa törmäsimme muutamaan funktioon kuten <code>sqrt</code> ja <code>print</code>. Tässä osiossa laadimme itse funktioita.</p>
         <Segment title="1. Eka funktio">
-            <p>Mikä funktio täsmälleen sitten on? Tyypillisesti funktio (ohjelmointikielessä) on samanlainen kuin matematiikassa: funktiolle syötetään jokin arvo
+            <p>Mikä funktio ohjelmointikielessä oikein on? Tyypillisesti funktio (ohjelmointikielessä) on samanlainen kuin matematiikassa: funktiolle syötetään jokin arvo
                 tai arvoja ("input") ja näiden arvojen avulla lasketaan jotain ja pullautetaan tulos ulos ("output").</p>
             <p>Alla olevassa esimerkissä on määritelty funktio nimeltä <code>summa</code> jolle voidaan syöttää inputtina kaksi lukua <code>x</code> ja <code>y</code>. Funktio
                 laskee lukujen <code>x</code> ja <code>y</code> summan ja pullauttaa tämän ulos.</p>
