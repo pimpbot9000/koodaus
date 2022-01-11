@@ -112,6 +112,7 @@ const AboutPage = () => {
                 <ul>
                     <li>Kokonaisluku eli <code>integer</code></li>
                     <li>Desimaaliluku eli <code>floating point number</code></li>
+                    <li>Teksti eli <code>string</code></li>
                     <li>Lista</li>
                 </ul>
                 <p>Alla olevassa koodissa on määritelty kokonaislukumuuttuja, desimaalilukumuuttuja sekä kaksi listaa. Huomaathan että Python-ohjelmointikielessä ei tarvitse millään tavalla
@@ -146,9 +147,7 @@ const AboutPage = () => {
                     sivun pituudet ovat 3 ja 4.</p>
                 <iframe src="https://trinket.io/embed/python3/b736899201" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <p>Koodi toimii aikalailla siten että "lasketaan muttujien a ja b neliöt,
-                    jotka summataan, ja summa syötetään neliöjuuri-funktiolle ja jonka tulos syötetään print-funktiolle, joka tulostaa neliöjuuren arvon". Tämän kaltaisen ohjelmakoodin kirjoittaminen vaatii kuitenkin harjaantumista,
-                    eikä kannata säikähtää.
-                </p>
+                    jotka summataan, ja summa syötetään neliöjuuri-funktiolle ja jonka tulos syötetään print-funktiolle, joka tulostaa neliöjuuren arvon".</p>
 
                 <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <code>2x + 1</code> mikään ei estä sinua sijoittamasta
                     muuttujan <code>x</code> tilalle vaikkapa lauseketta <code>y + 1</code>, jolloin saadaan lauseke <code>2(y + 1) + 1</code>. Konteksivapaa siis tarkoittaa sitä, että
