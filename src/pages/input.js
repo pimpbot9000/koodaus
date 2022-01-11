@@ -21,8 +21,19 @@ const InputsPage = () => {
         <p>Laajenna ohjelmaa siten, että etunimen syöttämisen jälkeen ohjelma kysyy sukunimeä ja tallentaa tämän muuttujaan <code>sukunimi</code>. Lopuksi ohjelma
         tulostaa (esimerkiksi) tekstin <code>Hyvää iltapäivää Matias Häggman</code> muuttujia <code>nimi</code> ja <code>sukunimi</code> hyväksikäyttäen.</p>
         </Segment>
+
         <Segment title="2. Kokonaisluvun lukeminen">
-            <p>TODO</p>
+            <p>Testaa allaolevan sovelluksen toimintaa.</p>
+        <iframe src="https://trinket.io/embed/python3/05094acffe?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <h4>Tehtävä 2.1</h4>
+        <p>Laajenna ohjelmaa siten, että ohjelma kysyy käyttäjältä (erikseen) kaksi eri lukua ja laskee lukujen summan.</p>
+        <h4>Tehtävä 2.2</h4>
+        <p>Laajenna ohjelmaa siten, että ohjelma kysyy käyttäjältä kolme eri lukua ja laskee lukujen summan.</p>
+        <h4>Tehtävä 2.3</h4>
+        <p>Muokkaa ohjelmaa siten, että se pyytää murtoluvun osoittajan ja nimittäjän ja ilmoittaa murtoluvun arvon sekä desimaalilukuna että prosentteina.</p>
+        <h4>Tehtävä 2.4</h4>
+        <p>Funktio <code>read_int</code> olettaa että käyttäjä syöttää kokonaisluvun. Kokeile mitä tapahtuu jos syötät jotain joka ei ole kokonaisluku, esimerkiksi
+        tekstiä.</p>
         </Segment>
 
         <Segment title="2. desimaaliluvun lukeminen">

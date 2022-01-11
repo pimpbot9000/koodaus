@@ -46,19 +46,29 @@ const AboutPage = () => {
                 <p>Kokeile painaa play-nappulaa ja kiinnitä huomiota siihen mitä ohjelma tulostaa.</p>
 
                 <iframe src="https://trinket.io/embed/python3/59b7d176f4?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <p>Ohjelma näyttää yksinkertaiselta (ja onkin) mutta on syytä täsmestää muutamaa seikkaa:</p>
+                
                 <Obs>
-                <p>Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.
-                    Rivi <code>a = 3</code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
-                    muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.</p>
+                    <p>Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.
+                        Rivi <code>a = 3</code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
+                        muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.</p>
 
-                <p>Lisäksi on syytä kiinnittää huomiota rivin 5 käskyyn <code>c = a + b</code>.</p>
-                <p>Tietokone suorittaa käskyn seuraavasti:</p>
-                <ul>
-                    <li>Lasketaan muuttujien <code>a</code> ja <code>b</code> arvojen summa</li>
-                    <li>Sijoitetaan laskutoimituksen tulos muuttujaan <code>c</code></li>
-                </ul>
-                <p>Kuten edellisestä selviää käsky <code>c = a + b</code> siis toimii eräällä tapaa "oikealta vasemmalle".</p>
+                    <p>Lisäksi on syytä kiinnittää huomiota rivin 5 käskyyn <code>c = a + b</code>.</p>
+                    <p>Tietokone suorittaa käskyn seuraavasti:</p>
+                    <ul>
+                        <li>Lasketaan muuttujien <code>a</code> ja <code>b</code> arvojen summa</li>
+                        <li>Sijoitetaan laskutoimituksen tulos muuttujaan <code>c</code></li>
+                    </ul>
+                    <p>Kuten edellisestä selviää käsky <code>c = a + b</code> siis toimii eräällä tapaa "oikealta vasemmalle".</p>
+                </Obs>
+                <Obs>
+                    Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
+                    <ul>
+                        <li>Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim <code>mun_muuttuja</code>.</li>
+                        <li>Muuttujien nimessä ei saa olla ääkkösiä (ä, ö, å)</li>
+                        <li>Muuttujan nimessä saa olla numeroita mutta muuttujan nimi ei saa alkaa numerolla</li>
+                    </ul>
+                    <p>Se että muuttujan nimissä ei saa olla ääkkösiä, ei haittaa sillä ohjelmointia useimmiten tehdään "englanniksi". Toki suomen kieltäkin saa käyttää
+                    mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi.</p>
                 </Obs>
                 <h4>Tehtävä 2.1</h4>
                 <p>Lisää koodiin muuttuja <code>d</code> johon lasketaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
@@ -94,21 +104,22 @@ const AboutPage = () => {
                     <li>Jakolasku: <code>/</code></li>
                     <li>pluslasku: <code>+</code></li>
                     <li>miinuslasku: <code>-</code></li>
-                    <li>Potenssilasku: <code>2**3</code> tarkoittaa "2 potenssiin 3".</li>                    
-                    
+                    <li>Potenssilasku: <code>2**3</code> tarkoittaa "2 potenssiin 3".</li>
+
                 </ul>
-                <p>Alla on esimerkki laskutoimitusten käytöstä.</p> 
+                <p>Alla on esimerkki laskutoimitusten käytöstä.</p>
                 <Obs><code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
-                matematiikkaan liittyviä funktioita! </Obs>
-                <br/>
+                    matematiikkaan liittyviä funktioita! </Obs>
+                <br />
                 <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <h4>Tehtävä 4.1</h4>
                 <p>Kokeile laskea "kymmenen potenssiin viisi". Muistathan printata tuloksen.</p>
                 <h4>Tehtävä 4.2</h4>
-                <p>Suoraan syvään päähän: Jos suorakulmion kateettien pituudet ovat 2 ja 3, laske hypotenuusan pituus Pythonin ja Pythagoraan lauseen avulla. Käytä muuttujia!</p>
+                <p>Suoraan syvään päähän: Jos suorakulmion kateettien pituudet ovat 2 ja 3, laske hypotenuusan pituus Pythonin ja Pythagoraan lauseen avulla. Käytä muuttujia kateettien
+                    pituuksina!</p>
                 <h4>Tehtävä 4.3</h4>
-                <p>Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka arvoksi on valmiiksi 
-                asetettu et ikinä arvaa mikä)</p>
+                <p>Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka arvoksi on valmiiksi
+                    asetettu et ikinä arvaa mikä)</p>
             </Segment>
 
             <Segment title="5. Muuttujatyypit">
@@ -122,9 +133,9 @@ const AboutPage = () => {
                 <p>Alla olevassa koodissa on määritelty kokonaislukumuuttuja, desimaalilukumuuttuja, merkkijonomuuttuja sekä kaksi listaa. Huomaathan että Python-ohjelmointikielessä ei tarvitse millään tavalla
                     erikseen kertoa minkä tyyppinen muuttuja on kyseessä, Python päättelee sen itse kun muuttujalle asetetaan arvo.</p>
                 <Obs>Alla olevaan koodiin on lisätty <em>kommentteja</em> käyttäen hyväksi risuaitaa tai "hashtagia" (<code>#</code>). Kommentit eivät ole suoritettavaa
-                ohjelmakoodia. Kun ohjelma ajetaan Python-kääntäjä ignooraa kommentit. Jos kommentit häiritsevät sinua, voit poistaa ne.</Obs>
+                    ohjelmakoodia. Kun ohjelma ajetaan Python-kääntäjä ignooraa kommentit. Jos kommentit häiritsevät sinua, voit poistaa ne.</Obs>
                 <Obs>Merkkijonon nimitys <code>string</code> ei liity bikineihin vaan se tarkoittaa "nauhaa". Nimitys on todennäköisesti peräisin ajoilta, jolloin
-                tietokoneita todellakin ohjelmoitiin syöttämällä niille nauhaa, jossa oli käskyjä.</Obs>
+                    tietokoneita todellakin ohjelmoitiin syöttämällä niille nauhaa, jossa oli käskyjä.</Obs>
                 <p>Kokeile ajaa koodi ja tee alla olevat tehtävät!</p>
 
                 <iframe src="https://trinket.io/embed/python3/7e56f73972?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
@@ -157,7 +168,7 @@ const AboutPage = () => {
                 <p>Kontekstivapaa kielioppi tekee ohjelmointikielien käyttämisestä hyvin joustavaa! Alla oleva esimerkki laskee hypotenuusan pituuden suorakulmaiselle kolmiolle, jonka
                     sivun pituudet ovat 3 ja 4.</p>
                 <iframe src="https://trinket.io/embed/python3/b736899201" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                
+
                 <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <code>2x + 1</code> mikään ei estä sinua sijoittamasta
                     muuttujan <code>x</code> tilalle vaikkapa lauseketta <code>y + 1</code>, jolloin saadaan lauseke <code>2(y + 1) + 1</code>. Konteksivapaa siis tarkoittaa sitä, että
                     "riippumatta siitä mitä <code>x</code>:n 'ympärillä' on (konteksti) voit silti sijoittaa <code>x</code>:n tilalle lausekkeen <code>y + 1</code>". Joitain rajoituksia
