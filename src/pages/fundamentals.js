@@ -47,7 +47,7 @@ const AboutPage = () => {
 
                 <iframe src="https://trinket.io/embed/python3/59b7d176f4?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <p>Ohjelma näyttää yksinkertaiselta (ja onkin) mutta on syytä täsmestää muutamaa seikkaa:</p>
-
+                <Obs>
                 <p>Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.
                     Rivi <code>a = 3</code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
                     muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.</p>
@@ -59,6 +59,7 @@ const AboutPage = () => {
                     <li>Sijoitetaan laskutoimituksen tulos muuttujaan <code>c</code></li>
                 </ul>
                 <p>Kuten edellisestä selviää käsky <code>c = a + b</code> siis toimii eräällä tapaa "oikealta vasemmalle".</p>
+                </Obs>
                 <h4>Tehtävä 2.1</h4>
                 <p>Lisää koodiin muuttuja <code>d</code> johon lasketaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
                     Laita ohjelma myös tulostamaan muuttujan <code>d</code> arvo.
@@ -118,7 +119,7 @@ const AboutPage = () => {
                     <li>Merkkijono ("tekstiä") eli <code>string</code></li>
                     <li>Lista</li>
                 </ul>
-                <p>Alla olevassa koodissa on määritelty kokonaislukumuuttuja, desimaalilukumuuttuja sekä kaksi listaa. Huomaathan että Python-ohjelmointikielessä ei tarvitse millään tavalla
+                <p>Alla olevassa koodissa on määritelty kokonaislukumuuttuja, desimaalilukumuuttuja, merkkijonomuuttuja sekä kaksi listaa. Huomaathan että Python-ohjelmointikielessä ei tarvitse millään tavalla
                     erikseen kertoa minkä tyyppinen muuttuja on kyseessä, Python päättelee sen itse kun muuttujalle asetetaan arvo.</p>
                 <Obs>Alla olevaan koodiin on lisätty <em>kommentteja</em> käyttäen hyväksi risuaitaa tai "hashtagia" (<code>#</code>). Kommentit eivät ole suoritettavaa
                 ohjelmakoodia. Kun ohjelma ajetaan Python-kääntäjä ignooraa kommentit. Jos kommentit häiritsevät sinua, voit poistaa ne.</Obs>
@@ -127,6 +128,9 @@ const AboutPage = () => {
                 <p>Kokeile ajaa koodi ja tee alla olevat tehtävät!</p>
 
                 <iframe src="https://trinket.io/embed/python3/7e56f73972?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <Obs>
+                    Kenties huomasit tarkastelemalla esimerkkikoodia että listan alkioiden numerointi lähtee nollasta?
+                </Obs>
                 <h4>Tehtävä 5.1</h4>
                 <p>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista1</code>:n viimeisen alkion</p>
                 <h4>Tehtävä 5.2</h4>
@@ -134,7 +138,7 @@ const AboutPage = () => {
                 <h4>Tehtävä 5.3</h4>
                 <p>Testaa mitä tapahtuu, jos yrität tulostaa jommankumman listan kuudennen (tai sadannen!) alkion.</p>
                 <h4>Tehtävä 5.4</h4>
-                <p>Muokkaa ohjelmaa siten että muuttujaan <code>summa</code> lasketaan <code>lista1</code>:n ensimmäisen ja viimeisen jäsenen summa.</p>
+                <p>Muokkaa ohjelmaa siten että muuttujaan <code>summa</code> lasketaan <code>lista1</code>:n ensimmäisen ja viimeisen alkion summa.</p>
                 <h4>Tehtävä 5.5</h4>
                 <p>Muuttuja luodaan kun sille asetetaan jokin arvo. Kokeile voiko muuttujan arvoa muuttaa jälkikäteen.</p>
                 <h4>Tehtävä 5.6</h4>
