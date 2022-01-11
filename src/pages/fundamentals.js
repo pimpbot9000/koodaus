@@ -107,7 +107,34 @@ const AboutPage = () => {
                 asetettu et ikinä arvaa mikä)</p>
             </Segment>
 
-            <Segment title="*5. Kontekstivapaa kieli">
+            <Segment title="5. Muuttujatyypit">
+                <p>Ohjelmointikielessä on useita eri muuttuja tai tietotyyppejä. Tulemme kurssin puitteissa käyttämään seuraavia:</p>
+                <ul>
+                    <li>Kokonaisluku eli <code>integer</code></li>
+                    <li>Desimaaliluku eli <code>floating point number</code></li>
+                    <li>Lista</li>
+                </ul>
+                <p>Alla olevassa koodissa on määritelty kokonaislukumuuttuja, desimaalilukumuuttuja sekä kaksi listaa. Huomaathan että Python-ohjelmointikielessä ei tarvitse millään tavalla
+                    erikseen kertoa minkä tyyppinen muuttuja on kyseessä, Python päättelee sen itse kun muuttujalle asetetaan arvo.</p>
+                <p>Huomaa että alla olevaan koodiin on lisätty kommentteja käyttäen hyväksi risuaitaa tai "hashtagia" (<code>#</code>). Kommentit eivät ole suoritettavaa
+                ohjelmakoodia. Kn ohjelma ajetaan Python-kääntäjä ignooraa kommentit</p>
+                <p>Kokeile ajaa koodi ja tee alla olevat tehtävät!</p>
+
+                <iframe src="https://trinket.io/embed/python3/9fb9364433?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <h4>Tehtävä 5.1</h4>
+                <p>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista1</code>:n viimeisen alkion</p>
+                <h4>Tehtävä 5.2</h4>
+                <p>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista2</code>:n toisen alkion</p>
+                <h4>Tehtävä 5.3</h4>
+                <p>Testaa mitä tapahtuu, jos yrität tulostaa jommankumman listan kuudennen (tai sadannen!) alkion.</p>
+                <h4>Tehtävä 5.4</h4>
+                <p>Muokkaa ohjelmaa siten että muuttujaan <code>summa</code> lasketaan <code>lista1</code>:n ensimmäisen ja viimeisen jäsenen summa.</p>
+                <h4>Tehtävä 5.5</h4>
+                <p>Muuttuja luodaan kun sille asetetaan jokin arvo. Kokeile voiko muuttujan arvoa muuttaa jälkikäteen.</p>
+
+            </Segment>
+
+            <Segment title="*6. Kontekstivapaa kieli">
                 <p>Tarkastellaan ensin alla olevaa ohjelmaa. Tässä vaiheessa lienee jo selvää mitä ohjelma tekee mutta kokeile silti ajaa ohjelma.</p>
                 <iframe src="https://trinket.io/embed/python3/f8538f5976?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <p>Entäpä toimiiko tämä seuraavasti? Kokeile ajaa ohjelma.</p>
@@ -118,7 +145,7 @@ const AboutPage = () => {
                 <p>Kontekstivapaa kielioppi tekee ohjelmointikielien käyttämisestä hyvin joustavaa! Alla oleva esimerkki laskee hypotenuusan pituuden suorakulmaiselle kolmiolle, jonka
                     sivun pituudet ovat 3 ja 4.</p>
                 <iframe src="https://trinket.io/embed/python3/b736899201" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <p>Ei ole väliä vaikka et ymmärtäisikään ohjelmakoodia mutta koodi toimii aikalailla siten että lasketaan muttujien a ja b neliöt,
+                <p>Koodi toimii aikalailla siten että "lasketaan muttujien a ja b neliöt,
                     jotka summataan, ja summa syötetään neliöjuuri-funktiolle ja jonka tulos syötetään print-funktiolle, joka tulostaa neliöjuuren arvon". Tämän kaltaisen ohjelmakoodin kirjoittaminen vaatii kuitenkin harjaantumista,
                     eikä kannata säikähtää.
                 </p>
@@ -131,9 +158,8 @@ const AboutPage = () => {
                     kielioppisääntöjä. Tällöin tietokone ei suorita ohjelmaa koska tietokone ei osaa tulkita mitä sen pitäisi tehdä.
                 </p>
                 <p>Tällöin kääntäjä antaa virheilmoituksen <code>syntax error</code>, joka tarkoittaa "kielioppivirhe!"</p>
+
             </Segment>
-
-
 
         </Layout>
     )
