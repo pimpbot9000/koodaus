@@ -18,7 +18,7 @@ const IndexPage = () => {
       <p>Jahka olet suorittanut pähkäilyn ja ajanut ohjelman voit siirtyä ensimmäiseen osioon nimeltä <Link to="/fundamentals">Perusteet</Link></p>
       </Segment>
       <Obs>
-        Tämä materiaali on tarkoitettu peruskoulun yhdeksännen luokan matematiikan opiskelun tueksi. Materiaali sisältää funktioita, pythagoraan lausetta, suoran kulmakertoimia ja ympyrän
+        Tämä materiaali on tarkoitettu peruskoulun yhdeksännen luokan matematiikan opiskelun tueksi. Materiaali sisältää funktioita, pythagoraan lauseen sovelluksia, suoran kulmakertoimia ja ympyrän
         pinta-aloja. Proceed with care. Materiaalin puitteissa opiskellaan sekä ohjelmointia että matematiikkaa.
       </Obs>
     </Layout>
