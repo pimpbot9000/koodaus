@@ -3,6 +3,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
+import Code from '../components/code'
 
 const IfElsePage = () => {
     return <Layout pageTitle="Ehtolauseet: if, else if ja else">
@@ -20,10 +21,10 @@ const IfElsePage = () => {
             <p>Testaa ohjelmaa eri syötteillä! Jos mielestäsi joku muu kuin Tuomas on awesome muokkaa koodia mieleiseksesi.</p>
             <iframe src="https://trinket.io/embed/python3/46f8fc5788" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <Obs>
-                <p>Huomasit kenties että if-lauseessa oli yhtäsuuruusmerkkinä <code>==</code>. Nyt täytyy ehdottomasti pysähtyä selventämään eräs tärkeä asia:</p>
+                <p>Huomasit kenties että if-lauseessa oli yhtäsuuruusmerkkinä <Code>==</Code>. Nyt täytyy ehdottomasti pysähtyä selventämään eräs tärkeä asia:</p>
                 <ul>
-                    <li><code>=</code> on <em>sijoitusoperaattori</em>, jota käytetään kun muuttujalle asetetaan arvo.</li>
-                    <li><code>==</code> on <em>yhtäsuuruusmerkki</em>, jota käytetään <em>ehtolauseissa</em>, kuten edellisessä koodiesimerkissä.</li>
+                    <li><Code>=</Code> on <em>sijoitusoperaattori</em>, jota käytetään kun muuttujalle asetetaan arvo.</li>
+                    <li><Code>==</Code> on <em>yhtäsuuruusmerkki</em>, jota käytetään <em>ehtolauseissa</em>, kuten edellisessä koodiesimerkissä.</li>
                 </ul>
                 <p>On merkille pantavaa että jälkimmäinen tapa käyttää yhtäsuuruusmerkkejä vastaa matematiikan yhtäsuuruutta.</p>
             </Obs>
@@ -31,12 +32,12 @@ const IfElsePage = () => {
                 Vertailuoperaattorit:
                 <ul>
 
-                    <li><code>==</code> yhtäsuuri kuin</li>
-                    <li><code>&lt;</code> pienempi kuin</li>
-                    <li><code>&gt;</code> suurempi kuin</li>
-                    <li><code>!=</code> eri suuri kuin</li>
-                    <li><code>&lt;=</code> pienempi tai yhtäsuuri kuin</li>
-                    <li><code>&gt;=</code> suurempi tai yhtäsuuri kuin</li>
+                    <li>yhtäsuuri kuin: <Code>==</Code> </li>
+                    <li>pienempi kuin:<Code>&lt;</Code> </li>
+                    <li>suurempi kuin: <Code>&gt;</Code> </li>
+                    <li>eri suuri kuin: <Code>!=</Code> </li>
+                    <li>pienempi tai yhtäsuuri kuin: <Code>&lt;=</Code> </li>
+                    <li>suurempi tai yhtäsuuri kuin: <Code>&gt;=</Code> </li>
                 </ul>
             </Obs>
             <h4>Tehtävä 1.1</h4>
@@ -51,14 +52,17 @@ const IfElsePage = () => {
         </Segment>
 
         <Segment title="2. Useita vaihtoehtoja: If - else if - else">
-            <p>Jos vaihtoehtoja on useita käytetään if - else if - else -rakennetta. Alla on esimerkki miten kyseistä ehtolauserakennetta käytetään. Tässä vielä seikkaperäiset ohjeet:</p> 
+            <p>Jos vaihtoehtoja on useita käytetään if - else if - else -rakennetta. Alla on esimerkki miten kyseistä ehtolauserakennetta käytetään. Tässä vielä seikkaperäiset ohjeet:</p>
             <ul>
-                <li>Ensimmäisenä tulee aina <code>if</code></li>
+                <li>Ensimmäisenä tulee aina <code>if</code> <Code>ehto</Code>:</li>
                 <li>Jos vaihtoehtoja on useita läiskytetään aina uusi <code>elif</code> jokaista ehtoa varten (<code>elif</code> on lyhenne sanoista "else if").</li>
-                <li><code>if</code>:n ja <code>elif</code>:n jälkeen tulee aina ehto</li>
-                <li>Lopuksi laitetaan <code>else</code>, joka tarkoittaa "jokin muu kuin ylläolevat".</li>
+                <li><code>if</code>:n ja <code>elif</code>:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>if x &lt; 10:</Code> tai  <Code>if y != 6:</Code></li>
+                <li>Lopuksi laitetaan <code>else</code>, joka tarkoittaa "jokin muu kuin ylläolevat". Else:n yhteyteen ei tule ehtoa. </li>
             </ul>
             <p>Kokeile allaolevaa ohjelmaa. Toimiiko se niinkuin ajattelisit sen toimivan?</p>
+            <Obs>
+                Huomaathan puolipisteet sekä sisennyksen riveillä 7, 9, 11 ja 13. Sisennys tehdään tabulaattorinäppäimellä!
+            </Obs>
             <iframe src="https://trinket.io/embed/python3/47acb869c0?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <Obs>
                 <code>else</code>:ä ei ole pakko olla rakenteessa lainkaan ja itse asiassa monasti riittää pelkkä yksittäinen <code>if</code>.
@@ -81,7 +85,7 @@ const IfElsePage = () => {
                 <li>Ohjelma lukee kokonaislukusyötteen käyttäjältä (funktio <code>read_int</code>).</li>
                 <li>Jos luku on yli 1000 tulostuu teksti "Yli tuhat".</li>
                 <li>Jos luku on alle 20 tulostuu teksti "Alle kakskäät".</li>
-                <li>Jos tulos on pienempi kuin nolla tulostuu teksti "negatiivinen luku".</li>                
+                <li>Jos tulos on pienempi kuin nolla tulostuu teksti "negatiivinen luku".</li>
             </ul>
             <Obs>
                 Tehtävä ei olekaan niin helppo miltä näyttää! Joissain tilanteissa tulee miettiä tarkkaan ehtolauseiden järjestys. Jos ehtolauseet kirjoitetaan

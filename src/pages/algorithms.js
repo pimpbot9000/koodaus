@@ -34,7 +34,7 @@ const MathPage = () => {
 
         <Segment title="1. Isoimman luvun etsiminen listasta">
             <p>Ehkä yksinkertaisin algoritmi (ja joka luokitellaan "oikeaksi" algoritmiksi) on isoimman tai pienimmän luvun etsiminen listasta</p>
-            <p>Alla on toteutettu kyseinen algoritmi. Algoritmi toimii seuraavasti:</p>
+            <p>Alla on toteutettu kyseinen algoritmi s.e. se etsii listan isoimman luvun. Algoritmi toimii seuraavasti:</p>
             <ul>
                 <li>Olkoon "suurin tähän mennessä nähty luku" <code>max_value</code>. Jos kaikki listan luvut ovat positiivisia asetetaan tämän arvoksi 0.</li>
                 <li>Käydään läpi jokainen listan luku ja suoritetaan seuraava operaatio: Jos tämänhetkinen luku (<code>x</code>) on suurempi kuin "suurin tähän

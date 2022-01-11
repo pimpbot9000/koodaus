@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
 import Quote from '../components/quote'
+import Code from '../components/code'
 
 const AboutPage = () => {
     return (
@@ -14,24 +15,24 @@ const AboutPage = () => {
                 muotoon, jonka jälkeen tietokone osaa ajaa eli suorittaa ohjelman. Täsmällisemmin sanonuttuna lähdekoodin avulla tietokoneelle kirjoitetaan joukko <code>käskyjä</code>,
                 jotka tietokone suorittaa järjestyksessä alusta loppuun.</p>
             <p>Tietokone on aika tyhmä, eli se ei osaa tehdä muuta kuin mitä ihminen on ohjelmoinut tietokoneen
-                tekemään. Toisaalta tietokone on hyvä ja uskollinen apuri, sillä se ei koskaan väsy eikä tee virheitä suorittaessaan käskyjä täysin orjallisesti. 
-                Niinkuin vuoden 1984 SciFi-klassikkoelokuvasa <em>The Terminator</em> todettiin:</p>
+                tekemään. Toisaalta tietokone on hyvä ja uskollinen apuri, sillä se ei koskaan väsy eikä tee virheitä suorittaessaan käskyjä täysin orjallisesti.
+                Niinkuin vuoden 1984 scifi-klassikkoelokuvassa <em>The Terminator</em> osuvasti todettiin:</p>
 
             <Quote>
-            That terminator is out there, it cant be bargained with, it cant be reasoned with, it doesn't feel pity or remorse or fear, and it absolutely will not stop... ever, untill you are dead!
+                That terminator is out there, it cant be bargained with, it cant be reasoned with, it doesn't feel pity or remorse or fear, and it absolutely will not stop... ever, untill you are dead!
             </Quote>
 
-            <p>Sen lisäksi että tietokone ei tee virheitä (ellei joku koodari ole mokannut), tietokone pystyy tekemään asioita uskomattoman nopeasti, joka oikeastaan 
+            <p>Sen lisäksi että tietokone ei tee virheitä (ellei joku koodari ole mokannut), tietokone pystyy tekemään asioita uskomattoman nopeasti, joka oikeastaan
                 tekee tietokoneesta niin hyödyllisen kapistuksen.
             </p>
             <p>Tällä kurssilla käytämme <code>Python</code>-nimistä ohjelmointikieltä, mutta samat periaatteet pätevät riippumatta ohjelmointikielestä ja riippumatta siitä
-            ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajarobotteja. Pythonin tulkkaamisen
-                hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia". 
+                ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajarobotteja. Pythonin tulkkaamisen
+                hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".
                 Python onkin nykypäivänä yksi käytetyimmästä ohjelmointikielestä koska se on niin "ihmisystävällinen".</p>
-            
+
             <Obs>
-                Tekoälyn avulla tietokone voi nykyään oppia tekemään asioita, mutta tekoälyalgoritmitkin on joku ihminen ohjelmoinut. Tosin teko"älykin" on hyvin 
-                rajattua: jos algoritmi oppii
+                Tekoälyn avulla tietokone voi nykyään oppia tekemään asioita, mutta tekoälyalgoritmitkin on joku ihminen ohjelmoinut. Tosin teko"älykin" on hyvin
+                rajattua: jos algoritmi on ohjelmoitu oppimaan
                 suosittelemaan sinulle TikTok-videoita aiemmin tykkäämiesi videoiden perusteella (oppimaan), ei se muuta osaa tehdä.
 
             </Obs>
@@ -65,29 +66,31 @@ const AboutPage = () => {
                 <p>Kokeile painaa play-nappulaa ja kiinnitä huomiota siihen mitä ohjelma tulostaa.</p>
 
                 <iframe src="https://trinket.io/embed/python3/59b7d176f4?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                
+
                 <Obs>
-                    <p>Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.
-                        Rivi <code>a = 3</code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
+                    <p>Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.</p>
+                    <p> Käsky <Code>a = 3</Code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
                         muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.</p>
 
-                    <p>Lisäksi on syytä kiinnittää huomiota rivin 5 käskyyn <code>c = a + b</code>.</p>
+                    <p>Lisäksi on syytä kiinnittää huomiota rivin 5 käskyyn <Code>c = a + b</Code>.</p>
                     <p>Tietokone suorittaa käskyn seuraavasti:</p>
                     <ul>
                         <li>Lasketaan muuttujien <code>a</code> ja <code>b</code> arvojen summa</li>
                         <li>Sijoitetaan laskutoimituksen tulos muuttujaan <code>c</code></li>
                     </ul>
-                    <p>Kuten edellisestä selviää käsky <code>c = a + b</code> siis toimii eräällä tapaa "oikealta vasemmalle".</p>
+                    <p>Kuten edellisestä selviää käsky <Code>c = a + b</Code> siis toimii eräällä tapaa "oikealta vasemmalle".</p>
                 </Obs>
                 <Obs>
                     Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
                     <ul>
-                        <li>Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim. <code>mun_muuttuja</code>.</li>
+                        <li>Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim. <code>tyypin_etunimi</code>.</li>
+                        <li>Muuttujan nimessä ei voi olla välilyöntejä.</li>
                         <li>Muuttujien nimessä ei saa olla ääkkösiä (ä, ö, å)</li>
                         <li>Muuttujan nimessä saa olla numeroita mutta muuttujan nimi ei saa alkaa numerolla</li>
                     </ul>
                     <p>Se että muuttujan nimissä ei saa olla ääkkösiä, ei haittaa sillä ohjelmointia useimmiten tehdään "englanniksi". Toki suomen kieltäkin saa käyttää
-                    mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi.</p>
+                        mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi. Tässä materiaalissa on välillä
+                        käytetty sekä suomen kielisiä että englanninkielisiä muuttujien nimiä. Toivottavasti pystyt elämään tämän kanssa :)</p>
                 </Obs>
                 <h4>Tehtävä 2.1</h4>
                 <p>Lisää koodiin muuttuja <code>d</code> johon sijoitetaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
@@ -101,7 +104,7 @@ const AboutPage = () => {
             <Segment title="3. Useampi argumentti print-funktiolle">
                 <p>Olet kenties matematiikassa oppinut jotain funktioista ja erityisesti että funktiolle "syötetään" arvo (input), jolloin funktio pullauttaa jonkin
                     toisen arvon "ulos" (output). Käyttämämme <code>print</code> on <em>funktio</em>, jolle voi antaa "inputtina" useamman arvon, jolloin nämä arvot tulostuvat samalle riville
-                    (Myöhemmin perehdymme siihen miksi käsky <code>print</code> ei oikeastaan ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan).
+                    (myöhemmin selviää miksi käsky <code>print</code> ei oikeastaan ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan).
                 </p>
 
                 <p>Jos print-funktiolle annetaan useampi inputti (<em>argumentti</em>), nämä tulee erottaa toisistaan pilkulla.</p>
@@ -115,6 +118,7 @@ const AboutPage = () => {
                 <p>Lisää ohjelmaan vielä kolmas muuttuja nimeltä <code>fav_animal</code> ja aseta tälle vaikka arvo <code>"pupu"</code>. Ohjelman tulee tulostaa muuttujien avulla
                     (esimerkiksi) teksti <code>tyypin Tumppu lempiväri on sininen ja suosikkieläin on pupu.</code></p>
             </Segment>
+
             <Segment title="4. Peruslaskutoimitukset">
                 <p> Ohjelmointikielessä yleensä - ja niin Pythonissakin - on "sisäänrakennettuna" useimmiten 5 eri laskutoimitusta, jotka ovat kerto, jako, plus ja miinus, sekä kummallinen modulo,
                     joka on "jakojäännös" (ja jonka unohdamme samantien). Pythonissa on lisäksi sisäänrakennettuna potenssilasku, harvinaista kyllä. Laskutoimitukset merkitään seuraavasti:               </p>
@@ -128,7 +132,10 @@ const AboutPage = () => {
                 </ul>
                 <p>Alla on esimerkki laskutoimitusten käytöstä.</p>
                 <Obs>Alla olevassa koodissa <code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
-                    matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).</Obs>
+                    matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).
+                    Python on suorittu ohjelmointikieli osittain siksi että Pythonille löytyy lukematon määrä erilaisia kirjastoja, joten pyörää ei tarvitse keksiä
+                    uudestaan. Tässä <a href="https://xkcd.com/413/">nörttisarjakuvassa</a> vitsaillaan sille että Pythonille löytyy kaikki mahdollinen ja mahdoton valmiiksi
+                    toteutettuna kirjastoina.</Obs>
                 <br />
                 <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <h4>Tehtävä 4.1</h4>
