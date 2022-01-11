@@ -3,6 +3,7 @@ import * as React from 'react'
 // Step 2: Define your component
 import Layout from '../components/layout'
 import Segment from '../components/segment'
+import Obs from '../components/obs'
 
 const AboutPage = () => {
     return (
@@ -95,8 +96,10 @@ const AboutPage = () => {
                     <li>Potenssilasku: <code>2**3</code> tarkoittaa "2 potenssiin 3".</li>                    
                     
                 </ul>
-                <p>Alla on esimerkki laskutoimitusten käytöstä. Huomaa <code>import</code> käsky jolla otetaan käyttöön <code>math</code> <em>kirjasto</em>, joka sisältää useita hyödyllisiä
-                matematiikkaan liittyviä funktioita! </p>
+                <p>Alla on esimerkki laskutoimitusten käytöstä.</p> 
+                <Obs><code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
+                matematiikkaan liittyviä funktioita! </Obs>
+                <br/>
                 <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <h4>Tehtävä 4.1</h4>
                 <p>Kokeile laskea "kymmenen potenssiin viisi". Muistathan printata tuloksen.</p>
@@ -112,16 +115,18 @@ const AboutPage = () => {
                 <ul>
                     <li>Kokonaisluku eli <code>integer</code></li>
                     <li>Desimaaliluku eli <code>floating point number</code></li>
-                    <li>Teksti eli <code>string</code></li>
+                    <li>Merkkijono ("tekstiä") eli <code>string</code></li>
                     <li>Lista</li>
                 </ul>
                 <p>Alla olevassa koodissa on määritelty kokonaislukumuuttuja, desimaalilukumuuttuja sekä kaksi listaa. Huomaathan että Python-ohjelmointikielessä ei tarvitse millään tavalla
                     erikseen kertoa minkä tyyppinen muuttuja on kyseessä, Python päättelee sen itse kun muuttujalle asetetaan arvo.</p>
-                <p>Huomaa että alla olevaan koodiin on lisätty kommentteja käyttäen hyväksi risuaitaa tai "hashtagia" (<code>#</code>). Kommentit eivät ole suoritettavaa
-                ohjelmakoodia. Kn ohjelma ajetaan Python-kääntäjä ignooraa kommentit</p>
+                <Obs>Alla olevaan koodiin on lisätty <em>kommentteja</em> käyttäen hyväksi risuaitaa tai "hashtagia" (<code>#</code>). Kommentit eivät ole suoritettavaa
+                ohjelmakoodia. Kun ohjelma ajetaan Python-kääntäjä ignooraa kommentit. Jos kommentit häiritsevät sinua, voit poistaa ne.</Obs>
+                <Obs>Merkkijonon nimitys <code>string</code> ei liity bikineihin vaan se tarkoittaa "nauhaa". Nimitys on todennäköisesti peräisin ajoilta, jolloin
+                tietokoneita todellakin ohjelmoitiin syöttämällä niille nauhaa, jossa oli käskyjä.</Obs>
                 <p>Kokeile ajaa koodi ja tee alla olevat tehtävät!</p>
 
-                <iframe src="https://trinket.io/embed/python3/9fb9364433?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <iframe src="https://trinket.io/embed/python3/7e56f73972?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 <h4>Tehtävä 5.1</h4>
                 <p>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista1</code>:n viimeisen alkion</p>
                 <h4>Tehtävä 5.2</h4>
@@ -132,6 +137,8 @@ const AboutPage = () => {
                 <p>Muokkaa ohjelmaa siten että muuttujaan <code>summa</code> lasketaan <code>lista1</code>:n ensimmäisen ja viimeisen jäsenen summa.</p>
                 <h4>Tehtävä 5.5</h4>
                 <p>Muuttuja luodaan kun sille asetetaan jokin arvo. Kokeile voiko muuttujan arvoa muuttaa jälkikäteen.</p>
+                <h4>Tehtävä 5.6</h4>
+                <p>Testaa voiko kokonaisluku- ja desimaalilukutyyppiset muuttujat laskea yhteen? Entäpä kokonaisluku ja merkkijono? Entä kaksi merkkijonoa?</p>
 
             </Segment>
 
@@ -146,9 +153,7 @@ const AboutPage = () => {
                 <p>Kontekstivapaa kielioppi tekee ohjelmointikielien käyttämisestä hyvin joustavaa! Alla oleva esimerkki laskee hypotenuusan pituuden suorakulmaiselle kolmiolle, jonka
                     sivun pituudet ovat 3 ja 4.</p>
                 <iframe src="https://trinket.io/embed/python3/b736899201" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <p>Koodi toimii aikalailla siten että "lasketaan muttujien a ja b neliöt,
-                    jotka summataan, ja summa syötetään neliöjuuri-funktiolle ja jonka tulos syötetään print-funktiolle, joka tulostaa neliöjuuren arvon".</p>
-
+                
                 <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <code>2x + 1</code> mikään ei estä sinua sijoittamasta
                     muuttujan <code>x</code> tilalle vaikkapa lauseketta <code>y + 1</code>, jolloin saadaan lauseke <code>2(y + 1) + 1</code>. Konteksivapaa siis tarkoittaa sitä, että
                     "riippumatta siitä mitä <code>x</code>:n 'ympärillä' on (konteksti) voit silti sijoittaa <code>x</code>:n tilalle lausekkeen <code>y + 1</code>". Joitain rajoituksia
