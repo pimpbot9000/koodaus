@@ -49,10 +49,18 @@ const AboutPage = () => {
             <p>Muuttuja ohjelmointikielessä on hieman eri asia kuin matematiikassa. Matematiikassa muuttuja kuvaa jotain "random" lukua, ohjelmointikielessä muuttuja
                 taas on eräänlainen lokero, johon voidaan sijoittaa esimerkiksi luku tai vaikkapa tekstiä. Tietokone siis "muistaa" mikä luku tai teksti muuttujaan - tai lokeroon - on tallennettu, ja tietokone
                 osaa suorittaa näiden muistissa olevien lukujen avulla esim. laskutoimituksia.</p>
+            
+            <Obs>
+                Muuttujan ero matematiikassa ja ohjelmointikielissä:
+                <ul>
+                    <li>Matematiikassa muuttuja kuvaa jotain "random" lukua.</li>
+                    <li>Ohjelmointikielissä muuttujalla on aina jokin arvo (joka on tietokoneen muistissa ohjelmaa suoritettaessa).</li>
+                </ul>
+            </Obs>
 
             <Segment title="2. Muuttujat">
                 <p>Alla olevassa sovelluksessa on asetettu muuttujille <code>a</code>, <code>b</code> ja <code>nimi</code> arvot. Kun muuttujalle asetetaan arvo,
-                    muuttuja (eli muistilokero) taianomaisesti luodaan. Huomaa että muuttujien <code>a</code> ja <code>b</code> arvot ovat kokonaislukuja (<code>integer</code>) kun taas
+                    muuttujaa voidaan käyttää jatkossa esimerkiksi laskutoimituksissa. Huomaa että muuttujien <code>a</code> ja <code>b</code> arvot ovat kokonaislukuja (<code>integer</code>) kun taas
                     muuttujan <code>nimi</code> arvo on tekstiä (<code>string</code>).</p>
                 <Obs>
                     Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
@@ -72,7 +80,7 @@ const AboutPage = () => {
                 <iframe src="https://trinket.io/embed/python3/59b7d176f4?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
                 <Obs>
-                    <p>Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.</p>
+                    <p> Merkki <code>=</code> ei ole sama asia kuin matematiikassa. Python ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.</p>
                     <p> Käsky <Code>a = 3</Code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
                         muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.</p>
 
@@ -92,6 +100,12 @@ const AboutPage = () => {
                 <h5>Tehtävä 2.2</h5>
                 <p>Muokkaa ohjelmaa siten että muuttujan <code>etunimi</code> arvoksi asetetaan <code>"jasu"</code> ja muuttujan <code>sukunimi</code> arvoksi asetetaan <code>"petteri"</code>.
                     Lisäksi, muuttujan <code>koko_nimi</code> arvoksi asetetaan muuttujien <code>etunimi</code> ja <code>sukunimi</code> summa (??). Aja koodi ja ihmettele tulosta!</p>
+                <h5>Tehtävä 2.3</h5>
+                <p>
+                    Laita ohjelma tulostamaan jonkin sellaisen muuttujan arvo jota ei ole määritelty, esim. <Code>print(e)</Code> käskyn avulla. Katso tarkasti mitä
+                    virheilmoitus sanoo.
+
+                </p>
             </Segment>
 
             <Segment title="3. Useampi argumentti print-funktiolle">
@@ -179,23 +193,16 @@ const AboutPage = () => {
 
             </Segment>
 
-            <Segment title="*6. Kontekstivapaa kieli">
+            <Segment title="*6. Suoritusjärjestys">
                 <p>Tarkastellaan ensin alla olevaa ohjelmaa. Tässä vaiheessa lienee jo selvää mitä ohjelma tekee mutta kokeile silti ajaa ohjelma.</p>
                 <iframe src="https://trinket.io/embed/python3/f8538f5976?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <p>Entäpä toimiiko tämä seuraavasti? Kokeile ajaa ohjelma.</p>
-                <iframe src="https://trinket.io/embed/python3/c8f6312148?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <p>Kuten huomaat, ohjelma toimii molemmilla tavoilla. Ohjelmointikielet muodostavat niin sanotun kontekstivapaan kielen, jonka merkitys (menemättä yksityiskohtiin) ilmeni edellisissä ohjelmakoodeissa:
-                    "jos siihen voi laittaa muuttujan tai luvun, siihen voi myös laittaa laskutoimituksen tai vertailuoperaattorin, tai funktion joka palauttaa arvon!".
-                </p>
+                <p>Rivin 6 käsky suoritetaan seuraavassa järjestyksessä</p>
+                <ul>
+                    <li>Ensiksi lasketaan lausekkeen <Code>a**2 + b**2</Code> arvo käyttämällä hyväksi muuttujan <code>a</code> ja <code>b</code> arvoja.</li>
+                    <li>Saatu arvo syötetään funktiolle <code>sqrt</code>.</li>
+                    <li>Funktion <code>sqrt</code> arvo sijoitetaan muuttujan <code>c</code> arvoksi.</li>
+                </ul>
 
-                <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <Code>2x + 1</Code> mikään ei estä sinua sijoittamasta
-                    muuttujan <code>x</code> tilalle vaikkapa lauseketta <Code>y + 1</Code>, jolloin saadaan lauseke <Code>2(y + 1) + 1</Code>. Konteksivapaa siis tarkoittaa sitä, että
-                    "riippumatta siitä mitä <code>x</code>:n 'ympärillä' on (konteksti) voit silti sijoittaa muuttujan <code>x</code> tilalle lausekkeen <Code>y + 1</Code>". Joitain rajoituksia
-                    kontekstivapaissakin kieliopeissa on: et voi esimerkiksi sijoittaa lausekkeessa <Code>2x + 1</Code> muuttujan <code>x</code> tilalle yhtälöä <Code> y = 1 </Code>,
-                    koska <Code>2(y = 1) + 1</Code> rikkoo matematiikan "kielioppisääntöjä". Samalla tavalla ohjelmointikielissä voi kirjoittaa käskyjä jotka rikkovat ohjelmointikielen
-                    kielioppisääntöjä. Tällöin tietokone ei suorita ohjelmaa koska tietokone ei osaa tulkita mitä sen pitäisi tehdä.
-                </p>
-                <p>Tällöin kääntäjä antaa virheilmoituksen <code>syntax error</code>, joka tarkoittaa "kielioppivirhe!"</p>
 
             </Segment>
 
