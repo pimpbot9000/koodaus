@@ -1,6 +1,5 @@
-// Step 1: Import React
 import * as React from 'react'
-// Step 2: Define your component
+import '../components/layout.css'
 import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
@@ -35,11 +34,11 @@ const AboutPage = () => {
                 <p>Kokeile painaa play-nappulaa alla, jolloin alla oleva ohjelma <code>suoritetaan</code> eli <code>ajetaan</code>. Näet ohjelman tulostaman tekstin
                     oikeanpuoleisessa ruudussa.</p>
                 <iframe src="https://trinket.io/embed/python3/cd26036c40?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <h4>Tehtävä 1.1</h4>
+                <h5>Tehtävä 1.1</h5>
                 <p>Muokkaa ylläolevaa koodia siten, että <code>Hello, world!</code>-tekstin sijasta tulostuu teksti <code>Hei maailma!</code></p>
-                <h4>Tehtävä 1.2</h4>
+                <h5>Tehtävä 1.2</h5>
                 <p>Lisää edelliseen sovellukseen toinen <code>print</code>-käsky edellisen alle, joka tulostaa ...noh, mitä nyt ikinä keksitkin.</p>
-                <h4>Tehtävä 1.3</h4>
+                <h5>Tehtävä 1.3</h5>
                 <p>Lisää edelliseen sovellukseen vielä kolmaskin <code>print</code>-käsky!</p>
             </Segment>
             <p>Onneksi olkoon! Olet selvinnyt ensimmäisestä haasteesta. Tähän mennessä olet oppinut sekä hyödyllisen <code>print</code>-käskyn, että sen, että tietokone suorittaa annetut käskyt peräjälkeen alusta loppuun.</p>
@@ -86,11 +85,11 @@ const AboutPage = () => {
                     <p>Kuten edellisestä selviää käsky <Code>c = a + b</Code> siis toimii eräällä tapaa "oikealta vasemmalle".</p>
                 </Obs>
 
-                <h4>Tehtävä 2.1</h4>
+                <h5>Tehtävä 2.1</h5>
                 <p>Lisää koodiin muuttuja <code>d</code> johon sijoitetaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
                     Käske tietokonetta myös tulostamaan muuttujan <code>d</code> arvo, jotta näet mitä tapahtuu.
                 </p>
-                <h4>Tehtävä 2.2</h4>
+                <h5>Tehtävä 2.2</h5>
                 <p>Muokkaa ohjelmaa siten että muuttujan <code>etunimi</code> arvoksi asetetaan <code>"jasu"</code> ja muuttujan <code>sukunimi</code> arvoksi asetetaan <code>"petteri"</code>.
                     Lisäksi, muuttujan <code>koko_nimi</code> arvoksi asetetaan muuttujien <code>etunimi</code> ja <code>sukunimi</code> summa (??). Aja koodi ja ihmettele tulosta!</p>
             </Segment>
@@ -101,14 +100,14 @@ const AboutPage = () => {
                     Myöhemmin selviää miksi käsky <code>print</code> ei ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan.
                 </p>
 
-                <p>Jos print-funktiolle annetaan useampi inputti (<em>argumentti</em>), nämä tulee erottaa toisistaan pilkulla.</p>
+                <Obs>Jos print-funktiolle annetaan useampi argumentti, nämä tulee erottaa toisistaan pilkulla.</Obs>
 
                 <p>Katselmoidaan alla olevaa esimerkkiä: Suorita ohjelma!</p>
                 <iframe src="https://trinket.io/embed/python3/6ff25d8c71?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <h4>Tehtävä 3.1</h4>
+                <h5>Tehtävä 3.1</h5>
                 <p>Tee vastaavanlainen ohjelma siten että määrittelet kaksi muuttujaa <code>nimi</code> ja <code>fav_color</code> asettamalla näille jotkin arvot. Lisäksi ohjelman tulee
                     tulostaa (esimerkiksi) teksti <code>tyypin Tumppu lempiväri on sininen</code> käyttämällä hyväksi em. muuttujan arvoja.</p>
-                <h4>Tehtävä 3.2</h4>
+                <h5>Tehtävä 3.2</h5>
                 <p>Lisää ohjelmaan vielä kolmas muuttuja nimeltä <code>fav_animal</code> ja aseta tälle vaikka arvo <code>"pupu"</code>. Ohjelman tulee tulostaa muuttujien avulla
                     (esimerkiksi) teksti <code>tyypin Tumppu lempiväri on sininen ja suosikkieläin on pupu.</code></p>
             </Segment>
@@ -131,19 +130,19 @@ const AboutPage = () => {
                     uudestaan. Tämä <a href="https://xkcd.com/413/">nöräsarjakuva</a> havainnollistaa sitä, että Pythonille löytyy kaikki mahdollinen ja mahdoton valmiiksi
                     toteutettuna kirjastoina.</Obs>
                 <br />
-                <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                <h4>Tehtävä 4.1</h4>
+                <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <h5>Tehtävä 4.1</h5>
                 <p>Kokeile laskea "kymmenen potenssiin viisi". Muistathan printata tuloksen.</p>
-                <h4>Tehtävä 4.2</h4>
+                <h5>Tehtävä 4.2</h5>
                 <p>Suoraan syvään päähän: Jos suorakulmion kateettien pituudet ovat 2 ja 3, laske hypotenuusan pituus Pythonin ja Pythagoraan lauseen avulla. Käytä muuttujia kateettien
                     pituuksina!</p>
-                <h4>Tehtävä 4.3</h4>
+                <h5>Tehtävä 4.3</h5>
                 <p>Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>math</code>-kirjastosta tuotu <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka arvoksi on valmiiksi
                     asetettu et ikinä arvaa mikä)</p>
             </Segment>
 
             <Segment title="5. Muuttujatyypit">
-                <p>Ohjelmointikielessä on useita eri muuttuja tai tietotyyppejä. Tulemme kurssin puitteissa käyttämään seuraavia:</p>
+                <p>Ohjelmointikielessä on useita eri muuttuja- tai tietotyyppejä. Tulemme kurssin puitteissa käyttämään seuraavia:</p>
                 <ul>
                     <li>Kokonaisluku eli <code>integer</code></li>
                     <li>Desimaaliluku eli <code>floating point number</code></li>
@@ -162,18 +161,21 @@ const AboutPage = () => {
                 <Obs>
                     Kenties huomasit tarkastelemalla esimerkkikoodia että listan alkioiden numerointi lähtee nollasta?
                 </Obs>
-                <h4>Tehtävä 5.1</h4>
-                <p>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista1</code>:n viimeisen alkion</p>
-                <h4>Tehtävä 5.2</h4>
-                <p>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista2</code>:n toisen alkion</p>
-                <h4>Tehtävä 5.3</h4>
-                <p>Testaa mitä tapahtuu, jos yrität tulostaa jommankumman listan kuudennen (tai sadannen!) alkion.</p>
-                <h4>Tehtävä 5.4</h4>
+                <h5>Tehtävä 5.1</h5>
+                <ul>
+                    <li>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista1</code>:n viimeisen alkion</li>
+                    <li>Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista2</code>:n toisen alkion</li>
+                    <li>Testaa mitä tapahtuu, jos yrität tulostaa jommankumman listan kuudennen (tai sadannen!) alkion.</li>
+                </ul>
+                <h5>Tehtävä 5.2</h5>
                 <p>Muokkaa ohjelmaa siten että muuttujaan <code>summa</code> lasketaan <code>lista1</code>:n ensimmäisen ja viimeisen alkion summa.</p>
-                <h4>Tehtävä 5.5</h4>
+                <h5>Tehtävä 5.3</h5>
                 <p>Muuttuja luodaan kun sille asetetaan jokin arvo. Kokeile voiko muuttujan arvoa muuttaa jälkikäteen.</p>
-                <h4>Tehtävä 5.6</h4>
-                <p>Testaa voiko kokonaisluku- ja desimaalilukutyyppiset muuttujat laskea yhteen? Entäpä kokonaisluku ja merkkijono? Entä kaksi merkkijonoa?</p>
+                <h5>Tehtävä 5.4</h5>
+                <p>Testaa voiko kokonaisluku- ja desimaalilukutyyppiset muuttujat laskea yhteen? Entäpä kokonaisluku ja merkkijono? Entä kaksi merkkijonoa? Alla
+                    olevassa koodissa on valmiiksi määritelty muutamia muuttujia testaamista varten</p>
+                    <iframe src="https://trinket.io/embed/python3/a0db8dae6b?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                
 
             </Segment>
 
@@ -185,9 +187,6 @@ const AboutPage = () => {
                 <p>Kuten huomaat, ohjelma toimii molemmilla tavoilla. Ohjelmointikielet muodostavat niin sanotun kontekstivapaan kielen, jonka merkitys (menemättä yksityiskohtiin) ilmeni edellisissä ohjelmakoodeissa:
                     "jos siihen voi laittaa muuttujan tai luvun, siihen voi myös laittaa laskutoimituksen tai vertailuoperaattorin, tai funktion joka palauttaa arvon!".
                 </p>
-                <p>Kontekstivapaa kielioppi tekee ohjelmointikielien käyttämisestä hyvin joustavaa! Alla oleva esimerkki laskee hypotenuusan pituuden suorakulmaiselle kolmiolle, jonka
-                    sivun pituudet ovat 3 ja 4.</p>
-                <iframe src="https://trinket.io/embed/python3/b736899201" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
                 <p>Eräs kontekstivapaa kielioppi sinulle onkin jo entuudestaan tuttu, nimittäin matematiikan lausekkeet. Jos on lauseke <Code>2x + 1</Code> mikään ei estä sinua sijoittamasta
                     muuttujan <code>x</code> tilalle vaikkapa lauseketta <Code>y + 1</Code>, jolloin saadaan lauseke <Code>2(y + 1) + 1</Code>. Konteksivapaa siis tarkoittaa sitä, että

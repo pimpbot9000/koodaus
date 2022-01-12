@@ -42,7 +42,7 @@ const MathPage = () => {
                 mennessä nähty luku" (<code>max_value</code>) asetetaan muuttujan <code>max_value</code> arvoksi muuttujan <code>x</code> arvo. </li>
             </ul>
             <iframe src="https://trinket.io/embed/python3/b73ba4628c?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>Tehtävä 1.1</h4>
+            <h5>Tehtävä 1.1</h5>
             <p>Muokkaa ohjelmaa siten että se etsii listan pienimmän luvun. Ensimmäisenä tietysti nimetään muuttuja <code>max_value</code> uudestaan (<code>min_value</code>). Pohdi tarkkaan mikä
             nyt asetetaan muuttujan <code>min_value</code> alkuperäiseksi arvoksi.</p>
         </Segment>
@@ -60,9 +60,9 @@ const MathPage = () => {
             </Obs>
 
         <iframe src="https://trinket.io/embed/python3/88d75f3113?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>Tehtävä 2.1</h4>
+            <h5>Tehtävä 2.1</h5>
             <p>Muokkaa ohjelmaa siten, että se laskee kuinka paljon ostokset maksavat yhteensä.</p>
-            <h4>Tehtävä 2.2</h4>
+            <h5>Tehtävä 2.2</h5>
             <p>Tee sovellus, joka laskee lukujen 1, 2, 3, 4, ..., 999, 1000 summan. Alla olevalla koodinpätkällä pääset alkuun. Kokeile ensin ajaa ohjelma, jossa saat käsityksen siitä,
                 miten <code>range</code>-funktio toimii.
             </p>

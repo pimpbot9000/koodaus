@@ -10,7 +10,7 @@ const MathPage = () => {
             mm. Pythagoraan lausetta ja palautamme mieleen mikä suoran kulmakerroin taas olikaan.</p>
 
         <Segment title="1. Pythagoraan lause">
-            <h4>Tehtävä 1.1</h4>
+            <h5>Tehtävä 1.1</h5>
             <p>Laajenna alla olevaa sovellusta seuraavasti:</p>
             <ul>
                 <li>Ohjelman tulee kysyy käyttäjältä toisenkin kateetin pituus ja tallentaa tämä muuttujaan <code>kateetti2</code>.</li>
@@ -35,11 +35,11 @@ const MathPage = () => {
             </Obs>
             <p>Aivan ensimmäiseksi, testaa ohjelman toimintaa antamalla syötteeksi jokin koordinaatti. Ohjelman tulisi tulostaa erikseen syöttämäsi koordinaatin x- ja y-koordinaatit.</p>
             <iframe src="https://trinket.io/embed/python3/40bf843ca7?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>Tehtävä 2.1</h4>
+            <h5>Tehtävä 2.1</h5>
             <p>Laajenna ohjelmaa siten, että se lukee käyttäjältä myös toisen pisteen koordinaatit. Annan näille vaikka nimet <code>x2</code> ja <code>y2</code>.</p>
-            <h4>Tehtävä 2.2</h4>
+            <h5>Tehtävä 2.2</h5>
             <p>Nyt kun ohjelma lukee kahden pisteen koordinaatti, koodistele tietokone laskemaan pisteiden välinen etäisyys</p>
-            <h4>Tehtävä 2.3</h4>
+            <h5>Tehtävä 2.3</h5>
             <p>Tee lopuksi funktio, jonka avulla pisteiden välinen etäisyys lasketaan. Huomaa että funktiolle tulee antaa 4 eri arvoa argumenttina!</p>
         </Segment>
 
@@ -47,9 +47,9 @@ const MathPage = () => {
 
             <p>Oletko käynyt New Yorkissa tai jopa niinkin eksoottisessa paikassa kuin Helsingin keskustassa. Pythagoraan lauseen avulla voidaan laskea kahden pisteen välinen etäisyys
                 "linnuntietä" pitkin, mutta kaupungeissa emme voi tietenkään liikkua linnuntietä pitkin.</p>
-            <h4>Tehtävä 3.1</h4>
+            <h5>Tehtävä 3.1</h5>
             <p>Googlaa mitä Manhattan-etäisyys tarkoittaa ja pohdi miten tämä lasketaan kahden koordinaatin avulla.</p>
-            <h4>Tehtävä 3.2</h4>
+            <h5>Tehtävä 3.2</h5>
             <p>Muokkaa alla olevaa koodia siten, että funktio <code>manhattan_distance</code> laskee ja palauttaa kahden pisteen välisen Manhattan-etäisyyden arvon. Käytä funktiota
                 hyväksi siten, että sen avulla lasketaan käyttähän syöttämien koordinaattien Manhattan-etäisyys.</p>
             <Obs>
@@ -61,7 +61,7 @@ const MathPage = () => {
         <Segment title="*5. Yhtälöparin ratkaisu, Never Again!">
             <p>Viimeisenä muttei vähäisimpänä, yhtälöparin ratkaisu.</p>
             <p> Ensimmäisenä otat kynän ja paperin käteen ja ratkaiset yhtälöparin ns. yleisessä muodossa.</p>
-            <h4>Tehtävä 5.1</h4>
+            <h5>Tehtävä 5.1</h5>
             <p>Laajenna alla olevaa koodia siten, ettei sinun tarvitse ratkaista enää yhtään yhtälöparia käsin!</p>
             <iframe src="https://trinket.io/embed/python3/62e5a77638?runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
         </Segment>

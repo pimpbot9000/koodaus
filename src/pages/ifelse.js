@@ -39,7 +39,7 @@ const IfElsePage = () => {
                     <li>suurempi tai yhtäsuuri kuin: <Code>&gt;=</Code> </li>
                 </ul>
             </Obs>
-            <h4>Tehtävä 1.1</h4>
+            <h5>Tehtävä 1.1</h5>
             <p> Laajenna alla olevaa ohjelmaa siten, että käytät if-else -rakennetta seuravasti:</p>
                 <ul>
                     <li>Jos käyttäjän syöttämä luku on suurempi kuin 1000 tulostuu teksti "Ohhoh!"</li>
@@ -48,7 +48,7 @@ const IfElsePage = () => {
                 <p>Huomaa että funktio <code>read_int</code> lukee syötteenä kokonaisluvun.</p>
         
             <iframe src="https://trinket.io/embed/python3/cb6b4e6668?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>Tehtävä 1.2</h4>
+            <h5>Tehtävä 1.2</h5>
             <p> Muokkaa ohjelmaa siten, että se pyytää kaksi kokonaislukua käyttäjältä, laskee lukujen summan ja tulostaa tekstin "Yli sata", jos lukujen summa on yli sata, muuten
                 tulostetaan teksti "alle sata".
             </p>
@@ -70,11 +70,11 @@ const IfElsePage = () => {
             <Obs>
                 Rakenteesta voidaan jättää kokonaan <code>else</code> pois ja itse asiassa useissa tilanteissa riittää pelkkä yksittäinen <code>if</code>.
             </Obs>
-            <h4>Tehtävä 2.1</h4>
+            <h5>Tehtävä 2.1</h5>
             <p>Lisää yllä olevaan esimerkkiin vielä yksi <code>elif</code></p>
-            <h4>Tehtävä 2.2</h4>
+            <h5>Tehtävä 2.2</h5>
             <p>Kokeile ottaa <code>else</code>-osio pois ja testaa ohjelman toimintaa</p>
-            <h4>Tehtävä 2.3</h4>
+            <h5>Tehtävä 2.3</h5>
             <p>Tee ohjelma, joka toimii seuraavasti</p>
             <ul>
                 <li>Ohjelma lukee kokonaislukusyötteen käyttäjältä (funktio <code>read_int</code>).</li>
@@ -82,7 +82,7 @@ const IfElsePage = () => {
                 <li>Jos tulos on pienempi kuin nolla tulostuu teksti "negatiivinen luku".</li>
                 <li>... muutoin tulostuu teksti "jotain siltä väliltä".</li>
             </ul>
-            <h4>Tehtävä 2.4</h4>
+            <h5>Tehtävä 2.4</h5>
             <p>Tee ohjelma, joka toimii seuraavasti</p>
             <ul>
                 <li>Ohjelma lukee kokonaislukusyötteen käyttäjältä (funktio <code>read_int</code>).</li>
@@ -95,10 +95,10 @@ const IfElsePage = () => {
                 tehtävänannossa olevaan järjestykseen, ohjelma ei koskaan tulosta tekstiä "negatiivinen luku". Pohdi miksi ei ja korjaa sovellus niin että ohjelma
                 toimii "oikein".
             </Obs>
-            <h4>Tehtävä 2.5</h4>
+            <h5>Tehtävä 2.5</h5>
             <p>Tehdään "laskin", joka osaa kaksi eri laskutoimitusta, plus- ja kertolaskun ja kertoo meille laskutoimituksen tuloksen. Alla on valmis pohja, jota voit täydentää.</p>
             <iframe src="https://trinket.io/embed/python3/0dc64f2228?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            <h4>Tehtävä 2.6</h4>
+            <h5>Tehtävä 2.6</h5>
             <p>Lisää laskimeen vielä miinus- ja jakolasku</p>
         </Segment>
 
