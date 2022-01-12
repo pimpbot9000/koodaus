@@ -114,7 +114,7 @@ const AboutPage = () => {
                     Myöhemmin selviää miksi käsky <code>print</code> ei ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan.
                 </p>
 
-                <Obs>Jos print-funktiolle annetaan useampi argumentti, nämä tulee erottaa toisistaan pilkulla.</Obs>
+                <Obs>Jos <code>print</code>-funktiolle annetaan useampi argumentti, nämä tulee erottaa toisistaan pilkulla.</Obs>
 
                 <p>Katselmoidaan alla olevaa esimerkkiä: Suorita ohjelma!</p>
                 <iframe src="https://trinket.io/embed/python3/6ff25d8c71?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
