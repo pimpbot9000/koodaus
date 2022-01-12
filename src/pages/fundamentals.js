@@ -55,6 +55,18 @@ const AboutPage = () => {
                 <p>Alla olevassa sovelluksessa on asetettu muuttujille <code>a</code>, <code>b</code> ja <code>nimi</code> arvot. Kun muuttujalle asetetaan arvo,
                     muuttuja (eli muistilokero) taianomaisesti luodaan. Huomaa että muuttujien <code>a</code> ja <code>b</code> arvot ovat kokonaislukuja (<code>integer</code>) kun taas
                     muuttujan <code>nimi</code> arvo on tekstiä (<code>string</code>).</p>
+                <Obs>
+                    Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
+                    <ul>
+                        <li>Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim. <code>tyypin_etunimi</code>.</li>
+                        <li>Muuttujan nimessä ei voi olla välilyöntejä.</li>
+                        <li>Muuttujien nimessä ei saa olla ääkkösiä (ä, ö, å)</li>
+                        <li>Muuttujan nimessä saa olla numeroita mutta muuttujan nimi ei saa alkaa numerolla</li>
+                    </ul>
+                    <p>Se että muuttujan nimissä ei saa olla ääkkösiä, ei haittaa sillä ohjelmointia useimmiten tehdään "englanniksi". Toki suomen kieltäkin saa käyttää
+                        mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi. Tässä materiaalissa on välillä
+                        käytetty sekä suomen kielisiä että englanninkielisiä muuttujien nimiä. Toivottavasti pystyt elämään tämän kanssa :)</p>
+                </Obs>
 
                 <p>Kokeile painaa play-nappulaa ja kiinnitä huomiota siihen mitä ohjelma tulostaa.</p>
 
@@ -73,18 +85,7 @@ const AboutPage = () => {
                     </ul>
                     <p>Kuten edellisestä selviää käsky <Code>c = a + b</Code> siis toimii eräällä tapaa "oikealta vasemmalle".</p>
                 </Obs>
-                <Obs>
-                    Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
-                    <ul>
-                        <li>Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim. <code>tyypin_etunimi</code>.</li>
-                        <li>Muuttujan nimessä ei voi olla välilyöntejä.</li>
-                        <li>Muuttujien nimessä ei saa olla ääkkösiä (ä, ö, å)</li>
-                        <li>Muuttujan nimessä saa olla numeroita mutta muuttujan nimi ei saa alkaa numerolla</li>
-                    </ul>
-                    <p>Se että muuttujan nimissä ei saa olla ääkkösiä, ei haittaa sillä ohjelmointia useimmiten tehdään "englanniksi". Toki suomen kieltäkin saa käyttää
-                        mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi. Tässä materiaalissa on välillä
-                        käytetty sekä suomen kielisiä että englanninkielisiä muuttujien nimiä. Toivottavasti pystyt elämään tämän kanssa :)</p>
-                </Obs>
+
                 <h4>Tehtävä 2.1</h4>
                 <p>Lisää koodiin muuttuja <code>d</code> johon sijoitetaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
                     Käske tietokonetta myös tulostamaan muuttujan <code>d</code> arvo, jotta näet mitä tapahtuu.
