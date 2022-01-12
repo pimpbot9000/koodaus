@@ -3,6 +3,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
+import Code from '../components/code'
 
 const MathPage = () => {
     return <Layout pageTitle="Algoritmit">
@@ -29,7 +30,7 @@ const MathPage = () => {
 
         <p>Edellisellä algoritmilla itseasiassa nimikin, nimeltä puolitushaku (Binary search algorithm).</p>
 
-        
+        <p>Tässä osiossa ohjelmoimme muutaman yksinkertaisen algoritmin</p>        
 
 
         <Segment title="1. Isoimman luvun etsiminen listasta">
@@ -38,21 +39,36 @@ const MathPage = () => {
             <ul>
                 <li>Olkoon "suurin tähän mennessä nähty luku" <code>max_value</code>. Jos kaikki listan luvut ovat positiivisia asetetaan tämän arvoksi 0.</li>
                 <li>Käydään läpi jokainen listan luku ja suoritetaan seuraava operaatio: Jos tämänhetkinen luku (<code>x</code>) on suurempi kuin "suurin tähän
-                mennessä nähty luku (<code>max_value</code>) asetetaan muuttujan <code>max_value</code> arvoksi muuttujan <code>x</code> arvo. </li>
+                mennessä nähty luku" (<code>max_value</code>) asetetaan muuttujan <code>max_value</code> arvoksi muuttujan <code>x</code> arvo. </li>
             </ul>
             <iframe src="https://trinket.io/embed/python3/b73ba4628c?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <h4>Tehtävä 1.1</h4>
-            <p>Muokkaa ohjelmaa siten että se etsii listan pienimmän luvun. Vinkki: nimeä muuttuja <code>max_value</code> uudestaa -> <code>min_value</code> ja aseta muuttujan <code>min_value</code> arvoksi jokin hyvin iso luku (idiksenä tässä on se mitä tapahtuu 
-            kun verrataan ekaa lukua muuttujan <code>min_value</code> arvoon).</p>
+            <p>Muokkaa ohjelmaa siten että se etsii listan pienimmän luvun. Ensimmäisenä tietysti nimetään muuttuja <code>max_value</code> uudestaan (<code>min_value</code>). Pohdi tarkkaan mikä
+            nyt asetetaan muuttujan <code>min_value</code> alkuperäiseksi arvoksi.</p>
         </Segment>
 
         <Segment title="2. Listan lukujen summa">
+            <p>Tyypillä on 100 € rahaa. Tyyppi on tehnyt ostoslistan, johon hän on merkinnyt niiden tuotteiden hinnan, jotka hän aikoo ostaa Alepasta.</p>
+            <p>Tyyppi ei halua laskea päässä kuinka paljon hänellä jää rahaa jäljelle. Tätä varten hän kirjoittaa Python-kielisen sovelluksen, joka löytyy alta.</p>
+            <Obs>
+                <p>Tarkastellaan rivin 6 käskyä. Käsky suoritetaan (oikealta vasemmalle) seuraavasti:</p>
+                <ul>
+                    <li>Muuttujan <code>money</code> arvosta vähennetään muuttujan <code>x</code> arvo</li>
+                    <li>Saatu arvo asetetaan muuttujan <code>money</code> (uudeksi) arvoksi.</li>
+                </ul>
+                <p>Edellinen toistetaan jokaiselle listan luvulle, joten saamme selville kuinka paljon rahaa jäi jäljelle.</p>
+            </Obs>
 
+        <iframe src="https://trinket.io/embed/python3/88d75f3113?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            <h4>Tehtävä 2.1</h4>
+            <p>Muokkaa ohjelmaa siten, että se laskee kuinka paljon ostokset maksavat yhteensä.</p>
+            <h4>Tehtävä 2.2</h4>
+            <p>Tee sovellus, joka laskee lukujen 1, 2, 3, 4, ..., 999, 1000 summan. Alla olevalla koodinpätkällä pääset alkuun. Kokeile ensin ajaa ohjelma, jossa saat käsityksen siitä,
+                miten <code>range</code>-funktio toimii.
+            </p>
+            <iframe src="https://trinket.io/embed/python3/123c5b848e?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
         </Segment>
 
-        <Segment title='3. "kättelyalgoritmi"'>
-
-        </Segment>
 
     </Layout>
 }

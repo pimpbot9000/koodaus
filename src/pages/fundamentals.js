@@ -9,7 +9,7 @@ import Code from '../components/code'
 
 const AboutPage = () => {
     return (
-        <Layout pageTitle="Never send a human to do a machines job!">
+        <Layout pageTitle="Never send a human to do a machines job">
             <p>(Agent Smith, <em>The Matrix</em>, 1999)</p>
             <p>Tietokonetta ohjelmoidaan kirjoittamalla lähdekoodia jollain ohjelmointikielellä. Lähdekoodi käännetään (tai tulkataan!) tietokoneen ymmärtämään
                 muotoon, jonka jälkeen tietokone osaa ajaa eli suorittaa ohjelman. Täsmällisemmin sanonuttuna lähdekoodin avulla tietokoneelle kirjoitetaan joukko <code>käskyjä</code>,
@@ -29,13 +29,6 @@ const AboutPage = () => {
                 ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajarobotteja. Pythonin tulkkaamisen
                 hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".
                 Python onkin nykypäivänä yksi käytetyimmästä ohjelmointikielestä koska se on niin "ihmisystävällinen".</p>
-
-            <Obs>
-                Tekoälyn avulla tietokone voi nykyään oppia tekemään asioita, mutta tekoälyalgoritmitkin on joku ihminen ohjelmoinut. Tosin teko"älykin" on hyvin
-                rajattua: jos algoritmi on ohjelmoitu oppimaan
-                suosittelemaan sinulle TikTok-videoita aiemmin tykkäämiesi videoiden perusteella (oppimaan), ei se muuta osaa tehdä.
-
-            </Obs>
 
             <Segment title="1. Eka ohjelma">
                 <p>Alla on ehkäpä yksinkertaisin mahdollinen ohjelma. Ohjelmassa on vain yksi käsky, joka tulostaa tekstin <code>Hello, world!</code></p>
@@ -103,8 +96,8 @@ const AboutPage = () => {
 
             <Segment title="3. Useampi argumentti print-funktiolle">
                 <p>Olet kenties matematiikassa oppinut jotain funktioista ja erityisesti että funktiolle "syötetään" arvo (input), jolloin funktio pullauttaa jonkin
-                    toisen arvon "ulos" (output). Käyttämämme <code>print</code> on <em>funktio</em>, jolle voi antaa "inputtina" useamman arvon, jolloin nämä arvot tulostuvat samalle riville
-                    (myöhemmin selviää miksi käsky <code>print</code> ei oikeastaan ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan).
+                    toisen arvon "ulos" (output). Käyttämämme <code>print</code> on <em>funktio</em>, jolle voi antaa "inputtina" eli <em>funktion argumenttina</em> useamman arvon, jolloin nämä arvot tulostuvat samalle riville.
+                    Myöhemmin selviää miksi käsky <code>print</code> ei ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan.
                 </p>
 
                 <p>Jos print-funktiolle annetaan useampi inputti (<em>argumentti</em>), nämä tulee erottaa toisistaan pilkulla.</p>
@@ -134,7 +127,7 @@ const AboutPage = () => {
                 <Obs>Alla olevassa koodissa <code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
                     matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).
                     Python on suosittu ohjelmointikieli osittain siksi että Pythonille löytyy lukematon määrä erilaisia kirjastoja, joten jokaista pyörää ei tarvitse keksiä
-                    uudestaan. Tässä <a href="https://xkcd.com/413/">nörttisarjakuvassa</a> vitsaillaan sille että Pythonille löytyy kaikki mahdollinen ja mahdoton valmiiksi
+                    uudestaan. Tämä <a href="https://xkcd.com/413/">nöräsarjakuva</a> havainnollistaa sitä, että Pythonille löytyy kaikki mahdollinen ja mahdoton valmiiksi
                     toteutettuna kirjastoina.</Obs>
                 <br />
                 <iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>

@@ -3,6 +3,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
+import Code from '../components/code'
 
 const InputsPage = () => {
     return <Layout pageTitle="Syötteen lukeminen">
@@ -37,8 +38,11 @@ const InputsPage = () => {
         </Segment>
 
         <Segment title="2. desimaaliluvun lukeminen">
-            <p>TODO</p>
-        </Segment>
+            <p>Testataan vielä <code>read_float()</code>-funktiota, jolla voi lukea desimaalilukuja. Tässä osiossa ei ole tehtäviä.</p>
+            <Obs>
+                Desimaalierottimena tulee käyttää pistettä eikä pilkkua. Ei siis näin <Code>2,5</Code> vaan <Code>2.5</Code>.
+            </Obs>
+            <iframe src="https://trinket.io/embed/python3/098636294b?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>        </Segment>
 
     </Layout>
 }

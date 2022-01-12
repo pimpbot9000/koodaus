@@ -18,7 +18,7 @@ const IfElsePage = () => {
                 <li>Jos (<code>if</code>) muuttujan <code>name</code> arvo on yhtäsuuri kuin <code>Tuomas</code> tulostuu teksti "You're awesome!"</li>
                 <li>... muuten (<code>else</code>) tulostuu teksti "meh..." </li>
             </ul>
-            <p>Testaa ohjelmaa eri syötteillä! Jos mielestäsi joku muu kuin Tuomas on awesome muokkaa koodia mieleiseksesi.</p>
+            <p>Testaa ohjelmaa eri syötteillä! Jos mielestäsi joku muu kuin Tuomas on awesome muokkaa koodia mieleiseksesi. Testaa myös onko isolla alkukirjaimella merkitystä</p>
             <iframe src="https://trinket.io/embed/python3/46f8fc5788" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <Obs>
                 <p>Huomasit kenties että if-lauseessa oli yhtäsuuruusmerkkinä <Code>==</Code>. Nyt täytyy ehdottomasti pysähtyä selventämään eräs tärkeä asia:</p>
@@ -26,12 +26,11 @@ const IfElsePage = () => {
                     <li><Code>=</Code> on <em>sijoitusoperaattori</em>, jota käytetään kun muuttujalle asetetaan arvo.</li>
                     <li><Code>==</Code> on <em>yhtäsuuruusmerkki</em>, jota käytetään <em>ehtolauseissa</em>, kuten edellisessä koodiesimerkissä.</li>
                 </ul>
-                <p>On merkille pantavaa että jälkimmäinen tapa käyttää yhtäsuuruusmerkkejä vastaa matematiikan yhtäsuuruutta.</p>
+                <p>Huomaa että jälkimmäinen tapa käyttää yhtäsuuruusmerkkejä vastaa matematiikan yhtäsuuruusmerkkiä.</p>
             </Obs>
             <Obs>
-                Vertailuoperaattorit:
+                <p>Vertailuoperaattorit:</p>
                 <ul>
-
                     <li>yhtäsuuri kuin: <Code>==</Code> </li>
                     <li>pienempi kuin:<Code>&lt;</Code> </li>
                     <li>suurempi kuin: <Code>&gt;</Code> </li>
@@ -41,9 +40,13 @@ const IfElsePage = () => {
                 </ul>
             </Obs>
             <h4>Tehtävä 1.1</h4>
-            <p> Laajenna alla olevaa ohjelmaa siten, että käytät if-else -rakennetta seuravasti: Jos käyttäjän syöttämä luku on suurempi kuin 1000 tulostuu teksti "Ohhoh!", muuten tulostuu
-                teksti "alle donitsi". Huomaa että funktio <code>read_int</code> lukee syötteenä kokonaisluvun.
-            </p>
+            <p> Laajenna alla olevaa ohjelmaa siten, että käytät if-else -rakennetta seuravasti:</p>
+                <ul>
+                    <li>Jos käyttäjän syöttämä luku on suurempi kuin 1000 tulostuu teksti "Ohhoh!"</li>
+                    <li>... muuten tulostuu teksti "alle donitsi".</li>
+                </ul>
+                <p>Huomaa että funktio <code>read_int</code> lukee syötteenä kokonaisluvun.</p>
+        
             <iframe src="https://trinket.io/embed/python3/cb6b4e6668?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <h4>Tehtävä 1.2</h4>
             <p> Muokkaa ohjelmaa siten, että se pyytää kaksi kokonaislukua käyttäjältä, laskee lukujen summan ja tulostaa tekstin "Yli sata", jos lukujen summa on yli sata, muuten
@@ -52,12 +55,12 @@ const IfElsePage = () => {
         </Segment>
 
         <Segment title="2. Useita vaihtoehtoja: If - else if - else">
-            <p>Jos vaihtoehtoja on useita käytetään if - else if - else -rakennetta. Alla on esimerkki miten kyseistä ehtolauserakennetta käytetään. Tässä vielä seikkaperäiset ohjeet:</p>
+            <p>Jos vaihtoehtoja on useita käytetään if - else if - else -rakennetta. Tutkaile ensin alla olevaa koodiesimerkkiä, miten kyseistä ehtolauserakennetta käytetään. Tässä vielä seikkaperäiset ohjeet:</p>
             <ul>
-                <li>Ensimmäisenä tulee aina <code>if</code> <Code>ehto</Code>:</li>
-                <li>Jos vaihtoehtoja on useita läiskytetään aina uusi <code>elif</code> jokaista ehtoa varten (<code>elif</code> on lyhenne sanoista "else if").</li>
-                <li><code>if</code>:n ja <code>elif</code>:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>if x &lt; 10:</Code> tai  <Code>if y != 6:</Code></li>
-                <li>Lopuksi laitetaan <code>else</code>, joka tarkoittaa "jokin muu kuin ylläolevat". Else:n yhteyteen ei tule ehtoa. </li>
+                <li>Ensimmäisenä tulee aina <code>if</code></li>
+                <li>Jos vaihtoehtoja on useita läiskytetään aina uusi <code>elif</code> jokaista uutta ehtoa varten (<code>elif</code> on lyhenne sanoista "else if").</li>
+                <li><code>if</code>:n ja <code>elif</code>:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>elif x &lt; 10:</Code> tai  <Code>elif y != 6:</Code></li>
+                <li>Lopuksi laitetaan <code>else</code>, joka tarkoittaa "jokin muu kuin ylläolevat". Tähän ei tule ehtoa. </li>
             </ul>
             <p>Kokeile allaolevaa ohjelmaa. Toimiiko se niinkuin ajattelisit sen toimivan?</p>
             <Obs>
@@ -65,7 +68,7 @@ const IfElsePage = () => {
             </Obs>
             <iframe src="https://trinket.io/embed/python3/47acb869c0?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <Obs>
-                <code>else</code>:ä ei ole pakko olla rakenteessa lainkaan ja itse asiassa monasti riittää pelkkä yksittäinen <code>if</code>.
+                Rakenteesta voidaan jättää kokonaan <code>else</code> pois ja itse asiassa useissa tilanteissa riittää pelkkä yksittäinen <code>if</code>.
             </Obs>
             <h4>Tehtävä 2.1</h4>
             <p>Lisää yllä olevaan esimerkkiin vielä yksi <code>elif</code></p>
@@ -92,6 +95,11 @@ const IfElsePage = () => {
                 tehtävänannossa olevaan järjestykseen, ohjelma ei koskaan tulosta tekstiä "negatiivinen luku". Pohdi miksi ei ja korjaa sovellus niin että ohjelma
                 toimii "oikein".
             </Obs>
+            <h4>Tehtävä 2.5</h4>
+            <p>Tehdään "laskin", joka osaa kaksi eri laskutoimitusta, plus- ja kertolaskun ja kertoo meille laskutoimituksen tuloksen. Alla on valmis pohja, jota voit täydentää.</p>
+            <iframe src="https://trinket.io/embed/python3/0dc64f2228?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            <h4>Tehtävä 2.6</h4>
+            <p>Lisää laskimeen vielä miinus- ja jakolasku</p>
         </Segment>
 
 

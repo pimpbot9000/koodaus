@@ -22,10 +22,10 @@ const Layout = ({ pageTitle, children }) => {
                         <li><Link to="/functions">Funktiot</Link></li>
                         <li><Link to="/input">Syötteen lukeminen</Link></li>
                         <li><Link to="/ifelse">Ehtolauseet</Link></li>
-                        <li>Toistolauseet eli silmukat</li>
+                        <li><Link to="/loops">Toistolauseet eli silmukat</Link></li>
                         <li><Link to="/math">Matikkaa</Link></li>
-                        <li>Loppukevennys: kilppari</li>
                         <li><Link to="/algorithms">Algoritmit</Link></li>
+                        <li><Link to="/turtle">Loppukevennys: kilppari</Link></li>                        
                     </ul>
                 </nav>
                 <main>

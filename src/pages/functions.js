@@ -18,28 +18,29 @@ const FunctionsPage = () => {
             <Obs><code>def</code> tulee sanasta <em>define</em> eli "määrittele"</Obs>
             <br />
             <iframe src="https://trinket.io/embed/python3/9fb9364433" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-            <p>Edellisessä on syytä kiinnittää huomiota riviin 6, jossa on käsky <Code>tulos = summa(3, 5)</Code></p>
+            <Obs>
+            <p>Edellisessä on syytä kiinnittää huomiota riviin 5, jossa on käsky <Code>tulos = summa(3, 5)</Code></p>
             <p>Koska kyseessä on sijoitusoperaatio, käsky on syytä taas ajatella "oikealta vasemmalle"</p>
             <ul>
-                <li>Funktio <Code>summa(3, 5)</Code> laskee lukujen 3 ja 5 summan ja palauttaa summan arvon.</li>
+                <li>Funktiokutsu <Code>summa(3, 5)</Code> laskee lukujen 3 ja 5 summan ja palauttaa summan arvon.</li>
                 <li>Palautettu arvo sijoitetaan muuttujaan <code>tulos</code></li>
             </ul>
+            </Obs>
             <p>Seuraavaksi rohkeasti kokeilemaan omien funktioiden laadintaa!</p>
             <h4>Tehtävä 1.1</h4>
             <p>Nimeä funktio uudestaan ja anna sille nimi <code>tulo</code> ja muokkaa funktiota siten että se laskee lukujen <code>x</code> ja <code>y</code> tulon
                 ja palauttaa tulon arvon.</p>
 
             <h4>Tehtävä 1.2</h4>
-            <p>Luo uusi funktio, joka laskee kolmen inputtina annetun luvun summan.</p>
+            <p>Luo uusi funktio, joka laskee kolmen inputtina eli <em>argumenttina</em> annetun luvun summan.</p>
             <h4>Tehtävä 1.3</h4>
-            <p>Luo uusi funktio, joka laskee kolmen inputtina annetun luvun tulon.</p>
+            <p>Luo uusi funktio, joka laskee kolmen argumenttina annetun luvun tulon.</p>
             <h4>Tehtävä 1.4</h4>
             <p>Luo funktio nimeltä <code>piiri</code>, jolle syötetään säteen <code>r</code> pituus. Funktion tulee laskea ympyrän kehän pituus.</p>
-            <p>Huom! Lisää ekana koodin ekalle riville käsky <Code>from math import pi</Code>, niin sinulla on käytössä muuttuja, jonka arvon on piin likiarvo</p>
+            <Obs>Huom! Lisää ekana koodin ekalle riville käsky <Code>from math import pi</Code>, niin sinulla on käytössä muuttuja <code>pi</code>, jonka arvona on piin likiarvo.</Obs>
             <h4>Tehtävä 1.5</h4>
             <p>Luo funktio nimeltä <code>pinta_ala</code>, jolle syötetään säteen <code>r</code> pituus. Funktion tulee laskea ympyrän pinta-ala.</p>
-            <h4>Tehtävä 1.6</h4>
+            <h4>*Tehtävä 1.6</h4>
             <p>Luo funktio nimeltä <code>hypotenuusa</code>, jolle annetaan inputtina kaksi eri lukua <code>a</code> ja <code>b</code>, jotka ovat suorakulmaisen
                 kolmion kateettien pituudet. Funktion tulee laskea hypotenuusan pituus</p>
         </Segment>
@@ -53,8 +54,8 @@ const FunctionsPage = () => {
             </Obs>
             <h4>Tehtävä 2.1</h4>
             <p>Luo funktio nimeltä <code>greeter2</code> jolle syötetään kaksi eri muuttujan arvoa <code>first_name</code> ja <code>last_name</code>. Funktio ei palauta
-                mitään arvoja vaan sen sijasta tulostaa muuttujien arvoilla seuraavanlaisen tekstin:</p>
-            <p><code>Hyvää iltapäivää Olli Starck. Voinko kutsua sinua etunimelläsi Olli?</code></p>
+                mitään arvoja vaan sen sijasta tulostaa muuttujien arvojen avulla seuraavanlaisen tekstin:</p>
+            <p><code>Hyvää iltapäivää Oliver Stark. Voinko kutsua sinua etunimelläsi Oliver?</code></p>
             <h4>Tehtävä 2.2</h4>
             <p>Luo funktio jolle ei syötetä mitään arvoa. Funktio ainoastaan tulostaa tekstin <code>moi!</code></p>
             <Obs>
