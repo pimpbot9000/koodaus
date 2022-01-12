@@ -4,8 +4,7 @@ const Code = ({ children }) => {
     const style = {
         backgroundColor: "#bda",
         padding: "2px 10px 2px 10px",
-        borderRadius: "5px",
-        marginBottom: "2px",
+        borderRadius: "5px",        
         fontStyle: "normal"
     }
     return (
