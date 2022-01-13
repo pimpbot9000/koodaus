@@ -21,6 +21,10 @@ const InputsPage = () => {
         <h4>Tehtävä 1.1</h4>
         <p>Laajenna ohjelmaa siten, että etunimen syöttämisen jälkeen ohjelma kysyy sukunimeä ja tallentaa tämän muuttujaan <code>sukunimi</code>. Lopuksi ohjelma
         tulostaa (esimerkiksi) tekstin <code>Hyvää iltapäivää Matias Häggman</code> muuttujia <code>nimi</code> ja <code>sukunimi</code> hyväksikäyttäen.</p>
+        <h4>Tehtävä 1.2</h4>
+        <p>Laajenna ohjelmaa vielä siten, että ohjelma kysyy etunimen ja sukunimen lisäksi lempiväriä, joka jälkeen muuttujien arvojen avulla tulostetaa esim.
+            tekstin <code>Moi Tuomas Välimäki. Lempivärisi sininen on ihan kiva.</code>
+        </p>
         </Segment>
 
         <Segment title="2. Kokonaisluvun lukeminen">
@@ -38,10 +42,11 @@ const InputsPage = () => {
         </Segment>
 
         <Segment title="2. desimaaliluvun lukeminen">
-            <p>Testataan vielä <code>read_float()</code>-funktiota, jolla voi lukea desimaalilukuja. Tässä osiossa ei ole tehtäviä.</p>
+            <p>Testataan vielä <code>read_float()</code>-funktiota, jolla voi lukea desimaalilukuja.</p>
             <Obs>
                 Desimaalierottimena tulee käyttää pistettä eikä pilkkua. Ei siis näin <Code>2,5</Code> vaan <Code>2.5</Code>.
             </Obs>
+            <p>Tässä osiossa ei ole tehtäviä, mutta testaa silti ohjelmaa syöttämällä sille jokin desimaaliluku ohjelman niin pyytäessä.</p>
             <iframe src="https://trinket.io/embed/python3/098636294b?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>        </Segment>
 
     </Layout>

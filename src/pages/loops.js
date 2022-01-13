@@ -18,7 +18,7 @@ const LoopsPage = () => {
             <Obs>Pistä merkille sisennys rivillä 4. Muista että sisennys tehdään tabulaattori-näppäimellä.</Obs>
             <iframe src="https://trinket.io/embed/python3/08eb7c4eef?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <h5>Tehtävä 1.1</h5>
-            <p>Muokkaa ohjelmaa siten että silmukassa oleva <code>print</code>-käsky tulostaa joka kierrokselle tekstin "Hei [nimi tähän]!". Sovelluksen tulee siis 
+            <p>Muokkaa ohjelmaa siten että silmukassa oleva <code>print</code>-käsky tulostaa joka kierroksella tekstin "Hei [nimi tähän]!". Sovelluksen tulee siis 
             tervehtiä jokaista listasta löytyvää henkilöä.</p>
             <h5>Tehtävä 1.2</h5>
             <p>Kokeile lisätä silmukkaan toinenkin <code>print</code>-käsky. Käsky voi tulostaa mitä ikinä haluatkin. Huomaa sisennys! Sisennyksen avulla Pythonissa kerrotaan mitkä käskyt ovat osa silmukkaa.</p>
