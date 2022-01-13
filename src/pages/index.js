@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Coding 101 for children (and slow adults!)">
+    <Layout pageTitle="Coding 101 for children and slow adults">
       <Segment title="Tervetuloa">
       <p>Opiskelohjeet. Lue materiaalia. Kun törmäät koodiesimerkkiin toimi seuraavasti:</p>
       <ul>

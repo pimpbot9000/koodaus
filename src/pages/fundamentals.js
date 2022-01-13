@@ -28,6 +28,12 @@ const AboutPage = () => {
                 ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajarobotteja. Pythonin tulkkaamisen
                 hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".
                 Python onkin nykypäivänä yksi käytetyimmästä ohjelmointikielestä koska se on niin "ihmisystävällinen".</p>
+            
+            <Obs>
+                Jos ohjelma toimii jotenkin virheellisesti ohjelmointimokan vuoksi, tällöin sanotaan että koodissa on bugi. Nimitys tulee englannin kielen sanasta bug, 
+                joka tarkoittaa ötökkää. Alun perin nimitys tulee ajoilta, jolloin pienimmätkin tietokoneet olivat jääkaapin kokoisia. Tietokoneisiin oli saattanut pesiytyä ötököitä,
+                jolloin saattoi käydä niin, että tietokoneet toimivat virheellisesti jos ötökät olivat pureskelleet johtoja.
+            </Obs>
 
             <Segment title="1. Eka ohjelma">
                 <p>Alla on ehkäpä yksinkertaisin mahdollinen ohjelma. Ohjelmassa on vain yksi käsky, joka tulostaa tekstin <code>Hello, world!</code></p>
@@ -99,7 +105,8 @@ const AboutPage = () => {
                 </p>
                 <h5>Tehtävä 2.2</h5>
                 <p>Muokkaa ohjelmaa siten että muuttujan <code>etunimi</code> arvoksi asetetaan <code>"jasu"</code> ja muuttujan <code>sukunimi</code> arvoksi asetetaan <code>"petteri"</code>.
-                    Lisäksi, muuttujan <code>koko_nimi</code> arvoksi asetetaan muuttujien <code>etunimi</code> ja <code>sukunimi</code> summa (??). Aja koodi ja ihmettele tulosta!</p>
+                    Lisäksi, muuttujan <code>koko_nimi</code> arvoksi asetetaan muuttujien <code>etunimi</code> ja <code>sukunimi</code> summa (??). Tulosta lisäksi muuttujan <code>koko_nimi</code> arvo.
+                    Aja koodi ja ihmettele tulosta!</p>
                 <h5>Tehtävä 2.3</h5>
                 <p>
                     Laita ohjelma tulostamaan jonkin sellaisen muuttujan arvo jota ei ole määritelty, esim. <Code>print(e)</Code> käskyn avulla. Katso tarkasti mitä

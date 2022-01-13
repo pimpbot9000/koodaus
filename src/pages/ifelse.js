@@ -1,5 +1,4 @@
 import * as React from 'react'
-// Step 2: Define your component
 import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
@@ -62,13 +61,13 @@ const IfElsePage = () => {
                 <li><code>if</code>:n ja <code>elif</code>:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>elif x &lt; 10:</Code> tai  <Code>elif y != 6:</Code></li>
                 <li>Lopuksi laitetaan <code>else</code>, joka tarkoittaa "jokin muu kuin ylläolevat". Tähän ei tule ehtoa. </li>
             </ul>
-            <p>Kokeile allaolevaa ohjelmaa. Toimiiko se niinkuin ajattelisit sen toimivan?</p>
+            <p>Testaa alla olevaa ohjelmaa eri syötteillä. Toimiiko se niinkuin ajattelisit sen toimivan?</p>
             <Obs>
-                Huomaathan puolipisteet sekä sisennyksen riveillä 7, 9, 11 ja 13. Sisennys tehdään tabulaattorinäppäimellä!
+                Huomaathan koodissa olevat puolipisteen, sekä sisennykset riveillä 7, 9, 11 ja 13. Sisennys tehdään tabulaattorinäppäimellä!
             </Obs>
             <iframe src="https://trinket.io/embed/python3/47acb869c0?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             <Obs>
-                Rakenteesta voidaan jättää kokonaan <code>else</code> pois ja itse asiassa useissa tilanteissa riittää pelkkä yksittäinen <code>if</code>.
+                Rakenteesta voidaan jättää kokonaan <code>else</code> pois ja joissain tilanteissa riittää pelkkä yksittäinen <code>if</code>.
             </Obs>
             <h5>Tehtävä 2.1</h5>
             <p>Lisää yllä olevaan esimerkkiin vielä yksi <code>elif</code></p>
