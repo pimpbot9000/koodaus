@@ -84,7 +84,8 @@ Kokeile painaa play-nappulaa ja kiinnitä huomiota siihen mitä ohjelma tulostaa
 <iframe src="https://trinket.io/embed/python3/59b7d176f4?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 <Obs>
-Merkki <code>=</code> ei tarkoita samaa asiaa kuin matematiikassa, eli toisin sanoen merkki ei ole "yhtä suuri kuin". Python-ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.
+Merkki <Code>=</Code> ei tarkoita samaa asiaa kuin matematiikassa, eli toisin sanoen merkki ei ole "yhtä suuri kuin". 
+Python-ohjelmointikielessä merkki <Code>=</Code> on niin sanottu <em>sijoitusoperaattori</em>.
 Käsky <Code>a = 3</Code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
 muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.
 
@@ -107,8 +108,12 @@ Lisäksi, muuttujan <code>koko_nimi</code> arvoksi asetetaan muuttujien <code>et
 Aja koodi ja ihmettele tulosta!
 
 <Task>2.3</Task>
-Laita ohjelma tulostamaan jonkin sellaisen muuttujan arvo jota ei ole määritelty, esim. <Code>print(e)</Code> käskyn avulla. Katso tarkasti mitä
-virheilmoitus sanoo.
+Laita ohjelma tulostamaan jonkin sellaisen muuttujan arvo jota ei ole määritelty, esim. <Code>print(e)</Code> käskyn avulla, joka yrittää
+tulostaa ei-määritellyn muuttujan <code>e</code> arvon. Katso tarkasti mitä virheilmoitus sanoo.
+
+<Task>2.4</Task>
+Testataan vielä yhtäsuuruusmerkkiä, joka Pythonissa on <Code>==</Code>. Lisää koodiin käsky <Code>print(a == b)</Code>. Aja ohjelma ja katso mitä kyseinen
+käsky tulostaa.
 </Segment>
 
 
@@ -143,7 +148,7 @@ joka on "jakojäännös" (ja jonka unohdamme samantien). Pythonissa on lisäksi 
 * Potenssilasku: `2**3` tarkoittaa "2 potenssiin 3".
 
 
-Alla on esimerkki laskutoimitusten käytöstä.
+Alla on esimerkki muutaman eri laskutoimituksen käytöstä.
 <Obs>Alla olevassa koodissa <code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
 matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).
 Python on suosittu ohjelmointikieli osittain siksi että Pythonille löytyy lukematon määrä erilaisia kirjastoja, joten jokaista pyörää ei tarvitse keksiä
@@ -160,8 +165,8 @@ Suoraan syvään päähän: Jos suorakulmion kateettien pituudet ovat 2 ja 3, la
 pituuksina!
 
 <Task>4.3</Task>
-Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>math</code>-kirjastosta tuotu <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka 
-arvona on piin likiarvo.
+Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. Huomaa <code>math</code>-kirjastosta tuotu <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka 
+arvona on piin likiarvo. Käytä tätä muuttujaa apuna.
 </Segment>
 
 <Segment title="5. Muuttujatyypit">
