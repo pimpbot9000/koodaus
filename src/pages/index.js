@@ -14,7 +14,7 @@ const IndexPage = () => {
         <li>Kun olet saanut jonkinlaisen tuntuman koodiin, suorita koodi (painamalla "play" nappulaa) ja katso toimiiko se niinkuin ajattelit sen toimivan.</li>
       </ul>
       <p>Ensimmäinen harjoitus: Mitä ajattelisit että alla oleva koodi tekee? Sinun ei tarvitse tietää (vielä) koodaamisesta yhtään mitään!</p>
-      <iframe src="https://trinket.io/embed/python3/2dd2506c27?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <iframe title="2dd2506c27" src="https://trinket.io/embed/python3/2dd2506c27?runOption=run" width="100%" height="300"></iframe>
       <p>Jahka olet suorittanut pähkäilyn ja ajanut ohjelman voit siirtyä ensimmäiseen osioon nimeltä <Link to="/fundamentals">Perusteet</Link></p>
       </Segment>
       <Obs>
