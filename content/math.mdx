@@ -1,0 +1,78 @@
+Tässä osiossa teemme hieman matematiikkaa Pythonin avulla aiemmin opittujen asioiden avulla. Koodaamisen kautta keraamme muutamia matematiikkaa liittyviä asioita. Käytämme
+mm. Pythagoraan lausetta ja palautamme mieleen mikä suoran kulmakerroin taas olikaan.
+
+<Segment title="1. Alennettu hinta">
+<Task>1.1</Task>
+Tee ohjelma joka pyytää syötteenä kaksi eri lukua, tuotteen hinnan ja alennusprosentin. Ohjelman tulee laskea
+
+* alennus (euroina)
+* tuotteen alennettu hinta
+
+Voit käyttää joko <code>read_int</code> tai <code>read_float</code> funktiota syötteiden lukemiseksi.
+<iframe src="https://trinket.io/embed/python3/97e8e92056?runOption=run" width="100%" height="350" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+</Segment>
+
+<Segment title="2. Pythagoraan lause">
+<Task>2.1</Task>
+Laajenna alla olevaa sovellusta seuraavasti:
+
+
+* Ohjelman tulee kysyy käyttäjältä toisenkin kateetin pituus ja tallentaa tämä muuttujaan <code>kateetti2</code>.
+* Funktion <code>hypotenuusa</code> tulee laskea hypotenuusan pituus ja palauttaa tämä arvo.
+* Käyttäjän syötteiden avulla lasketaan hypotenuusan pituus käyttämällä funktiota <code>hypotenuusa</code>
+* Lopuksi hypotenuusan pituus tulostetaan <code>print</code>-käskyn avulla 
+
+<Obs>
+Käytämme tällä kertaa <code>read_float</code> funktiota, jolloin käyttäjä voi halutessaan syöttää joko kokonaisluvun tai desimaaliluvun. Huomaa että
+desimaalierottimena on piste (näin: <code>2.5</code>) eikä pilkku (ei näin: <code>2,5</code>)
+</Obs>
+<iframe src="https://trinket.io/embed/python3/f78f142beb?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</Segment>
+
+<Segment title="3. Kahden pisteen välinen etäisyys">
+Jos tunnetaan kahden pisteen koordinaatit, pisteiden välinen etäisyys voidaan laskea Pythagoraan lauseen avulla. Tämä lienee kaikista eniten käytetty
+pythagoraan lauseen sovellus koko maailmankaikkeudessa.
+<Obs>
+Tällä kertaa käytössämme on funktio <code>read_coord</code>, joka osaa lukea koordinaatteja jotka on annettu joko muodossa <code>1,2</code> tai <code>(1,2)</code>. Käytämme
+myös hieman erikoista "destrukturointisijoitusoperaatiota", jonka voi bongata riviltä 8. Emme syvenny tähän sen tarkemmin, mutta näyttää siltä, että
+rivillä 8 sijoitetaan arvot yhtä aikaa kahteen eri muuttujan arvoon!
+</Obs>
+Aivan ensimmäiseksi, testaa ohjelman toimintaa antamalla syötteeksi jokin koordinaatti. Ohjelman tulisi tulostaa erikseen syöttämäsi koordinaatin x- ja y-koordinaatit.
+<iframe src="https://trinket.io/embed/python3/40bf843ca7?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<Task>3.1</Task>
+Laajenna ohjelmaa siten, että se lukee käyttäjältä myös toisen pisteen koordinaatit. Annan näille vaikka nimet <code>x2</code> ja <code>y2</code>.
+
+<Task>3.2</Task>
+Nyt kun ohjelma lukee kahden pisteen koordinaatti, koodistele tietokone laskemaan pisteiden välinen etäisyys
+
+<Task>3.3</Task>
+Tee lopuksi funktio, jonka avulla pisteiden välinen etäisyys lasketaan. Huomaa että funktiolle tulee antaa 4 eri arvoa argumenttina!
+</Segment>
+
+<Segment title="4. Manhattan-etäisyys">
+
+Oletko käynyt New Yorkissa tai jopa niinkin eksoottisessa paikassa kuin Helsingin keskustassa. Pythagoraan lauseen avulla voidaan laskea kahden pisteen välinen etäisyys
+"linnuntietä" pitkin, mutta kaupungeissa emme voi tietenkään liikkua linnuntietä pitkin.
+
+<Task>4.1</Task>
+Googlaa mitä Manhattan-etäisyys tarkoittaa ja pohdi miten tämä lasketaan kahden koordinaatin avulla.
+
+<Task>4.2</Task>
+Muokkaa alla olevaa koodia siten, että funktio <code>manhattan_distance</code> laskee ja palauttaa kahden pisteen välisen Manhattan-etäisyyden arvon. Käytä funktiota
+hyväksi siten, että sen avulla lasketaan käyttäjän syöttämien koordinaattien Manhattan-etäisyys.
+
+
+<Obs>
+Pohdi mihin itseisarvofunktiota <code>abs</code> tarvitaan Manhattan-etäisyyden laskemisessa? Miksi Pythagoraan lauseen tapauksessa ei tarvita itseisarvoa?
+</Obs>
+<iframe src="https://trinket.io/embed/python3/640b2f64a1?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</Segment>
+
+<Segment title="*5. Yhtälöparin ratkaisu, Never Again!">
+Viimeisenä muttei vähäisimpänä, yhtälöparin ratkaisu.  Ensimmäisenä otat kynän ja paperin käteen ja ratkaiset yhtälöparin ns. yleisessä muodossa.
+<Task>5.1</Task>
+Laajenna alla olevaa koodia siten, ettei sinun tarvitse ratkaista enää yhtään yhtälöparia käsin!
+<iframe src="https://trinket.io/embed/python3/62e5a77638?runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</Segment>

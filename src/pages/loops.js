@@ -1,5 +1,5 @@
 import * as React from 'react'
-// Step 2: Define your component
+import MathJax from 'react-mathjax';
 import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
@@ -27,14 +27,14 @@ const LoopsPage = () => {
         <Segment title="2. For-lause, osa 2">
             <p>Suorita ohjelma ja tutkaile ohjelman tulostetta. Tässä osiossa ei ole tehtäviä, tämä toimii lähinnä demonstraationa siitä miten silmukka toimii.</p>
             <Obs>
-                Silmukan yhden kierroksen aikana suoritetaan 3 käskyä. Huomaa sisennykset riveillä 4, 5 ja 6.
+                Silmukan yhden kierroksen aikana suoritetaan 4 käskyä. Huomaa sisennykset riveillä 5, 6, 7 ja 8.
             </Obs>
             <iframe src="https://trinket.io/embed/python3/c470564e43?runOption=run" width="100%" height="350" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
         </Segment>
 
         <Segment title="3. For-lause, osa 3">
             <h5>Tehtävä 2.1</h5> 
-            <p>Matematiikan tunnilla opettaja käskee sinua laskemaan funktion <Code>f(x) = 2x + 1</Code> arvon muuttujien arvolla 0...5. Koska olet laiska haluat ulkoistaa
+            <p>Matematiikan tunnilla opettaja käskee sinua laskemaan funktion  <MathJax.Provider><MathJax.Node inline formula={`f(x)=2x+1`}/></MathJax.Provider> arvon muuttujien arvolla 0...5. Koska olet laiska haluat ulkoistaa
             tämän tietokoneelle. Toteuta tämä alla olevaan koodipohjaan.</p>
             <Obs>Muista että vaikka matematiikassa usein kertomerkkejä ei merkitä näkyviin, ohjelmointikielessä ei voi olla näkymättömiä kertomerkkejä</Obs>
             <iframe src="https://trinket.io/embed/python3/4e0e6f9ff7?runOption=run" width="100%" height="350" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>

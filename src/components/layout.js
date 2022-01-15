@@ -27,7 +27,7 @@ const Layout = ({ pageTitle, children }) => {
                 <nav>
                     <ul>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/fundamentals2">Perusteet</Link></li>
+                        <li><Link to="/fundamentals">Perusteet</Link></li>
                         <li><Link to="/functions">Funktiot</Link></li>
                         <li><Link to="/input">Syötteen lukeminen</Link></li>
                         <li><Link to="/ifelse">Ehtolauseet</Link></li>
