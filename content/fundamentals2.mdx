@@ -46,7 +46,6 @@ Lisää edelliseen sovellukseen toinen <code>print</code>-käsky edellisen alle,
 Lisää edelliseen sovellukseen vielä kolmaskin <code>print</code>-käsky!
 
 </Segment>
-
 Onneksi olkoon! Olet selvinnyt ensimmäisestä haasteesta. Tähän mennessä olet oppinut sekä hyödyllisen <code>print</code>-käskyn, että sen, että tietokone suorittaa annetut käskyt peräjälkeen alusta loppuun.
 Loppujen lopuksi tietokone ei osaa tehdä kovin montaa eri asiaa. Pääosin tietokone osaa suorittaa laskutoimituksia tietokoneen muistissa olevien arvojen
 avulla. Ohjelmointikielissä käytetään <code>muuttujia</code> kuvaamaan tietokoneen muistissa olevia asioita.
@@ -64,6 +63,7 @@ Muuttujan ero matematiikassa ja ohjelmointikielissä:
 <Segment title="2. Muuttujat">
 Alla olevassa sovelluksessa on asetettu muuttujille <code>a</code>, <code>b</code> ja <code>nimi</code> arvot. Kun muuttujalle asetetaan arvo,
 muuttujaa voidaan käyttää jatkossa esimerkiksi laskutoimituksissa. Huomaa että muuttujien <code>a</code> ja <code>b</code> arvot ovat kokonaislukuja (<code>integer</code>) kun taas
+
 muuttujan <code>nimi</code> arvo on "tekstiä" eli merkkijono. (<code>string</code>).
 
 <Obs>
@@ -84,8 +84,10 @@ Kokeile painaa play-nappulaa ja kiinnitä huomiota siihen mitä ohjelma tulostaa
 <iframe src="https://trinket.io/embed/python3/59b7d176f4?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 <Obs>
+
 Merkki <Code>=</Code> ei tarkoita samaa asiaa kuin matematiikassa, eli toisin sanoen merkki ei ole "yhtä suuri kuin". 
 Python-ohjelmointikielessä merkki <Code>=</Code> on niin sanottu <em>sijoitusoperaattori</em>.
+
 Käsky <Code>a = 3</Code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
 muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.
 
@@ -114,6 +116,7 @@ tulostaa ei-määritellyn muuttujan <code>e</code> arvon. Katso tarkasti mitä v
 <Task>2.4</Task>
 Testataan vielä yhtäsuuruusmerkkiä, joka Pythonissa on <Code>==</Code>. Lisää koodiin käsky <Code>print(a == b)</Code>. Aja ohjelma ja katso mitä kyseinen
 käsky tulostaa.
+
 </Segment>
 
 
@@ -147,8 +150,8 @@ joka on "jakojäännös" (ja jonka unohdamme samantien). Pythonissa on lisäksi 
 * miinuslasku: `-`
 * Potenssilasku: `2**3` tarkoittaa "2 potenssiin 3".
 
-
 Alla on esimerkki muutaman eri laskutoimituksen käytöstä.
+
 <Obs>Alla olevassa koodissa <code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
 matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).
 Python on suosittu ohjelmointikieli osittain siksi että Pythonille löytyy lukematon määrä erilaisia kirjastoja, joten jokaista pyörää ei tarvitse keksiä
@@ -167,6 +170,8 @@ pituuksina!
 <Task>4.3</Task>
 Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. Huomaa <code>math</code>-kirjastosta tuotu <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka 
 arvona on piin likiarvo. Käytä tätä muuttujaa apuna.
+
+
 </Segment>
 
 <Segment title="5. Muuttujatyypit">
