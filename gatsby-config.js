@@ -1,7 +1,16 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Koodaus",
+    title: "Koodauskoirakoulu",
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content`,
+      }
+    },
+    "gatsby-plugin-mdx"
+  ],
 };

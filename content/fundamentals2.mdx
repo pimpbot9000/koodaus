@@ -1,0 +1,230 @@
+---
+title: "Never send a human to do a machines job"
+---
+(Agent Smith, *The Matrix*, 1999)
+
+Tietokonetta ohjelmoidaan kirjoittamalla lähdekoodia jollain ohjelmointikielellä. Lähdekoodi käännetään (tai tulkataan!) tietokoneen ymmärtämään
+muotoon, jonka jälkeen tietokone osaa ajaa eli suorittaa ohjelman. Täsmällisemmin sanonuttuna lähdekoodin avulla tietokoneelle kirjoitetaan joukko <code>käskyjä</code>,
+jotka tietokone suorittaa järjestyksessä alusta loppuun.
+
+Tietokone on aika tyhmä, eli se ei osaa tehdä muuta kuin mitä ihminen on ohjelmoinut tietokoneen
+tekemään. Toisaalta tietokone on hyvä ja uskollinen apuri, sillä se ei koskaan väsy eikä tee virheitä suorittaessaan käskyjä täysin orjallisesti.
+Niinkuin vuoden 1984 scifi-klassikkoelokuvassa *The Terminator* osuvasti todettiin:
+
+<Quote>
+That terminator is out there, it cant be bargained with, it cant be reasoned with, it doesn't feel pity or remorse or fear, 
+and it absolutely will not stop... ever, untill you are dead!
+</Quote>
+
+Sen lisäksi että tietokone ei tee virheitä (ellei joku koodari ole mokannut), tietokone pystyy tekemään asioita uskomattoman nopeasti, joka oikeastaan
+tekee tietokoneesta niin hyödyllisen kapistuksen.
+
+Tällä kurssilla käytämme `Python`-nimistä ohjelmointikieltä, mutta samat periaatteet pätevät riippumatta ohjelmointikielestä ja riippumatta siitä
+ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajarobotteja. Pythonin tulkkaamisen
+hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".
+Python onkin nykypäivänä yksi käytetyimmästä ohjelmointikielestä koska se on niin "ihmisystävällinen".
+
+<Obs>
+Jos ohjelma toimii jotenkin virheellisesti ohjelmointimokan vuoksi, tällöin sanotaan että koodissa on bugi. Nimitys tulee englannin kielen sanasta bug, 
+joka tarkoittaa ötökkää. Alun perin nimitys tulee ajoilta, jolloin pienimmätkin tietokoneet olivat jääkaapin kokoisia. Tietokoneisiin oli saattanut pesiytyä ötököitä,
+jolloin saattoi käydä niin, että tietokoneet toimivat virheellisesti jos ötökät olivat pureskelleet johtoja.
+</Obs>
+
+<Segment title="1. Eka ohjelma">
+Alla on ehkäpä yksinkertaisin mahdollinen ohjelma. Ohjelmassa on vain yksi käsky, joka tulostaa tekstin <code>Hello, world!</code>
+Kokeile painaa play-nappulaa alla, jolloin alla oleva ohjelma <code>suoritetaan</code> eli <code>ajetaan</code>. Näet ohjelman tulostaman tekstin
+oikeanpuoleisessa ruudussa.
+<iframe src="https://trinket.io/embed/python3/cd26036c40?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<Task>1.1</Task>
+Muokkaa ylläolevaa koodia siten, että <code>Hello, world!</code>-tekstin sijasta tulostuu teksti <code>Hei maailma!</code>  
+
+<Task>1.2</Task>
+Lisää edelliseen sovellukseen toinen <code>print</code>-käsky edellisen alle, joka tulostaa ...noh, mitä nyt ikinä keksitkin.
+
+<Task>1.3</Task>
+Lisää edelliseen sovellukseen vielä kolmaskin <code>print</code>-käsky!
+
+</Segment>
+Onneksi olkoon! Olet selvinnyt ensimmäisestä haasteesta. Tähän mennessä olet oppinut sekä hyödyllisen <code>print</code>-käskyn, että sen, että tietokone suorittaa annetut käskyt peräjälkeen alusta loppuun.
+Loppujen lopuksi tietokone ei osaa tehdä kovin montaa eri asiaa. Pääosin tietokone osaa suorittaa laskutoimituksia tietokoneen muistissa olevien arvojen
+avulla. Ohjelmointikielissä käytetään <code>muuttujia</code> kuvaamaan tietokoneen muistissa olevia asioita.
+
+
+Muuttuja ohjelmointikielessä on hieman eri asia kuin matematiikassa. Matematiikassa muuttuja kuvaa jotain "random" lukua, ohjelmointikielessä muuttuja
+taas on eräänlainen lokero, johon voidaan sijoittaa esimerkiksi luku tai vaikkapa tekstiä. Tietokone siis "muistaa" mikä luku tai teksti muuttujaan - tai lokeroon - on tallennettu, ja tietokone
+osaa suorittaa näiden muistissa olevien lukujen avulla esim. laskutoimituksia.
+
+<Obs>
+Muuttujan ero matematiikassa ja ohjelmointikielissä:
+* Matematiikassa muuttuja kuvaa jotain "random" lukua.
+* Ohjelmointikielissä muuttujalla on aina jokin arvo (joka on tietokoneen muistissa ohjelmaa suoritettaessa).
+</Obs>
+
+Onneksi olkoon! Olet selvinnyt ensimmäisestä haasteesta. Tähän mennessä olet oppinut sekä hyödyllisen <code>print</code>-käskyn, että sen, että tietokone suorittaa annetut käskyt peräjälkeen alusta loppuun.
+Loppujen lopuksi tietokone ei osaa tehdä kovin montaa eri asiaa. Pääosin tietokone osaa suorittaa laskutoimituksia tietokoneen muistissa olevien arvojen
+avulla. Ohjelmointikielissä käytetään <code>muuttujia</code> kuvaamaan tietokoneen muistissa olevia asioita.
+
+
+Muuttuja ohjelmointikielessä on hieman eri asia kuin matematiikassa. Matematiikassa muuttuja kuvaa jotain "random" lukua, ohjelmointikielessä muuttuja
+taas on eräänlainen lokero, johon voidaan sijoittaa esimerkiksi luku tai vaikkapa tekstiä. Tietokone siis "muistaa" mikä luku tai teksti muuttujaan - tai lokeroon - on tallennettu, ja tietokone
+osaa suorittaa näiden muistissa olevien lukujen avulla esim. laskutoimituksia.
+
+<Obs>
+Muuttujan ero matematiikassa ja ohjelmointikielissä:
+* Matematiikassa muuttuja kuvaa jotain "random" lukua.
+* Ohjelmointikielissä muuttujalla on aina jokin arvo (joka on tietokoneen muistissa ohjelmaa suoritettaessa).
+</Obs>
+
+<Segment title="2. Muuttujat">
+Alla olevassa sovelluksessa on asetettu muuttujille <code>a</code>, <code>b</code> ja <code>nimi</code> arvot. Kun muuttujalle asetetaan arvo,
+muuttujaa voidaan käyttää jatkossa esimerkiksi laskutoimituksissa. Huomaa että muuttujien <code>a</code> ja <code>b</code> arvot ovat kokonaislukuja (<code>integer</code>) kun taas
+muuttujan <code>nimi</code> arvo on tekstiä (<code>string</code>).
+<Obs>
+Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
+
+* Muuttujan nimessä ei saa olla väliviivaa (<code>-</code>), koska tämä tulkitaan vähennyslaskuna. Väliviivan sijasta käytetään ns. alaviivaa esim. <code>tyypin_etunimi</code>.
+* Muuttujan nimessä ei voi olla välilyöntejä.
+* Muuttujien nimessä ei saa olla ääkkösiä (ä, ö, å)
+* Muuttujan nimessä saa olla numeroita mutta muuttujan nimi ei saa alkaa numerolla
+
+Se että muuttujan nimissä ei saa olla ääkkösiä, ei haittaa sillä ohjelmointia useimmiten tehdään "englanniksi". Toki suomen kieltäkin saa käyttää
+mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi. Tässä materiaalissa on välillä
+käytetty sekä suomen kielisiä että englanninkielisiä muuttujien nimiä. Toivottavasti pystyt elämään tämän kanssa :)
+</Obs>
+
+Kokeile painaa play-nappulaa ja kiinnitä huomiota siihen mitä ohjelma tulostaa.
+
+<iframe src="https://trinket.io/embed/python3/59b7d176f4?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<Obs>
+Merkki <code>=</code> ei tarkoita samaa asiaa kuin matematiikassa, eli toisin sanoen merkki ei ole "yhtä suuri kuin". Python-ohjelmointikielessä merkki <code>=</code> on niin sanottu <em>sijoitusoperaattori</em>.
+Käsky <Code>a = 3</Code> ei siis tarkoita "<code>a</code> on yhtäsuuri kuin 3" vaan "muuttujan arvoksi <code>a</code> asetetaan arvo 3". Samalla koska
+muuttujaa <code>a</code> ei ole aiemmin määritelty, muuttuja nimeltä <code>a</code> otetaan samalla käyttöön.
+
+Lisäksi on syytä kiinnittää huomiota rivin 5 käskyyn <Code>c = a + b</Code>.
+Tietokone suorittaa käskyn seuraavasti:
+
+* Lasketaan muuttujien <code>a</code> ja <code>b</code> arvojen summa
+* Sijoitetaan laskutoimituksen tulos muuttujaan <code>c</code>
+
+Kuten edellisestä selviää käsky <Code>c = a + b</Code> siis toimii eräällä tapaa "oikealta vasemmalle".
+</Obs>
+
+<Task>2.1</Task>
+Lisää koodiin muuttuja <code>d</code> johon sijoitetaan muuttujien <code>a</code> ja <code>b</code> tulo (eli kertolasku). Kertomerkki on <code>*</code>.
+Käske tietokonetta myös tulostamaan muuttujan <code>d</code> arvo, jotta näet mitä tapahtuu.
+
+<Task>2.2</Task>
+Muokkaa ohjelmaa siten että muuttujan <code>etunimi</code> arvoksi asetetaan <code>"jasu"</code> ja muuttujan <code>sukunimi</code> arvoksi asetetaan <code>"petteri"</code>.
+Lisäksi, muuttujan <code>koko_nimi</code> arvoksi asetetaan muuttujien <code>etunimi</code> ja <code>sukunimi</code> summa (??). Tulosta lisäksi muuttujan <code>koko_nimi</code> arvo.
+Aja koodi ja ihmettele tulosta!
+
+<Task>2.3</Task>
+Laita ohjelma tulostamaan jonkin sellaisen muuttujan arvo jota ei ole määritelty, esim. <Code>print(e)</Code> käskyn avulla. Katso tarkasti mitä
+virheilmoitus sanoo.
+</Segment>
+
+
+<Segment title="3. Useampi argumentti print-funktiolle">
+Olet kenties matematiikassa oppinut jotain funktioista ja erityisesti että funktiolle "syötetään" arvo (input), jolloin funktio pullauttaa jonkin
+toisen arvon "ulos" (output). Käyttämämme <code>print</code> on <em>funktio</em>, jolle voi antaa "inputtina" eli <em>funktion argumenttina</em> useamman arvon, jolloin nämä arvot tulostuvat samalle riville.
+Myöhemmin selviää miksi käsky <code>print</code> ei ole funktio samassa mielessä kuin mitä matematiikassa funktioilla tarkoitetaan.
+
+
+<Obs>Jos <code>print</code>-funktiolle annetaan useampi argumentti, nämä tulee erottaa toisistaan pilkulla.</Obs>
+
+Katselmoidaan alla olevaa esimerkkiä: Suorita ohjelma!
+<iframe src="https://trinket.io/embed/python3/6ff25d8c71?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<Task>3.1</Task>
+Tee vastaavanlainen ohjelma siten että määrittelet kaksi muuttujaa <code>nimi</code> ja <code>fav_color</code> asettamalla näille jotkin arvot. Lisäksi ohjelman tulee
+tulostaa (esimerkiksi) teksti <code>tyypin Tumppu lempiväri on sininen</code> käyttämällä hyväksi em. muuttujan arvoja.
+
+<Task>3.2</Task>
+Lisää ohjelmaan vielä kolmas muuttuja nimeltä <code>fav_animal</code> ja aseta tälle vaikka arvo <code>"pupu"</code>. Ohjelman tulee tulostaa muuttujien avulla
+(esimerkiksi) teksti <code>tyypin Tumppu lempiväri on sininen ja suosikkieläin on pupu.</code>
+</Segment>
+
+<Segment title="4. Peruslaskutoimitukset">
+ Ohjelmointikielessä yleensä - ja niin Pythonissakin - on "sisäänrakennettuna" useimmiten 5 eri laskutoimitusta, jotka ovat kerto, jako, plus ja miinus, sekä kummallinen modulo,
+joka on "jakojäännös" (ja jonka unohdamme samantien). Pythonissa on lisäksi sisäänrakennettuna potenssilasku, harvinaista kyllä. Laskutoimitukset merkitään seuraavasti:               
+
+* Kertolasku: `*`
+* Jakolasku: `/`
+* pluslasku: `+`
+* miinuslasku: `-`
+* Potenssilasku: `2**3` tarkoittaa "2 potenssiin 3".
+
+
+Alla on esimerkki laskutoimitusten käytöstä.
+<Obs>Alla olevassa koodissa <code>import</code> käskyllä otetaan käyttöön <code>math</code>-<em>kirjasto</em>, joka sisältää useita hyödyllisiä
+matematiikkaan liittyviä funktioita! Funktio <code>sqrt</code> on neliöjuuri (square root).
+Python on suosittu ohjelmointikieli osittain siksi että Pythonille löytyy lukematon määrä erilaisia kirjastoja, joten jokaista pyörää ei tarvitse keksiä
+uudestaan. Tämä <a href="https://xkcd.com/413/">nöräsarjakuva</a> havainnollistaa sitä, että Pythonille löytyy kaikki mahdollinen ja mahdoton valmiiksi
+toteutettuna kirjastoina.</Obs>
+<br />
+<iframe src="https://trinket.io/embed/python3/fc6dc37a22" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<Task>4.1</Task>
+Kokeile laskea "kymmenen potenssiin viisi". Muistathan printata tuloksen.
+
+<Task>4.2</Task>
+Suoraan syvään päähän: Jos suorakulmion kateettien pituudet ovat 2 ja 3, laske hypotenuusan pituus Pythonin ja Pythagoraan lauseen avulla. Käytä muuttujia kateettien
+pituuksina!
+
+<Task>4.3</Task>
+Jos ympyrän säteen pituus on <code>3</code>, laske ympyrän pinta-ala. (Huomaa <code>math</code>-kirjastosta tuotu <code>pi</code>, joka ei ole funktio vaan muuttuja, jonka arvoksi on valmiiksi
+asetettu et ikinä arvaa mikä)
+</Segment>
+
+<Segment title="5. Muuttujatyypit">
+Ohjelmointikielessä on useita eri muuttuja- tai tietotyyppejä. Tulemme kurssin puitteissa käyttämään seuraavia:
+
+* Kokonaisluku eli `integer`
+* Desimaaliluku eli `floating point number` tai vaan lyhyemmin `float`
+* Merkkijono ("tekstiä") eli <code>string</code>
+* Lista
+
+
+Alla olevassa koodissa on määritelty kokonaislukumuuttuja, desimaalilukumuuttuja, merkkijonomuuttuja sekä kaksi listaa. Huomaathan että Python-ohjelmointikielessä ei tarvitse millään tavalla
+erikseen kertoa minkä tyyppinen muuttuja on kyseessä, Python päättelee sen itse kun muuttujalle asetetaan arvo.
+<Obs>Alla olevaan koodiin on lisätty <em>kommentteja</em> käyttäen hyväksi risuaitaa tai "hashtagia" (<code>#</code>). Kommentit eivät ole suoritettavaa
+ohjelmakoodia. Kun ohjelma ajetaan Python-kääntäjä ignooraa kommentit. Jos kommentit häiritsevät sinua, voit poistaa ne.</Obs>
+
+Kokeile ajaa koodi ja tee alla olevat tehtävät!
+
+<iframe src="https://trinket.io/embed/python3/7e56f73972?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<Obs>
+Kenties huomasit tarkastelemalla esimerkkikoodia että listan alkioiden numerointi lähtee nollasta?
+</Obs>
+
+<Task>5.1</Task>
+
+* Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista1</code>:n viimeisen alkion
+* Muokkaa ohjelmaa siten, että ohjelma tulostaa <code>lista2</code>:n toisen alkion
+* Testaa mitä tapahtuu, jos yrität tulostaa jommankumman listan kuudennen (tai sadannen!) alkion.
+
+<Task>5.2</Task>
+Muokkaa ohjelmaa siten että muuttujaan <code>summa</code> lasketaan <code>lista1</code>:n ensimmäisen ja viimeisen alkion summa.
+
+<Task>5.3</Task>
+Muuttuja luodaan kun sille asetetaan jokin arvo. Kokeile voiko muuttujan arvoa muuttaa jälkikäteen.
+
+<Task>5.4</Task>
+Testaa voiko kokonaisluku- ja desimaalilukutyyppiset muuttujat laskea yhteen? Entäpä kokonaisluku ja merkkijono? Entä kaksi merkkijonoa? Alla
+olevassa koodissa on valmiiksi määritelty muutamia muuttujia testaamista varten
+<iframe src="https://trinket.io/embed/python3/a0db8dae6b?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+</Segment>
+
+<Segment title="*6. Suoritusjärjestys">
+Tarkastellaan ensin alla olevaa ohjelmaa. Tässä vaiheessa lienee jo selvää mitä ohjelma tekee mutta kokeile silti ajaa ohjelma.
+<iframe src="https://trinket.io/embed/python3/f8538f5976?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+Rivin 6 käsky suoritetaan seuraavassa järjestyksessä
+
+* Ensiksi lasketaan lausekkeen <code>a\**2 + b\**2</code> arvo käyttämällä hyväksi muuttujan <code>a</code> ja <code>b</code> arvoja.
+* Saatu arvo syötetään funktiolle <code>sqrt</code>.
+* Funktion <code>sqrt</code> palauttama arvo sijoitetaan muuttujan <code>c</code> arvoksi.
+
+</Segment>
