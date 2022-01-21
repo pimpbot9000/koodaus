@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Segment from '../components/segment'
 import Obs from '../components/obs'
 import Code from '../components/code'
+
 const LoopsPage = () => {
     return <Layout pageTitle="Toistolauseet eli silmukat">
         <p>Tässä osassa käsitellään toistolauseita eli silmukoita ("luuppeja"). Toistolauseen avulla jotain käskyjoukkoa suoritetaan monta kertaa peräjälkeen.

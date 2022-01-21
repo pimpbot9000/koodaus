@@ -1,15 +1,16 @@
 import * as React from 'react'
 
 const Quote = ({ children }) => {
-    const style = {
-        backgroundColor: "#e3dd96",
-        padding: "20px",
-        borderRadius: "5px",
-        marginBottom: "10px"
+
+    const style2 = {
+        borderLeft: "4px solid #0b6ebf",
+        paddingLeft: "20px",
+        margin: "10px",
+        color: "#555"
     }
     return (
-        <div style={style}>
-            "<em>{children}</em>"
+        <div style={style2}>
+            " <em>{children}</em> "
         </div>
     )
 }

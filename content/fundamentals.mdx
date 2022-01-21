@@ -4,7 +4,7 @@ title: "Never send a human to do a machines job"
 (Agent Smith, *The Matrix*, 1999)
 
 Tietokonetta ohjelmoidaan kirjoittamalla lähdekoodia jollain ohjelmointikielellä. Lähdekoodi käännetään (tai tulkataan!) tietokoneen ymmärtämään
-muotoon, jonka jälkeen tietokone osaa ajaa eli suorittaa ohjelman. Täsmällisemmin sanonuttuna lähdekoodin avulla tietokoneelle kirjoitetaan joukko <code>käskyjä</code>,
+muotoon, jonka jälkeen tietokone osaa ajaa eli suorittaa ohjelman. Täsmällisemmin sanottuna lähdekoodin avulla tietokoneelle kirjoitetaan joukko <code>käskyjä</code>,
 jotka tietokone suorittaa järjestyksessä alusta loppuun.
 
 Tietokone on aika tyhmä, eli se ei osaa tehdä muuta kuin mitä ihminen on ohjelmoinut tietokoneen
@@ -12,7 +12,7 @@ tekemään. Toisaalta tietokone on hyvä ja uskollinen apuri, sillä se ei koska
 Niinkuin vuoden 1984 scifi-klassikkoelokuvassa *The Terminator* osuvasti todettiin:
 
 <Quote>
-That terminator is out there, it cant be bargained with, it cant be reasoned with, it doesn't feel pity or remorse or fear, 
+That terminator is out there, it can't be bargained with, it can't be reasoned with, it doesn't feel pity or remorse or fear, 
 and it absolutely will not stop... ever, untill you are dead!
 </Quote>
 
@@ -49,22 +49,24 @@ Lisää edelliseen sovellukseen vielä kolmaskin <code>print</code>-käsky!
 Onneksi olkoon! Olet selvinnyt ensimmäisestä haasteesta. Tähän mennessä olet oppinut sekä hyödyllisen <code>print</code>-käskyn, että sen, että tietokone suorittaa annetut käskyt peräjälkeen alusta loppuun.
 Loppujen lopuksi tietokone ei osaa tehdä kovin montaa eri asiaa. Pääosin tietokone osaa suorittaa laskutoimituksia tietokoneen muistissa olevien arvojen
 avulla. Ohjelmointikielissä käytetään <code>muuttujia</code> kuvaamaan tietokoneen muistissa olevia asioita.
-
+<br/><br/>
 Muuttuja ohjelmointikielessä on hieman eri asia kuin matematiikassa. Matematiikassa muuttuja kuvaa jotain "random" lukua, ohjelmointikielessä muuttuja
 taas on eräänlainen lokero, johon voidaan sijoittaa esimerkiksi luku tai vaikkapa tekstiä. Tietokone siis "muistaa" mikä luku tai teksti muuttujaan - tai lokeroon - on tallennettu, ja tietokone
 osaa suorittaa näiden muistissa olevien lukujen avulla esim. laskutoimituksia.
 
 <Obs>
-Muuttujan ero matematiikassa ja ohjelmointikielissä:
+Muuttujan ero matematiikassa ja ohjelmointikielissä: 
+
 * Matematiikassa muuttuja kuvaa jotain "random" lukua.
 * Ohjelmointikielissä muuttujalla on aina jokin arvo (joka on tietokoneen muistissa ohjelmaa suoritettaessa).
+
 </Obs>
 
 <Segment title="2. Muuttujat">
 Alla olevassa sovelluksessa on asetettu muuttujille <code>a</code>, <code>b</code> ja <code>nimi</code> arvot. Kun muuttujalle asetetaan arvo,
 muuttujaa voidaan käyttää jatkossa esimerkiksi laskutoimituksissa. Huomaa että muuttujien <code>a</code> ja <code>b</code> arvot ovat kokonaislukuja (<code>integer</code>) kun taas
 
-muuttujan <code>nimi</code> arvo on "tekstiä" eli merkkijono. (<code>string</code>).
+muuttujan <code>nimi</code> arvo on "tekstiä" eli merkkijono (<code>string</code>).
 
 <Obs>
 Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
@@ -75,8 +77,8 @@ Muuttujan nimeämisessä täytyy ottaa muutama seikka huomioon:
 * Muuttujan nimessä saa olla numeroita mutta muuttujan nimi ei saa alkaa numerolla
 
 Se että muuttujan nimissä ei saa olla ääkkösiä, ei haittaa sillä ohjelmointia useimmiten tehdään "englanniksi". Toki suomen kieltäkin saa käyttää
-mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi. Tässä materiaalissa on välillä
-käytetty sekä suomen kielisiä että englanninkielisiä muuttujien nimiä. Toivottavasti pystyt elämään tämän kanssa :)
+mutta se näyttää vähän urpolta sillä ohjelmointikielen sisäänrakennetut käskyt (esim. <code>print</code>) ovat kuitenkin englanniksi. Tässä materiaalissa on kuitenkin
+käytetty sekä suomen-  että englanninkielisiä muuttujien nimiä.
 </Obs>
 
 Kokeile painaa play-nappulaa ja kiinnitä huomiota siihen mitä ohjelma tulostaa.
