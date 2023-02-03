@@ -1,0 +1,54 @@
+---
+title: "Toistolauseet eli silmukat (tai luupit, engl. loops)"
+---
+
+Tässä osassa käsitellään toistolauseita eli silmukoita ("luuppeja"). Toistolauseen avulla jotain käskyjoukkoa suoritetaan monta kertaa peräjälkeen.
+Aloitamme toistolauseen käsitteleminen tutkailemalla <code>for</code>-toistolausetta. <code>for</code>-toistolausetta käytetään tyypillisesti kun
+tulee "käydä läpi" lista.
+
+<Segment title="1. For-lause, osa 1">
+Alla olevassa esimerkissä for lauseen avulla käydään listan jokainen alkio läpi. Toistolauseessa oleva käsky <Code>print(nimi)</Code> siis toistetaan
+niin monta kertaa kuin listassa on nimiä.
+
+Tutkaile koodia ja aja ohjelma.
+<Obs>Pistä merkille sisennys rivillä 4. Muista että sisennys tehdään tabulaattori-näppäimellä.</Obs>
+<Trinket id="08eb7c4eef" height="350"/>
+
+### 1.1
+
+Muokkaa ohjelmaa siten että silmukassa oleva <code>print</code>-käsky tulostaa joka kierroksella tekstin "Hei [nimi tähän]!". Sovelluksen tulee siis 
+tervehtiä jokaista listasta löytyvää henkilöä.
+
+### 1.2
+Kokeile lisätä silmukkaan toinenkin <code>print</code>-käsky. Käsky voi tulostaa mitä ikinä haluatkin. Huomaa sisennys! Sisennyksen avulla Pythonissa kerrotaan mitkä käskyt ovat osa silmukkaa.
+</Segment>
+
+<Segment title="2. For-lause, osa 2">
+Suorita ohjelma ja tutkaile ohjelman tulostetta. Tässä osiossa ei ole tehtäviä, tämä toimii lähinnä demonstraationa siitä miten silmukka toimii.
+<Obs>
+Silmukan yhden kierroksen aikana suoritetaan 4 käskyä. Huomaa sisennykset riveillä 5, 6, 7 ja 8.
+</Obs>
+<Trinket id="c470564e43" height="350"/>
+</Segment>
+
+<Segment title="3. For-lause, osa 3">
+
+### 2.1 
+
+Matematiikan tunnilla opettaja käskee sinua laskemaan funktion  <InlineMath>f(x) = 2x + 1</InlineMath> arvon muuttujien arvolla <InlineMath>0...5</InlineMath>. Koska olet laiska haluat ulkoistaa
+tämän tietokoneelle. Toteuta tämä alla olevaan koodipohjaan.
+
+<Obs>Muista että vaikka matematiikassa usein kertomerkkejä ei merkitä näkyviin, ohjelmointikielessä ei voi olla näkymättömiä kertomerkkejä</Obs>
+<Trinket id="4e0e6f9ff7" height="350"/>
+
+### 2.2
+Taksimatkan aloitusmaksu on 5 € ja kilometritaksa 2 € / km. Muodosta funktio jonka avulla voidaan laskea taksimatkan kokonaishinta, kun taksilla kuljetun
+matkan pituus on x. Tee sovellus, joka laskee taksimatkan hinnat muuttujien arvoilla 0 ... 6. Käske ohjelmaa tulostamaan jokaisella silmukan kierroksella sekä 
+taksimatkan pituus että hinta, esimerkiksi seuraavasti: "<em>Taksimatkan pituus on 1 km ja hinta 7 €</em>".
+
+<Obs>
+Muista että sisennyksellä Pyhtonissa kerrotaan mitkä käskyt ovat osa silmukkaa.
+</Obs>
+
+<Trinket id="2a9c9d5e77" height="350"/>
+</Segment>

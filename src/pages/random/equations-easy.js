@@ -24,7 +24,7 @@ const EquationsPage = () => {
     const Task = () => {
         const jaana = getRandomInRange(5, 15)
 
-        const sumString = "Leevillä, Jaanalla ja Elisalla on yhteensä _ omenaa."
+        const sumString = "Jaanalla ja Elisalla on yhteensä _ omenaa."
         const options = [
             ["Leevillä on _ omenaa enemmän kuin Jaanalla.", ["kolme", "neljä", "viisi"], [3, 4, 5], (n, k) => n + k],
             ["Leevin omenoiden määrä on _ Jaanan omenoiden lukumäärään nähden.", ["kaksinkertainen", "kolminkertainen", "nelinkertainen"], [2, 3, 4], (n, k) => n * k],

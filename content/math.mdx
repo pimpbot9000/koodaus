@@ -2,47 +2,55 @@
 title: "Hieman matikkaa"
 ---
 
-Tässä osiossa teemme hieman matematiikkaa Pythonin avulla aiemmin opittujen asioiden avulla. Koodaamisen kautta keraamme muutamia matematiikkaa liittyviä asioita. Käytämme
-mm. Pythagoraan lausetta ja palautamme mieleen mikä suoran kulmakerroin taas olikaan.
+Tässä osiossa teemme hieman matematiikkaa Pythonin avulla aiemmin opittujen asioiden avulla. Koodaamisen kautta kertaamme muutamia matematiikkaa liittyviä asioita. Käytämme
+mm. Pythagoraan lausetta, teemme funktioita kappaleen tilavuuden laskemiseksi ja selviääpä sellainenkin asia kuin mikä on Manhattan-etäisyys.
 
-<Segment title="1. Ympyrälieriön tilavuus">
-<Task>1.1</Task>
+<Segment title="1. Ympyrälieriön ja pallon tilavuus">
+
+### 1.1
 Täydennä alla olevaa sovellusta seuraavasti:
 
-* Funktion <code>volume</code> tulee laskea ympyrälieriön tilavuuden.
+* Funktion ```volume_cylinder``` tulee laskea ympyrälieriön tilavuuden.
 * Ohjelman tulee kysyä käyttäjältä ympyrälieriön tilavuuden ja korkeuden ja ympyrälieriön tilavuus lasketaan funktion avulla.
-* Muista lopuksi käyttää <code>print</code>-käskyä.
+* Muista lopuksi käyttää ```print```-käskyä.
 
-<iframe src="https://trinket.io/embed/python3/80ec6b493b" width="100%" height="350" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<Trinket id="80ec6b493b" height="350"/>
+
+
+### 1.2
+Täydennä ylläolevassa koodissa funktiota ```volume_sphere```, jolle annetaan argumentiksi pallon ympärysmitta (```c```) ja joka laskee pallon tilavuuden.
 </Segment>
 
 <Segment title="2. Alennettu hinta">
-<Task>2.1</Task>
+
+### 2.1
 Tee ohjelma joka pyytää syötteenä kaksi eri lukua, tuotteen hinnan ja alennusprosentin. Ohjelman tulee laskea
 
 * alennus (euroina)
 * tuotteen alennettu hinta
 
-Voit käyttää joko <code>read_int</code> tai <code>read_float</code> funktiota syötteiden lukemiseksi.
+Voit käyttää joko ```read_int``` tai ```read_float``` funktiota syötteiden lukemiseksi.
 <iframe src="https://trinket.io/embed/python3/97e8e92056?runOption=run" width="100%" height="350" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 </Segment>
 
 <Segment title="3. Pythagoraan lause">
-<Task>3.1</Task>
+
+### 3.1
+
 Laajenna alla olevaa sovellusta seuraavasti:
 
 
-* Ohjelman tulee kysyy käyttäjältä toisenkin kateetin pituus ja tallentaa tämä muuttujaan <code>kateetti2</code>.
-* Funktion <code>hypotenuusa</code> tulee laskea hypotenuusan pituus ja palauttaa tämä arvo.
-* Käyttäjän syötteiden avulla lasketaan hypotenuusan pituus käyttämällä funktiota <code>hypotenuusa</code>
-* Lopuksi hypotenuusan pituus tulostetaan <code>print</code>-käskyn avulla 
+* Ohjelman tulee kysyy käyttäjältä toisenkin kateetin pituus ja tallentaa tämä muuttujaan ```kateetti2```.
+* Funktion ```hypotenuusa``` tulee laskea hypotenuusan pituus ja palauttaa tämä arvo.
+* Käyttäjän syötteiden avulla lasketaan hypotenuusan pituus käyttämällä funktiota ```hypotenuusa```
+* Lopuksi hypotenuusan pituus tulostetaan ```print```-käskyn avulla 
 
 <Obs>
 Käytämme tällä kertaa <code>read_float</code> funktiota, jolloin käyttäjä voi halutessaan syöttää joko kokonaisluvun tai desimaaliluvun. Huomaa että
 desimaalierottimena on piste (näin: <code>2.5</code>) eikä pilkku (ei näin: <code>2,5</code>)
 </Obs>
-<iframe src="https://trinket.io/embed/python3/f78f142beb?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<Trinket id="f78f142beb" height="400"/>
 </Segment>
 
 <Segment title="4. Kahden pisteen välinen etäisyys">
@@ -54,34 +62,35 @@ myös hieman erikoista "destrukturointisijoitusoperaatiota", jonka voi bongata r
 rivillä 8 sijoitetaan arvot yhtä aikaa kahteen eri muuttujan arvoon!
 </Obs>
 Aivan ensimmäiseksi, testaa ohjelman toimintaa antamalla syötteeksi jokin koordinaatti. Ohjelman tulisi tulostaa erikseen syöttämäsi koordinaatin x- ja y-koordinaatit.
-<iframe src="https://trinket.io/embed/python3/40bf843ca7?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<Trinket id="40bf843ca7" height="400"/>
 
-<Task>4.1</Task>
-Laajenna ohjelmaa siten, että se lukee käyttäjältä myös toisen pisteen koordinaatit. Annan näille vaikka nimet <code>x2</code> ja <code>y2</code>.
+### 4.1
+Laajenna ohjelmaa siten, että se lukee käyttäjältä myös toisen pisteen koordinaatit. Annan näille vaikka nimet ```x2``` ja ```y2```.
 
-<Task>4.2</Task>
+### 4.2
 Nyt kun ohjelma lukee kahden pisteen koordinaatti, koodistele tietokone laskemaan pisteiden välinen etäisyys
 
-<Task>4.3</Task>
+### 4.3
 Tee lopuksi funktio, jonka avulla pisteiden välinen etäisyys lasketaan. Huomaa että funktiolle tulee antaa 4 eri arvoa argumenttina!
 </Segment>
 
-<Segment title=". Manhattan-etäisyys">
+<Segment title="5. Manhattan-etäisyys">
 
-Oletko käynyt New Yorkissa tai jopa niinkin eksoottisessa paikassa kuin Helsingin keskustassa. Pythagoraan lauseen avulla voidaan laskea kahden pisteen välinen etäisyys
+Oletko käynyt New Yorkissa tai jopa niinkin eksoottisessa paikassa kuin Helsingin keskustassa? Pythagoraan lauseen avulla voidaan laskea kahden pisteen välinen etäisyys
 "linnuntietä" pitkin, mutta kaupungeissa emme voi tietenkään liikkua linnuntietä pitkin.
 
-<Task>5.1</Task>
+### 5.1
 Googlaa mitä Manhattan-etäisyys tarkoittaa ja pohdi miten tämä lasketaan kahden koordinaatin avulla.
 
-<Task>5.2</Task>
-Muokkaa alla olevaa koodia siten, että funktio <code>manhattan_distance</code> laskee ja palauttaa kahden pisteen välisen Manhattan-etäisyyden arvon. Käytä funktiota
+### 5.2
+Muokkaa alla olevaa koodia siten, että funktio ```manhattan_distance``` laskee ja palauttaa kahden pisteen välisen Manhattan-etäisyyden arvon. Käytä funktiota
 hyväksi siten, että sen avulla lasketaan käyttäjän syöttämien koordinaattien Manhattan-etäisyys.
 
-
+Tässä tarvitaan itseisarvofunktiota ```abs```. Itseisarvofunktio toimii siten, että jos sille annetaan argumentiksi negatiivinen luku (esimerkiksi <InlineMath>-3</InlineMath>) se
+muuttaa luvun positiiviseksi (<InlineMath>3</InlineMath>). Positiivinen luku pysyy ennallaan.
 <Obs>
 Pohdi mihin itseisarvofunktiota <code>abs</code> tarvitaan Manhattan-etäisyyden laskemisessa? Miksi Pythagoraan lauseen tapauksessa ei tarvita itseisarvoa?
 </Obs>
-<iframe src="https://trinket.io/embed/python3/640b2f64a1?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<Trinket id="640b2f64a1" height="400"/>
 </Segment>
 

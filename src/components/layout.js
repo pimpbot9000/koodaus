@@ -9,8 +9,10 @@ import Obs from '../components/obs'
 import Quote from '../components/quote'
 import Code from '../components/code'
 import Task from '../components/task'
+import Trinket from '../components/trinket'
+import InlineMath from '../components/mathjax-inline'
 
-const shortcodes = { Segment, Obs, Quote, Code, Task }
+
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -39,7 +41,11 @@ const Layout = ({ pageTitle, children }) => {
                 </nav>
                 <main>
                     <h1>{pageTitle}</h1>
-                    <MDXProvider components={shortcodes}>{children}</MDXProvider>
+                    <MDXProvider components={{
+                        h3: Task,
+                        thematicBreak: () => <><br/><br></br></>,
+                        Segment, Obs, Quote, Code, Task, Trinket, InlineMath
+                    }}>{children}</MDXProvider>
                 </main>
             </div>
         </>
