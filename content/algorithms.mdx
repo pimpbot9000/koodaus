@@ -12,8 +12,6 @@ tulkita olevan algoritmi, tai oikeastaan minkä tahansa ohjelman, sillä jokaine
 Käytännössä algoritmeilla tarkoitetaan jonkinlaista nokkelaa tapaa ratkaista jokin ongelma toistamalla jotain samaa proseduuria uudestaan ja uudestaan.
 Ehkä parhaiten yksinkertaista algoritmia kuvaa tilanne, jossa opettaja sanoo "Avaa kirja sivulta 58".
 <br/><br/>
- 
-
 Miten toimit tilanteessa? Yksinkertaisin tapa on tietysti alkaa selaamaan kirjaa alusta kunnes päädyt sivulle 58. Tämä on algoritmi, mutta ei kovin tehokas sellainen.
 Useimmiten algoritmin tulee suoriutua tehtävästä mahdollisimman nopeasti. Kuvittele että HSL:n reittihaku kokeilisi kaikki mahdolliset bussireitit, ennenkuin osaisi ehdottaa nopeinta
 vaihtoehtoa. Tähän kuluisi Helsingin kokoisessa joukkoliikennesysteemissä tietokoneeltakin aivan liian pitkän aika! Algoritmin siis tulee olla nokkela, jotta
@@ -34,48 +32,50 @@ Edellisellä algoritmilla itseasiassa nimikin, nimeltä puolitushaku (Binary sea
 Tässä osiossa ohjelmoimme muutaman yksinkertaisen algoritmin.
 
 <Segment title="1. Isoimman luvun etsiminen listasta">
-Ehkä yksinkertaisin algoritmi (ja joka luokitellaan "oikeaksi" algoritmiksi) on isoimman tai pienimmän luvun etsiminen listasta.
-Alla on toteutettu kyseinen algoritmi s.e. se etsii listan isoimman luvun. Algoritmi toimii seuraavasti:  
+Ehkä yksinkertaisin algoritmi (ja jonka voidaan ajatella olevan ihan "oikea" algoritmi) on isoimman tai pienimmän luvun etsiminen listasta.
+Alla on toteutettu kyseinen algoritmi s.e. se etsii listan isoimman luvun. Algoritmi toimii seuraavasti:
 
+---
 
-* Olkoon "suurin tähän mennessä nähty luku" <code>max_value</code>. Jos kaikki listan luvut ovat positiivisia asetetaan tämän arvoksi 0 (eli luku, joka on pienempi 
+* Olkoon "suurin tähän mennessä nähty luku" `max_value`. Jos kaikki listan luvut ovat positiivisia asetetaan tämän arvoksi 0 (eli luku, joka on pienempi 
 kuin mikä tahansa listan luku).
-* Käydään läpi jokainen listan luku ja suoritetaan seuraava operaatio: Jos tämänhetkinen luku (<code>x</code>) on suurempi kuin "suurin tähän
-mennessä nähty luku" (<code>max_value</code>) asetetaan muuttujan <code>max_value</code> arvoksi muuttujan <code>x</code> arvo. 
+* Käydään läpi jokainen listan luku ja suoritetaan seuraava operaatio: Jos tämänhetkinen luku (`x`) on suurempi kuin "suurin tähän
+mennessä nähty luku" (`max_value`) asetetaan muuttujan `max_value` arvoksi muuttujan `x` arvo. 
 
 <Trinket id="b73ba4628c" height="300"/>
 
-<Task> 1.1</Task>
-Muokkaa ohjelmaa siten että se etsii listan pienimmän luvun. Ensimmäisenä tietysti nimetään muuttuja <code>max_value</code> uudestaan (<code>min_value</code>). Pohdi tarkkaan mikä
-nyt asetetaan muuttujan <code>min_value</code> alkuperäiseksi arvoksi.
+###  1.1
+Muokkaa ohjelmaa siten että se etsii listan pienimmän luvun. Ensimmäisenä tietysti nimetään muuttuja `max_value` uudestaan (`min_value`). Pohdi tarkkaan mikä
+nyt asetetaan muuttujan `min_value` alkuperäiseksi arvoksi.
 </Segment>
 
 <Segment title="2. Listan lukujen summa">
 Tyypillä on 100 € rahaa. Tyyppi on tehnyt ostoslistan, johon hän on merkinnyt niiden tuotteiden hinnan, jotka hän aikoo ostaa Alepasta.
 Tyyppi ei halua laskea päässä kuinka paljon hänellä jää rahaa jäljelle. Tätä varten hän kirjoittaa Python-kielisen sovelluksen, joka löytyy alta.
+
 <Obs>
 Tarkastellaan rivin 6 käskyä. Käsky suoritetaan (oikealta vasemmalle) seuraavasti:
 
-* Muuttujan <code>money</code> arvosta vähennetään muuttujan <code>x</code> arvo
-* Saatu arvo asetetaan muuttujan <code>money</code> (uudeksi) arvoksi.
+* Muuttujan `money` arvosta vähennetään muuttujan `x` arvo
+* Saatu arvo asetetaan muuttujan `money` (uudeksi) arvoksi.
 
 Edellinen toistetaan jokaiselle listan luvulle, joten saamme selville kuinka paljon rahaa jäi jäljelle.
 </Obs>
 
 <Trinket id="88d75f3113" height="300"/>
 
-<Task>2.1</Task>
+### 2.1
 Muokkaa ohjelmaa siten, että se laskee kuinka paljon ostokset maksavat yhteensä.
 
-<Task>2.2</Task>
+### 2.2
 Tee sovellus, joka laskee lukujen <InlineMath>1,2,3,4,...,999,1000</InlineMath> summan. Alla olevalla koodinpätkällä pääset alkuun. Kokeile ensin ajaa ohjelma, jossa saat käsityksen siitä,
-miten <code>range</code>-funktio toimii. Vastaukseksi pitäisi tulla <InlineMath>500500</InlineMath>.
+miten `range`-funktio toimii. Vastaukseksi pitäisi tulla <InlineMath>500500</InlineMath>.
 
 <Trinket id="123c5b848e" height="300"/>
 
-<Task>2.3</Task>
-Tee sovellus, joka laskuu lukujen 1, 2, 3, 4, ... , <code>n</code> tulon, jossa <code>n</code> on käyttäjän syöttämä luku. Käytä <code>for</code>-simulkkaa
-ja <code>range</code>-funktiota.
+### 2.3
+Tee sovellus, joka laskuu lukujen 1, 2, 3, 4, ... , `n` tulon, jossa `n` on käyttäjän syöttämä luku. Käytä `for`-simulkkaa
+ja `range`-funktiota.
 
 <Obs>
 Tämän kaltainen laskutoimitus on kenties sinulle tuttu, jos olet matematiikan tunnilla laskenut kombinaatioiden lukumääriä.
@@ -85,41 +85,61 @@ Tämän kaltainen laskutoimitus on kenties sinulle tuttu, jos olet matematiikan 
 </Segment>
 
 <Segment title="3. Tietyn alkion lukumäärä listassa">
-<Task>3.1</Task>
+
+### 3.1
 Tee sovellus, joka laskee kuinka monta kakkosta on listassa.
 <Trinket id="4eb1edbca2" height="300"/>
 
-<Task>3.2</Task>
+### 3.2
 Tee sovellus, joka laskee kuinka monta parillista lukua listassa on. Tarvitset tässä modulo-laskutoimitusta, joka laskee ala-asteelta tutun jakojäännöksen. 
-Esimerkiksi laskutoimituksen <Code>9 % 3</Code> tulos on <code>0</code>, sillä kun 9 jaetaan luvulla 3, jakojäännös on 0. Laskutoimituksen <Code>8 % 3</Code> tulos
- taasen on <code>2</code>, sillä jako ei mene tasan.
-<Task>3.3</Task>
+Esimerkiksi laskutoimituksen `9 % 3` tulos on `0`, sillä kun 9 jaetaan luvulla 3, jakojäännös on 0. Laskutoimituksen `8 % 3` tulos
+ taasen on `2`, sillä jako ei mene tasan.
+
+### 3.3
 Muuta sovellusta siten että se laskeekin kuinka monta paritonta lukua listassa on.
+
+### 3.4: FizzBuzz!
+
+FizzBuzz on klassinen ohjelmointiharjoitus, jota tarinan mukaan on käytetty työhaastatteluissa tehtävänä selvittämään, onko työpaikkaa hakeva koodari
+itseasiassa täysin kuutamolla. FizzBuzz on hyvin yksinkertainen: käy läpi lukuja järjestyksessä ja ...
+* mikäli luku on jaollinen kolmella tulosta `Fizz`
+* mikäli luku on jaollinen viidellä tulosta `Buzz`
+* mikäli luku on jaollinen kolmella ja viidellä tulosta `FizzBuzz`
+* muuten tulosta luku.
+
+Toteuta FizzBuzz luvuille 1...100.
+<Obs>Ole tarkka if-elif-else-järjestyksen kanssa.</Obs>
+
+<Trinket id="07fe0d3bb9" height="300"/>
+
 </Segment>
 
 <Segment title="4. Neliöjuuri ja kuutiojuuri">
 Tiettyjen lukujen neliöjuuren päässä laskeminen on helppoa: tämä perustuu kertotaulun ulkoaosaamiseen. Esimerkiksi luvun <InlineMath>36</InlineMath> neliöjuuri on <InlineMath>6</InlineMath>, sillä <InlineMath>3\cdot 3 = 9</InlineMath>.
 Ongelmat tulevat vastaan kun pitää laskea neliöjuuri silloin, kun vastausta ei löydykään kertotaulusta. Esimerkiksi luvun <InlineMath>2</InlineMath> neliöjuuri on <InlineMath>1.41421356237...</InlineMath>.
 <br/><br/>
-Tällaisissa tilanteissa neliöjuuri lasketaan jonkinlaisen algoritmin avulla. Algoritmeja on useampia ja alla on esimerkkinä yksinkertainen algoritmi, jonka periaatteen
+Tällaisissa tilanteissa neliöjuuri lasketaan jonkinlaisen algoritmin avulla. Esimerkkinä käsitellään yksinkertaista algoritmia, jonka periaatteen
 ymmärtäminen ei vaadi suurta ponnistelua. Esimerkkinä on luvun 2 neliöjuuren laskeminen.
 
 1. Todetaan aluksi että neliöjuuren täytyy olla jossain välillä <InlineMath>0...2</InlineMath>.
 1. Lasketaan lukujen <InlineMath>0</InlineMath> ja <InlineMath>2</InlineMath> keskiarvo joka on <InlineMath>1.5</InlineMath>
 1. Lasketaan <InlineMath>1.5 \cdot 1.5 = 2.25</InlineMath>. Luku <InlineMath>1.5</InlineMath> on siis liian suuri ollakseen luvun <InlineMath>2</InlineMath> neliöjuuri.
-1. Luvun <InlineMath>2</InlineMath> neliöjuuri on siis pienempi kuin <InlineMath>1.5</InlineMath> ja suurempi kuin <InlineMath>0</InlineMath>.
+1. Luvun <InlineMath>2</InlineMath> neliöjuuri on siis suurempi kuin <InlineMath>0</InlineMath> ja pienempi kuin <InlineMath>1.5</InlineMath>.
 1. Lasketaan lukujen <InlineMath>0</InlineMath> ja <InlineMath>1.5</InlineMath> keskiarvo, joka on <InlineMath>0.75</InlineMath>.
 1. Lasketaan <InlineMath>0.75 \cdot 0.75 = 0.5625</InlineMath>. Luku <InlineMath>0.5625</InlineMath> on siis liian pieni ollakseen luvun <InlineMath>2</InlineMath> neliöjuuri.
-1. Luvun <InlineMath>2</InlineMath> neliöjuuri on siis pienempi kuin <InlineMath>1.5</InlineMath> ja suurempi kuin <InlineMath>0.5625</InlineMath>.
-1. Tätä jatketaan kunnes saadaan tarpeeksi hyvä likiarvo.
+1. Luvun <InlineMath>2</InlineMath> neliöjuuri on siis suurempi kuin <InlineMath>0.75</InlineMath> ja pienempi kuin <InlineMath>1.5</InlineMath>.
+1. Lasketaan lukujen <InlineMath>0.75</InlineMath> ja <InlineMath>1.5</InlineMath> keskiarvo ...
+1. Toistetaan kunnes tarpeeksi tarkka likiarvo löytyy.
 
 Jos et pysynyt perässä piirrä lukusuora ja käy vaiheet uudelleen läpi. Ja kyllä, kyseessä oli binäärihaku, joka mainittiin aivan alussa kirjaesimerkin tapauksessa.
 
 ### 4.1
-Alla on koodi jossa on kikkailun vuoksi tehty kurssin loppuun rekursiivinen algoritmi (funktio, joka kutsuu itse itseään!) neliöjuuren laskemiseksi edellä kuvatulla tavalla. Muuta ohjelmaa siten,
+Alla on koodi, jossa on kikkailun vuoksi tehty kurssin lopun kunniaksi rekursiivinen algoritmi (funktio, joka kutsuu itse itseään!) neliöjuuren laskemiseksi edellä kuvatulla tavalla. Muuta ohjelmaa siten,
 että se laskeekin kuutiojuuren neliöjuuren sijasta. Huomaa että koodiin tarvitsee tehdä ihan vain pikkiriikkinen muutos!
+
 <Obs>
 Jaa mikä ihmeen kuutiojuuri?? Esimerkiksi, luvun <InlineMath>8</InlineMath> kuutiojuuri on <InlineMath>2</InlineMath>, sillä <InlineMath>2 \cdot 2 \cdot 2 = 8</InlineMath>.
 </Obs>
+
 <Trinket id="4003451995" height="500"/>
 </Segment>

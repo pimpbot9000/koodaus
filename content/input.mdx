@@ -8,25 +8,25 @@ osiossa teemme yksinkertaisia sovelluksia, jossa käyttäjä voi ohjelman suorit
 
 <Segment title="1. Merkkijonon lukeminen">
 
-Kokeile ajaa alla oleva ohjelma. Ohjelman suoritus pysähtyy ```print``` käskyn jälkeen ja ohjelma odottaa että käyttäjä (oikeanpuoleisessa konsolissa)
-syöttää luvun ja painaa enter-näppäintä. Kokeile syöttää konsolissa oma nimesi. Syötteen lukemisen hoitaa ```read_str```-funktio.
+Kokeile ajaa alla oleva ohjelma. Ohjelman suoritus pysähtyy `print` käskyn jälkeen ja ohjelma odottaa että käyttäjä (oikeanpuoleisessa konsolissa)
+syöttää luvun ja painaa enter-näppäintä. Kokeile syöttää konsolissa oma nimesi. Syötteen lukemisen hoitaa `read_str`-funktio.
 
 <Obs>
 
-```read_str``` ei ole Python-ohjelmointikielen sisäänrakennettu funktio. Kyseinen funktio käyttää hyödyksi Pythonin sisäänrakennettua 
-funktiota ```input```, mutta tässä kurssissa käytämme helpotuksena valmiiksi laadittuja funktioita merkkijonojen, kokonaislukujen ja desimaalilukujen lukemiseksi.
+`read_str` ei ole Python-ohjelmointikielen sisäänrakennettu funktio. Kyseinen funktio käyttää hyödyksi Pythonin sisäänrakennettua 
+funktiota `input`, mutta tässä kurssissa käytämme helpotuksena valmiiksi laadittuja funktioita merkkijonojen, kokonaislukujen ja desimaalilukujen lukemiseksi.
 
 </Obs>
 
 <Trinket id="cb12130092" height="300"/>
 
 ###  1.1
-Laajenna ohjelmaa siten, että etunimen syöttämisen jälkeen ohjelma kysyy sukunimeä ja tallentaa tämän muuttujaan ```sukunimi```. Lopuksi ohjelma
-tulostaa (esimerkiksi) tekstin ```Hyvää iltapäivää Matias Häggman``` muuttujia ```nimi``` ja ```sukunimi``` hyväksikäyttäen.
+Laajenna ohjelmaa siten, että etunimen syöttämisen jälkeen ohjelma kysyy sukunimeä ja tallentaa tämän muuttujaan `sukunimi`. Lopuksi ohjelma
+tulostaa (esimerkiksi) tekstin `Hyvää iltapäivää Matias Häggman` muuttujia `nimi` ja `sukunimi` hyväksikäyttäen.
 
 ###  1.2
 Laajenna ohjelmaa vielä siten, että ohjelma kysyy etunimen ja sukunimen lisäksi lempiväriä, joka jälkeen muuttujien arvojen avulla tulostetaa esim.
-tekstin ```Moi Mikko Keskimäki. Lempivärisi sininen on ihan kiva.```
+tekstin `Moi Mikko Keskimäki. Lempivärisi sininen on ihan kiva.`
 
 </Segment>
 
@@ -45,17 +45,17 @@ Laajenna ohjelmaa siten, että ohjelma kysyy käyttäjältä kolme eri lukua ja 
 Muokkaa ohjelmaa siten, että se pyytää murtoluvun osoittajan ja nimittäjän ja ilmoittaa murtoluvun arvon sekä desimaalilukuna että prosentteina.
 
 ###  2.4
-Funktio ```read_int``` olettaa että käyttäjä syöttää kokonaisluvun. Kokeile mitä tapahtuu jos syötät jotain joka ei ole kokonaisluku, esimerkiksi
+Funktio `read_int` olettaa että käyttäjä syöttää kokonaisluvun. Kokeile mitä tapahtuu jos syötät jotain joka ei ole kokonaisluku, esimerkiksi
 tekstiä.
 </Segment>
 
-<Segment title="3. desimaaliluvun lukeminen">
+<Segment title="3. Desimaaliluvun lukeminen">
 
-Testataan vielä ```read_float()```-funktiota, jolla voi lukea desimaalilukuja.
+Testataan vielä `read_float()`-funktiota, jolla voi lukea desimaalilukuja.
 
 <Obs>
 
-Desimaalierottimena tulee käyttää pistettä eikä pilkkua. Ei siis näin ```2,5``` vaan ```2.5```.
+Desimaalierottimena tulee käyttää pistettä eikä pilkkua. Ei siis näin `2,5` vaan näin `2.5`.
 
 </Obs>
 

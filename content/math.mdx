@@ -3,35 +3,51 @@ title: "Hieman matikkaa"
 ---
 
 Tässä osiossa teemme hieman matematiikkaa Pythonin avulla aiemmin opittujen asioiden avulla. Koodaamisen kautta kertaamme muutamia matematiikkaa liittyviä asioita. Käytämme
-mm. Pythagoraan lausetta, teemme funktioita kappaleen tilavuuden laskemiseksi ja selviääpä sellainenkin asia kuin mikä on Manhattan-etäisyys.
+mm. prosenttilaskua, Pythagoraan lausetta, teemme funktioita kappaleen tilavuuden laskemiseksi ja selviääpä sellainenkin asia kuin mikä on Manhattan-etäisyys.
 
 <Segment title="1. Ympyrälieriön ja pallon tilavuus">
 
 ### 1.1
 Täydennä alla olevaa sovellusta seuraavasti:
 
-* Funktion ```volume_cylinder``` tulee laskea ympyrälieriön tilavuuden.
-* Ohjelman tulee kysyä käyttäjältä ympyrälieriön tilavuuden ja korkeuden ja ympyrälieriön tilavuus lasketaan funktion avulla.
-* Muista lopuksi käyttää ```print```-käskyä.
+* Funktion `volume_cylinder` tulee laskea ympyrälieriön tilavuus.
+* Ohjelman tulee kysyä käyttäjältä ympyrälieriön tilavuus ja korkeus ja ympyrälieriön tilavuus lasketaan funktion avulla.
+* Muista lopuksi käyttää `print`-käskyä tulostaaksesi vastauksen.
 
 <Trinket id="80ec6b493b" height="350"/>
 
 
 ### 1.2
-Täydennä ylläolevassa koodissa funktiota ```volume_sphere```, jolle annetaan argumentiksi pallon ympärysmitta (```c```) ja joka laskee pallon tilavuuden.
+Täydennä ylläolevassa koodissa funktiota `volume_sphere`, jolle annetaan argumentiksi pallon ympärysmitta (`c`) ja joka laskee pallon tilavuuden.
+
 </Segment>
 
-<Segment title="2. Alennettu hinta">
+<Segment title="2. Prosenttilaskua">
 
 ### 2.1
+Tee alla olevaan pohjaan ohjelma joka laskee esimerkiksi että kuinka paljon on 21 % luvusta 750. Ohjelma kysyy näitä lukuja käyttäjältä. Voit käyttää joko `read_int` tai `read_float` funktiota syötteiden lukemiseksi.
+
+### 2.2
 Tee ohjelma joka pyytää syötteenä kaksi eri lukua, tuotteen hinnan ja alennusprosentin. Ohjelman tulee laskea
 
 * alennus (euroina)
 * tuotteen alennettu hinta
 
-Voit käyttää joko ```read_int``` tai ```read_float``` funktiota syötteiden lukemiseksi.
+
 <Trinket id="97e8e92056" height="350"/>
 
+### 2.3
+Tee ohjelma lukee käyttäjältä kaksi lukua: "ennen" ja "jälkeen". Ohjelman tulee laskea kuinka monta prosenttia luku muuttui.
+
+### 2.4
+Muuta edellistä koodia siten, että se tulostaa esim. `luku kasvoi 10 %` tai `luku pieneni 15 %` tapauksesta riippuen.
+
+<Obs>
+
+Tämän voi toteuttaa esimerkiksi käyttämällä itseisarvofunktiota `abs`. Itseisarvofunktio toimii siten, että jos sille annetaan argumentiksi negatiivinen luku (esimerkiksi `-3`) se
+muuttaa luvun positiiviseksi (`3`). Positiivinen luku pysyy ennallaan.
+
+</Obs>
 </Segment>
 
 <Segment title="3. Pythagoraan lause">
@@ -41,31 +57,38 @@ Voit käyttää joko ```read_int``` tai ```read_float``` funktiota syötteiden l
 Laajenna alla olevaa sovellusta seuraavasti:
 
 
-* Ohjelman tulee kysyy käyttäjältä toisenkin kateetin pituus ja tallentaa tämä muuttujaan ```kateetti2```.
-* Funktion ```hypotenuusa``` tulee laskea hypotenuusan pituus ja palauttaa tämä arvo.
-* Käyttäjän syötteiden avulla lasketaan hypotenuusan pituus käyttämällä funktiota ```hypotenuusa```
-* Lopuksi hypotenuusan pituus tulostetaan ```print```-käskyn avulla 
+* Ohjelman tulee kysyy käyttäjältä toisenkin kateetin pituus ja tallentaa tämä muuttujaan `kateetti2`.
+* Funktion `hypotenuusa` tulee laskea hypotenuusan pituus ja palauttaa tämä arvo.
+* Käyttäjän syötteiden avulla lasketaan hypotenuusan pituus käyttämällä funktiota `hypotenuusa`
+* Lopuksi hypotenuusan pituus tulostetaan `print`-käskyn avulla 
 
 <Obs>
-Käytämme tällä kertaa <code>read_float</code> funktiota, jolloin käyttäjä voi halutessaan syöttää joko kokonaisluvun tai desimaaliluvun. Huomaa että
-desimaalierottimena on piste (näin: <code>2.5</code>) eikä pilkku (ei näin: <code>2,5</code>)
+
+Käytämme tällä kertaa `read_float` funktiota, jolloin käyttäjä voi halutessaan syöttää joko kokonaisluvun tai desimaaliluvun. Huomaa että
+desimaalierottimena on piste (näin: `2.5`) eikä pilkku (ei näin: `2,5`)
+
 </Obs>
+
 <Trinket id="f78f142beb" height="400"/>
 </Segment>
 
 <Segment title="4. Kahden pisteen välinen etäisyys">
 Jos tunnetaan kahden pisteen koordinaatit, pisteiden välinen etäisyys voidaan laskea Pythagoraan lauseen avulla. Tämä lienee kaikista eniten käytetty
 pythagoraan lauseen sovellus koko maailmankaikkeudessa.
+
 <Obs>
-Tällä kertaa käytössämme on funktio <code>read_coord</code>, joka osaa lukea koordinaatteja jotka on annettu joko muodossa <code>1,2</code> tai <code>(1,2)</code>. Käytämme
+
+Tällä kertaa käytössämme on funktio `read_coord`, joka osaa lukea koordinaatteja jotka on annettu joko muodossa `1,2` tai `(1,2)`. Käytämme
 myös hieman erikoista "destrukturointisijoitusoperaatiota", jonka voi bongata riviltä 8. Emme syvenny tähän sen tarkemmin, mutta näyttää siltä, että
 rivillä 8 sijoitetaan arvot yhtä aikaa kahteen eri muuttujan arvoon!
+
 </Obs>
+
 Aivan ensimmäiseksi, testaa ohjelman toimintaa antamalla syötteeksi jokin koordinaatti. Ohjelman tulisi tulostaa erikseen syöttämäsi koordinaatin x- ja y-koordinaatit.
 <Trinket id="40bf843ca7" height="400"/>
 
 ### 4.1
-Laajenna ohjelmaa siten, että se lukee käyttäjältä myös toisen pisteen koordinaatit. Annan näille vaikka nimet ```x2``` ja ```y2```.
+Laajenna ohjelmaa siten, että se lukee käyttäjältä myös toisen pisteen koordinaatit. Annan näille vaikka nimet `x2` ja `y2`.
 
 ### 4.2
 Nyt kun ohjelma lukee kahden pisteen koordinaatti, koodistele tietokone laskemaan pisteiden välinen etäisyys
@@ -83,14 +106,17 @@ Oletko käynyt New Yorkissa tai jopa niinkin eksoottisessa paikassa kuin Helsing
 Googlaa mitä Manhattan-etäisyys tarkoittaa ja pohdi miten tämä lasketaan kahden koordinaatin avulla.
 
 ### 5.2
-Muokkaa alla olevaa koodia siten, että funktio ```manhattan_distance``` laskee ja palauttaa kahden pisteen välisen Manhattan-etäisyyden arvon. Käytä funktiota
+Muokkaa alla olevaa koodia siten, että funktio `manhattan_distance` laskee ja palauttaa kahden pisteen välisen Manhattan-etäisyyden arvon. Käytä funktiota
 hyväksi siten, että sen avulla lasketaan käyttäjän syöttämien koordinaattien Manhattan-etäisyys.
 
-Tässä tarvitaan itseisarvofunktiota ```abs```. Itseisarvofunktio toimii siten, että jos sille annetaan argumentiksi negatiivinen luku (esimerkiksi <InlineMath>-3</InlineMath>) se
-muuttaa luvun positiiviseksi (<InlineMath>3</InlineMath>). Positiivinen luku pysyy ennallaan.
+Tässä tarvitaan itseisarvofunktiota `abs`.
+
 <Obs>
-Pohdi mihin itseisarvofunktiota <code>abs</code> tarvitaan Manhattan-etäisyyden laskemisessa? Miksi Pythagoraan lauseen tapauksessa ei tarvita itseisarvoa?
+
+Pohdi mihin itseisarvofunktiota `abs` tarvitaan Manhattan-etäisyyden laskemisessa? Miksi Pythagoraan lauseen tapauksessa ei tarvita itseisarvoa?
+
 </Obs>
+
 <Trinket id="640b2f64a1" height="400"/>
 </Segment>
 

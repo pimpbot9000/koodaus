@@ -11,6 +11,7 @@ import Code from '../components/code'
 import Task from '../components/task'
 import Trinket from '../components/trinket'
 import InlineMath from '../components/mathjax-inline'
+import Error from '../components/error'
 
 
 
@@ -20,7 +21,7 @@ const Layout = ({ pageTitle, children }) => {
         <>
             <Navbar bg="light">
                 <Container>
-                    <Navbar.Brand href="#home">Koodikoirakoulu</Navbar.Brand>
+                    <Navbar.Brand href="#home">🐶KoodiKoiraKoulu🐶</Navbar.Brand>
                 </Container>
             </Navbar>
             <br></br>
@@ -45,7 +46,7 @@ const Layout = ({ pageTitle, children }) => {
                     <MDXProvider components={{
                         h3: Task,
                         thematicBreak: () => <><br/><br></br></>,
-                        Segment, Obs, Quote, Code, Task, Trinket, InlineMath
+                        Segment, Obs, Quote, Code, Task, Trinket, InlineMath, Error
                     }}>{children}</MDXProvider>
                 </main>
             </div>

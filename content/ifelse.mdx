@@ -6,14 +6,20 @@ Ehtolauseiden avulla ohjelma voi suorittaa vaihtoehtoisia asioita riippuen siit�
 ehtolauseita laaditaan if - else if - else -rakenteen avulla. Tässä osiossa tutustutaan ehtolauseiden käyttöön.
 
 <Segment title="1. if-else">
-Alla oleva ohjelma lukee käyttäjältä syötteen (merkkijono), jonka arvo sijoitetaan muuttujaan ```name```. Syötteen lukemisen jälkeen tapahtuu
+Alla oleva ohjelma lukee käyttäjältä syötteen (merkkijono), jonka arvo sijoitetaan muuttujaan `name`. Syötteen lukemisen jälkeen tapahtuu
 seuraavaa:
 
-* Jos (```if```) muuttujan ```name``` arvo on yhtäsuuri kuin ```Tuomas``` tulostuu teksti "You're awesome!"
-* ... muuten (```else```) tulostuu teksti "meh..." 
+* Jos (`if`) muuttujan `name` arvo on yhtäsuuri kuin `Tuomas` tulostuu teksti "You're awesome!"
+* ... muuten (`else`) tulostuu teksti "meh..." 
 
 Testaa ohjelmaa eri syötteillä! Jos mielestäsi joku muu kuin Tuomas on awesome muokkaa koodia mieleiseksesi. Testaa myös onko isolla alkukirjaimella merkitystä
-<iframe src="https://trinket.io/embed/python3/46f8fc5788" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<Obs>
+Huomaathan koodissa olevat puolipisteet, sekä sisennykset riveillä 7 ja 9. Sisennys tehdään tabulaattorinäppäimellä!
+</Obs>
+
+<Trinket id="46f8fc5788" height="300"/>
+
 <Obs>
 Huomasit kenties että if-lauseessa oli yhtäsuuruusmerkkinä <Code>==</Code>. Nyt täytyy ehdottomasti pysähtyä selventämään eräs tärkeä asia:
 
@@ -22,6 +28,7 @@ Huomasit kenties että if-lauseessa oli yhtäsuuruusmerkkinä <Code>==</Code>. N
 
 Huomaa että jälkimmäinen tapa käyttää yhtäsuuruusmerkkejä vastaa matematiikan yhtäsuuruusmerkkiä.
 </Obs>
+
 <Obs>
 Vertailuoperaattorit:
 
@@ -37,15 +44,15 @@ Vertailuoperaattorit:
 ### 1.1
 Laajenna alla olevaa ohjelmaa siten, että käytät if-else -rakennetta seuravasti:
 
-* Jos käyttäjän syöttämä luku on suurempi tai yhtäsuuri kuin 0 tulostuu teksti ```positiivinen luku```
-* muuten tulostuu teksti ```negatiivinen luku```.
+* Jos käyttäjän syöttämä luku on suurempi tai yhtäsuuri kuin 0 tulostuu teksti `positiivinen luku`
+* muuten tulostuu teksti `negatiivinen luku`.
 
 Huomaa että funktio <code>read_int</code> lukee syötteenä kokonaisluvun. Testaa ohjelmaa positiivisella ja negatiivisella luvulla, sekä nollalla.
 
 <Trinket id="cb6b4e6668" height="250"/>
 
 ### 1.2
-Muokkaa ohjelmaa siten, että se pyytää kaksi kokonaislukua käyttäjältä, laskee lukujen summan ja tulostaa tekstin ```sata tai yli``` tai ```alle sata```,
+Muokkaa ohjelmaa siten, että se pyytää kaksi kokonaislukua käyttäjältä, laskee lukujen summan ja tulostaa tekstin `sata tai yli` tai `alle sata`,
 riippuen lukujen summasta.
 
 </Segment>
@@ -53,14 +60,14 @@ riippuen lukujen summasta.
 <Segment title="2. Useita vaihtoehtoja: If - else if - else">
 Jos vaihtoehtoja on useita käytetään <b>if - else if - else</b> -rakennetta. Tutkaile ensin alla olevaa koodiesimerkkiä, miten kyseistä ehtolauserakennetta käytetään. Tässä vielä seikkaperäiset ohjeet:
 
-* Ensimmäisenä tulee aina ```if```
-* Jos vaihtoehtoja on useita läiskytetään aina uusi ```elif``` jokaista uutta ehtoa varten (```elif``` on lyhenne sanoista "else if").
-* ```if```:n ja ```elif```:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>elif x &lt; 10:</Code> tai  <Code>elif y != 6:</Code>
-* Lopuksi laitetaan ```else```, joka tarkoittaa "jokin muu kuin ylläolevat". Tähän ei tule ehtoa. 
+* Ensimmäisenä tulee aina `if`
+* Jos vaihtoehtoja on useita läiskytetään aina uusi `elif` jokaista uutta ehtoa varten (`elif` on lyhenne sanoista "else if").
+* `if`:n ja `elif`:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>elif x &lt; 10:</Code> tai  <Code>elif y != 6:</Code>
+* Lopuksi laitetaan `else`, joka tarkoittaa "jokin muu kuin ylläolevat". Tähän ei tule ehtoa. 
 
 Testaa alla olevaa ohjelmaa eri syötteillä. Toimiiko se niinkuin ajattelisit sen toimivan?
 <Obs>
-Huomaathan koodissa olevat puolipisteen, sekä sisennykset riveillä 7, 9, 11 ja 13. Sisennys tehdään tabulaattorinäppäimellä!
+Huomaathan koodissa olevat puolipisteet, sekä sisennykset riveillä 7, 9, 11 ja 13. Sisennys tehdään tabulaattorinäppäimellä!
 </Obs>
 
 <Trinket id="47acb869c0" height="300"/>
@@ -70,29 +77,29 @@ Rakenteesta voidaan jättää kokonaan <code>else</code> pois ja joissain tilant
 </Obs>
 
 ### 2.1
-Lisää yllä olevaan esimerkkiin vielä yksi ehto eli ```elif```
+Lisää yllä olevaan esimerkkiin vielä yksi ehto eli `elif`
 
 ### 2.2
 
-Kokeile ottaa ```else```-osio pois ja testaa ohjelman toimintaa
+Kokeile ottaa `else`-osio pois ja testaa ohjelman toimintaa
 
 ### 2.3
 Linnanmäen Taiga-laite on 140-195 cm pituisille. Tee seuraavanlainen ohjelma:
 
-* Ohjelma lukee pituuden käyttäjältä (funktion ```read_int``` avulla, siis ilman yksikköä)
-* Jos pituus on alle 140 cm tulostuu teksti ```olet liian lyhyt```.
-* Jos tulos on suurempi kuin 195 cm tulostuu teksti ```olet liian pitkä```.
-* ... muutoin tulostuu teksti ```tervetuloa Taigaan!```.
+* Ohjelma lukee pituuden käyttäjältä (funktion `read_int` avulla, siis ilman yksikköä)
+* Jos pituus on alle 140 cm tulostuu teksti `olet liian lyhyt`.
+* Jos tulos on suurempi kuin 195 cm tulostuu teksti `olet liian pitkä`.
+* ... muutoin tulostuu teksti `tervetuloa Taigaan!`.
 
 <Trinket id="9d9bee5d81" height="300"/>
 
 ### 2.4
 Tee ohjelma, joka toimii seuraavasti  
 
-* Ohjelma lukee kouluarvosanan käyttäjältä (funktio ```read_int```).
-* Jos arvosana on 9 tai 10 tulostuu teksti ```hyvä!```.
-* Jos arvosana on kahdeksikko tai siitä alaspäin tulostuu teksti ```ok```.
-* Jos arvosana on 4 tulostuu teksti ```hylätty```.
+* Ohjelma lukee kouluarvosanan käyttäjältä (funktio `read_int`).
+* Jos arvosana on 9 tai 10 tulostuu teksti `hyvä!`.
+* Jos arvosana on kahdeksikko tai siitä alaspäin tulostuu teksti `ok`.
+* Jos arvosana on 4 tulostuu teksti `hylätty`.
 
 Toteuta ohjelma vaikkapa ylläolevaan Linnanmäki-koodipohjaan.
 
