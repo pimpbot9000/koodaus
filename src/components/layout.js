@@ -27,8 +27,9 @@ const Layout = ({ pageTitle, children }) => {
             <div className="Container">
                 <title>{pageTitle}</title>
                 <nav>
+                    Sisältö:
                     <ul>
-                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/">Etusivu</Link></li>
                         <li><Link to="/fundamentals">Perusteet</Link></li>
                         <li><Link to="/functions">Funktiot</Link></li>
                         <li><Link to="/input">Syötteen lukeminen</Link></li>

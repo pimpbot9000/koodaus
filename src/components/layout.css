@@ -6,13 +6,18 @@
 
 .Segment {
     background-color: #eee;
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
+    box-shadow: 5px 5px lightblue;
 }
 
 code {
     font-style: normal;
     color: #38F
+}
+
+a {
+    color: #38F,
 }

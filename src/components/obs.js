@@ -10,9 +10,9 @@ const Obs = ({ children }) => {
         setVisible(!visible)
     }
     const style = {
-        backgroundColor: "#c1edb7",
+        backgroundColor: "#bda",
         padding: "10px",
-        borderRadius: "5px",
+        borderRadius: "3px",
         marginBottom: "10px"
     }
     return (

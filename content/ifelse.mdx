@@ -6,11 +6,11 @@ Ehtolauseiden avulla ohjelma voi suorittaa vaihtoehtoisia asioita riippuen siit�
 ehtolauseita laaditaan if - else if - else -rakenteen avulla. Tässä osiossa tutustutaan ehtolauseiden käyttöön.
 
 <Segment title="1. if-else">
-Alla oleva ohjelma lukee käyttäjältä syötteen (merkkijono), jonka arvo sijoitetaan muuttujaan <code>name</code>. Syötteen lukemisen jälkeen tapahtuu
+Alla oleva ohjelma lukee käyttäjältä syötteen (merkkijono), jonka arvo sijoitetaan muuttujaan ```name```. Syötteen lukemisen jälkeen tapahtuu
 seuraavaa:
 
-* Jos (<code>if</code>) muuttujan <code>name</code> arvo on yhtäsuuri kuin <code>Tuomas</code> tulostuu teksti "You're awesome!"
-* ... muuten (<code>else</code>) tulostuu teksti "meh..." 
+* Jos (```if```) muuttujan ```name``` arvo on yhtäsuuri kuin ```Tuomas``` tulostuu teksti "You're awesome!"
+* ... muuten (```else```) tulostuu teksti "meh..." 
 
 Testaa ohjelmaa eri syötteillä! Jos mielestäsi joku muu kuin Tuomas on awesome muokkaa koodia mieleiseksesi. Testaa myös onko isolla alkukirjaimella merkitystä
 <iframe src="https://trinket.io/embed/python3/46f8fc5788" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
@@ -33,65 +33,101 @@ Vertailuoperaattorit:
 * suurempi tai yhtäsuuri kuin: <Code>&gt;=</Code> 
 
 </Obs>
-<h5>Tehtävä 1.1</h5>
+
+### 1.1
 Laajenna alla olevaa ohjelmaa siten, että käytät if-else -rakennetta seuravasti:
 
-* Jos käyttäjän syöttämä luku on suurempi kuin 1000 tulostuu teksti "Ohhoh!"
-* ... muuten tulostuu teksti "alle donitsi".
+* Jos käyttäjän syöttämä luku on suurempi tai yhtäsuuri kuin 0 tulostuu teksti ```positiivinen luku```
+* muuten tulostuu teksti ```negatiivinen luku```.
 
-Huomaa että funktio <code>read_int</code> lukee syötteenä kokonaisluvun.
+Huomaa että funktio <code>read_int</code> lukee syötteenä kokonaisluvun. Testaa ohjelmaa positiivisella ja negatiivisella luvulla, sekä nollalla.
 
-<iframe src="https://trinket.io/embed/python3/cb6b4e6668?runOption=run" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-<h5>Tehtävä 1.2</h5>
- Muokkaa ohjelmaa siten, että se pyytää kaksi kokonaislukua käyttäjältä, laskee lukujen summan ja tulostaa tekstin "Yli sata", jos lukujen summa on yli sata, muuten
-tulostetaan teksti "alle sata".
+<Trinket id="cb6b4e6668" height="250"/>
+
+### 1.2
+Muokkaa ohjelmaa siten, että se pyytää kaksi kokonaislukua käyttäjältä, laskee lukujen summan ja tulostaa tekstin ```sata tai yli``` tai ```alle sata```,
+riippuen lukujen summasta.
 
 </Segment>
 
 <Segment title="2. Useita vaihtoehtoja: If - else if - else">
-Jos vaihtoehtoja on useita käytetään if - else if - else -rakennetta. Tutkaile ensin alla olevaa koodiesimerkkiä, miten kyseistä ehtolauserakennetta käytetään. Tässä vielä seikkaperäiset ohjeet:
+Jos vaihtoehtoja on useita käytetään <b>if - else if - else</b> -rakennetta. Tutkaile ensin alla olevaa koodiesimerkkiä, miten kyseistä ehtolauserakennetta käytetään. Tässä vielä seikkaperäiset ohjeet:
 
-* Ensimmäisenä tulee aina <code>if</code>
-* Jos vaihtoehtoja on useita läiskytetään aina uusi <code>elif</code> jokaista uutta ehtoa varten (<code>elif</code> on lyhenne sanoista "else if").
-* <code>if</code>:n ja <code>elif</code>:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>elif x &lt; 10:</Code> tai  <Code>elif y != 6:</Code>
-* Lopuksi laitetaan <code>else</code>, joka tarkoittaa "jokin muu kuin ylläolevat". Tähän ei tule ehtoa. 
+* Ensimmäisenä tulee aina ```if```
+* Jos vaihtoehtoja on useita läiskytetään aina uusi ```elif``` jokaista uutta ehtoa varten (```elif``` on lyhenne sanoista "else if").
+* ```if```:n ja ```elif```:n tapauksessa tulee aina ehto esim. <Code>if nimi == "Tuomas":</Code>, <Code>elif x &lt; 10:</Code> tai  <Code>elif y != 6:</Code>
+* Lopuksi laitetaan ```else```, joka tarkoittaa "jokin muu kuin ylläolevat". Tähän ei tule ehtoa. 
 
 Testaa alla olevaa ohjelmaa eri syötteillä. Toimiiko se niinkuin ajattelisit sen toimivan?
 <Obs>
 Huomaathan koodissa olevat puolipisteen, sekä sisennykset riveillä 7, 9, 11 ja 13. Sisennys tehdään tabulaattorinäppäimellä!
 </Obs>
-<iframe src="https://trinket.io/embed/python3/47acb869c0?runOption=run" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<Trinket id="47acb869c0" height="300"/>
+
 <Obs>
 Rakenteesta voidaan jättää kokonaan <code>else</code> pois ja joissain tilanteissa riittää pelkkä yksittäinen <code>if</code>.
 </Obs>
-<h5>Tehtävä 2.1</h5>
-Lisää yllä olevaan esimerkkiin vielä yksi <code>elif</code>
-<h5>Tehtävä 2.2</h5>
-Kokeile ottaa <code>else</code>-osio pois ja testaa ohjelman toimintaa
-<h5>Tehtävä 2.3</h5>
-Tee ohjelma, joka toimii seuraavasti
 
-* Ohjelma lukee kokonaislukusyötteen käyttäjältä (funktio <code>read_int</code>).
-* Jos luku on yli 1000 tulostuu teksti "Yli tuhat".
-* Jos tulos on pienempi kuin nolla tulostuu teksti "negatiivinen luku".
-* ... muutoin tulostuu teksti "jotain siltä väliltä".
+### 2.1
+Lisää yllä olevaan esimerkkiin vielä yksi ehto eli ```elif```
 
-<h5>Tehtävä 2.4</h5>
+### 2.2
+
+Kokeile ottaa ```else```-osio pois ja testaa ohjelman toimintaa
+
+### 2.3
+Linnanmäen Taiga-laite on 140-195 cm pituisille. Tee seuraavanlainen ohjelma:
+
+* Ohjelma lukee pituuden käyttäjältä (funktion ```read_int``` avulla, siis ilman yksikköä)
+* Jos pituus on alle 140 cm tulostuu teksti ```olet liian lyhyt```.
+* Jos tulos on suurempi kuin 195 cm tulostuu teksti ```olet liian pitkä```.
+* ... muutoin tulostuu teksti ```tervetuloa Taigaan!```.
+
+<Trinket id="9d9bee5d81" height="300"/>
+
+### 2.4
 Tee ohjelma, joka toimii seuraavasti  
 
-* Ohjelma lukee kokonaislukusyötteen käyttäjältä (funktio <code>read_int</code>).
-* Jos luku on yli 1000 tulostuu teksti "Yli tuhat".
-* Jos luku on alle 20 tulostuu teksti "Alle kakskäät".
-* Jos tulos on pienempi kuin nolla tulostuu teksti "negatiivinen luku".
+* Ohjelma lukee kouluarvosanan käyttäjältä (funktio ```read_int```).
+* Jos arvosana on 9 tai 10 tulostuu teksti ```hyvä!```.
+* Jos arvosana on kahdeksikko tai siitä alaspäin tulostuu teksti ```ok```.
+* Jos arvosana on 4 tulostuu teksti ```hylätty```.
+
+Toteuta ohjelma vaikkapa ylläolevaan Linnanmäki-koodipohjaan.
 
 <Obs>
 Tehtävä ei olekaan niin helppo miltä näyttää! Joissain tilanteissa tulee miettiä tarkkaan ehtolauseiden järjestys. Jos ehtolauseet kirjoitetaan
-tehtävänannossa olevaan järjestykseen, ohjelma ei koskaan tulosta tekstiä "negatiivinen luku". Pohdi miksi ei ja korjaa sovellus niin että ohjelma
-toimii "oikein".
+tehtävänannossa olevaan järjestykseen, ohjelma ei koskaan tulosta tekstiä <code>hylätty</code>. Pohdi miksi ei ja korjaa sovellus niin että ohjelma
+toimii oikein.
 </Obs>
-<h5>Tehtävä 2.5</h5>
+
+### 2.5
 Tehdään "laskin", joka osaa kaksi eri laskutoimitusta, plus- ja kertolaskun ja kertoo meille laskutoimituksen tuloksen. Alla on valmis pohja, jota voit täydentää.
-<iframe src="https://trinket.io/embed/python3/0dc64f2228?runOption=run" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-<h5>Tehtävä 2.6</h5>
+<Trinket id="0dc64f2228" height="400"/>
+
+### 2.6
 Lisää laskimeen vielä miinus- ja jakolasku
+</Segment>
+
+<Segment title="3. Loogiset operaattorit">
+Usein ehtolauseen tapauksessa tarvitaan useampi ehto. Esimerkiksi alla oleva koodinpätkä lukee syöttäjältä luvun ja tarkistaa onko luku välillä 100-200.
+
+<Trinket id="353446be0e" height="300"/>
+
+Ohjelma siis tarkistaa onko luku suurempi tai yhtäsuuri kuin 100 <b>ja</b> pienempi tai yhtäsuuri kuin 200.
+<Obs>
+Loogisia operaattoreita on kolme:
+
+* <Code>and</Code> molempien (tai siis kaikkien) ehtojen tulee olla voimassa.
+* <Code>or</Code> jommankumman (tai siis jonkin) ehdon tulee olla voimassa
+* <Code>not</Code> ehdon <b>ei</b> tule olla voimassa.
+
+</Obs>
+
+### 3.1
+
+Täydennä alla olevaa ohjelmakoodia siten, että se kertoo käyttäjän syötteen perusteella pääseekö käyttäjä Linnanmäen Kahvikuppikaruselliin.
+<Trinket id="fad5cd809e" height="350"/>
+
 </Segment>
