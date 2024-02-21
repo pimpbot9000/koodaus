@@ -4,18 +4,18 @@ import './layout.css'
 import { MDXProvider } from "@mdx-js/react"
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import Segment from '../components/segment'
-import Obs from '../components/obs'
-import Quote from '../components/quote'
-import Code from '../components/code'
-import Task from '../components/task'
-import Trinket from '../components/trinket'
-import InlineMath from '../components/mathjax-inline'
-import Error from '../components/error'
+import Segment from './segment'
+import Obs from './obs'
+import Quote from './quote'
+import Code from './code'
+import Task from './task'
+import Trinket from './trinket'
+import InlineMath from './mathjax-inline'
+import Error from './error'
 
 
 
-const Layout = ({ pageTitle, children }) => {
+const PageTemplate = ({ pageTitle, children }) => {
 
     return (
         <>
@@ -53,4 +53,16 @@ const Layout = ({ pageTitle, children }) => {
         </>
     )
 }
-export default Layout
+
+
+
+/*export const query = graphql`
+  query($id: String!) {
+    mdx(id: { eq: $id }) {
+      frontmatter {
+        title
+      }
+    }
+  }
+`*/
+export default PageTemplate

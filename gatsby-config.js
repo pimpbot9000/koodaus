@@ -4,6 +4,7 @@ module.exports = {
     title: "Koodauskoirakoulu",
   },
   plugins: [
+    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -11,7 +12,6 @@ module.exports = {
         path: `${__dirname}/content`,
         commonmark: false
       }
-    },
-    "gatsby-plugin-mdx"
+    },    
   ],
 };

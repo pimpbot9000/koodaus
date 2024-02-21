@@ -10,7 +10,7 @@ const IndexPage = () => {
       <Segment title="Tervetuloa">
       <p>Opiskelohjeet. Lue materiaalia. Kun törmäät koodiesimerkkiin toimi seuraavasti:</p>
       <ul>
-        <li>Ensiksi tutkaile koodia ja pohdi mitä se kenties tekee</li>
+        <li>Jeejee   jsjdj Ensiksi tutkaile koodia ja pohdi mitä se kenties tekee</li>
         <li>Kun olet saanut jonkinlaisen tuntuman koodiin, suorita koodi (painamalla "play" nappulaa) ja katso toimiiko se niinkuin ajattelit sen toimivan.</li>
       </ul>
       <p>Ensimmäinen harjoitus: Mitä ajattelisit että alla oleva koodi tekee? Sinun ei tarvitse tietää (vielä) koodaamisesta yhtään mitään!</p>
@@ -23,5 +23,6 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
 
 export default IndexPage
