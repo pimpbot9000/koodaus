@@ -54,15 +54,4 @@ const PageTemplate = ({ pageTitle, children }) => {
     )
 }
 
-
-
-/*export const query = graphql`
-  query($id: String!) {
-    mdx(id: { eq: $id }) {
-      frontmatter {
-        title
-      }
-    }
-  }
-`*/
 export default PageTemplate

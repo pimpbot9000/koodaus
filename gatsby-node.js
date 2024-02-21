@@ -37,7 +37,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: `${pageTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       // You can use the values in this context in
       // our page layout component
-      context: { id: node.frontmatter.slug },
+      context: { id: node.id },
     })
   })
 }
