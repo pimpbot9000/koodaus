@@ -14,18 +14,18 @@ const Page = ({ data, pageContext }) => {
   )
 }
 
+
 export const query = graphql`
   query ($id: String) {
     mdx(id: {eq: $id}) {
       frontmatter {
-        title
-        
+        title        
       }
       body
     }
   }
 `
-export default Page
+
 
 /*
 export const query = graphql`
@@ -35,11 +35,10 @@ export const query = graphql`
         frontmatter {
           title
         }
-        slug
-        id
         body
       }
     }
   }
 `*/
 
+export default Page
