@@ -1,6 +1,6 @@
 import * as React from 'react'
-import MathJax from 'react-mathjax'
+import MathJax from 'react-mathjax2'
 
-const InlineMath = ({children}) => <MathJax.Provider><MathJax.Node inline formula={children}/></MathJax.Provider>
+const InlineMath = ({children}) => <MathJax.Context><MathJax.Node>{children}</MathJax.Node></MathJax.Context>
 
 export default InlineMath
