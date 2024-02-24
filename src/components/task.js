@@ -6,7 +6,7 @@ const Task = ({ children }) => {
         color: "#0b6ebf"
     }
     return (
-        <h5 style={style}>Tehtävä {children}</h5>
+        <h4 style={style}>Tehtävä {children}</h4>
     )
 }
 

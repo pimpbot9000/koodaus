@@ -1,0 +1,107 @@
+---
+title: "3. Funktiot"
+slug: "functions"
+---
+
+<Segment title="1. Eka funktio">
+
+Mikä funktio ohjelmointikielessä oikein on? Tyypillisesti funktio on samanlainen kuin matematiikassa: funktiolle syötetään jokin arvo
+tai arvoja ("input") ja näiden arvojen avulla lasketaan jotain ja pullautetaan tulos ulos ("output").
+Alla olevassa esimerkissä on määritelty funktio nimeltä `summa` jolle voidaan syöttää inputtina kaksi lukua `x` ja `y`.
+Funktio laskee lukujen `x` ja `y` summan ja pullauttaa tämän ulos.
+
+<Obs>
+
+Virallinen termi ulos pullauttamiselle on "palauttaa arvo", tästä syystä
+Pythonissa käytetään `return` nimistä käskyä funktioissa.
+
+</Obs>
+
+<Trinket id="9fb9364433" height="400"/>
+
+<Obs>
+
+Edellisessä on syytä kiinnittää huomiota riviin 5, jossa on käsky `summa(3, 5)`. Koska kyseessä on sijoitusoperaatio, käsky on syytä taas ajatella "oikealta vasemmalle":
+
+***
+
+* Funktiokutsu `summa(3, 5)` laskee lukujen 3 ja 5 summan ja palauttaa summan arvon.
+* Palautettu arvo sijoitetaan muuttujaan `tulos`
+
+</Obs>
+
+Seuraavaksi rohkeasti kokeilemaan omien funktioiden laadintaa! Testaa laatimiesi funktioden toimintaa `print` käskyn avulla.
+
+### 1.1
+
+Nimeä funktio uudestaan ja anna sille nimi `tulo` ja muokkaa funktiota siten että se laskee lukujen `x` ja `y` tulon
+ja palauttaa tulon arvon.
+
+### 1.2
+
+Luo uusi funktio, joka laskee kolmen inputtina eli *argumenttina* annetun luvun summan. 
+
+### 1.3
+
+Luo uusi funktio, joka laskee kolmen argumenttina annetun luvun tulon.
+
+</Segment>
+
+<Segment title="2. Matematiikasta tuttuja funktioita">
+Muista seuraavissa tehtävissä testata laatimiesi funktioiden toimintaa `print`-käskyn avulla.
+<Trinket id="6952c692bc" height="300"/>
+
+### 2.1
+
+Luo funktio nimeltä `piiri`, jolle syötetään säteen `r` pituus. Funktion tulee laskea ympyrän kehän pituus.
+
+<Obs>
+
+Koodiin on valmiiksi lisätty käsky `from math import sqrt, pi` joten käytössäsi on muuttuja `pi` (pii) ja funktio `sqrt` eli neliöjuuri.
+
+</Obs>
+
+### 2.2
+
+Luo funktio nimeltä `pinta_ala`, jolle syötetään säteen `r` pituus. Funktion tulee laskea ympyrän pinta-ala.
+
+### 2.3
+
+Luo funktio nimeltä `hypotenuusa`, jolle annetaan inputtina kaksi eri lukua `a` ja `b`, jotka ovat suorakulmaisen
+kolmion kateettien pituudet. Funktion tulee laskea hypotenuusan pituus.
+</Segment>
+
+<Segment title="3. Funktio ilman paluuarvoa">
+Matematiikassa funktio palauttaa aina jonkin arvon. Ohjelmointikielissä voidaan myös laatia funktioita, jotka eivät palauta mitään arvoja.
+Alla on esimerkki tällaisesta funktiosta, joka ei palauta mitään arvoa, vaan ainoastaan tulostaa tekstiä.
+
+<Trinket id="7190f5e043" height="300"/>
+
+<Obs>
+Koska Python-ohjelmointikielellä laaditun funktion ei välttämättä tarvitse palauttaa mitään arvoa, kaikki Python-kielellä laaditut funktiot eivät ole funktioita samassa mielessä kuin
+matematiikassa.
+</Obs>
+
+### 3.1
+
+Lisää edelliseen koodiin funktio nimeltä `greeter2` jolle syötetään kaksi eri muuttujan arvoa `first_name` ja `last_name`. Funktio ei palauta
+mitään arvoja vaan sen sijasta tulostaa muuttujien arvojen avulla esimerkiksi seuraavanlaisen tekstin:
+
+`Hyvää päivää Oliver Stark. Voinko kutsua sinua etunimelläsi Oliver?`
+
+### 3.2
+
+<Obs>
+Jos funktiolle ei syötetä arvoja, tällöin funktio määritelmässä täytyy kuitenkin olla sulkeet, mutta sulkeiden sisälle ei laiteta mitään.
+Alla esimerkki funktion määrittelystä, jolla ei ole argumentteja ja joka palauttaa aina arvon sata.
+```
+def sata():
+  return 100
+```
+</Obs>
+
+Luo funktio jolle ei syötetä mitään arvoa. Funktio ainoastaan tulostaa tekstin `moi!`.
+
+
+</Segment>
+

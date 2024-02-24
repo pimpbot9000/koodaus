@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useEffect } from 'react'
 import { Link } from 'gatsby'
 import './layout.css'
 import { MDXProvider } from "@mdx-js/react"
@@ -15,34 +16,38 @@ import Error from './error'
 
 
 
-const PageTemplate = ({ pageTitle, children }) => {
+const PageTemplate = ({data, pageContext, children}) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
+    const linkItems = pageContext.pagesMetaData.map( (page) => {
+        const linkPath = "/" + page.slug
+
+        return (<li><Link to={linkPath}>{page.title}</Link></li>)
+    })
 
     return (
         <>
             <Navbar bg="light">
                 <Container>
-                    <Navbar.Brand href="#home">🐶KoodiKoiraKoulu🐶</Navbar.Brand>
+                    <Navbar.Brand href="">🐶KoodiKoiraKoulu🐶</Navbar.Brand>
                 </Container>
             </Navbar>
             <br></br>
             <div className="Container">
-                <title>{pageTitle}</title>
+                <Segment title="Sisältö">
+                <title>{pageContext.title}</title>
                 <nav>
-                    Sisältö:
+                  
                     <ul>
-                        <li><Link to="/">Etusivu</Link></li>
-                        <li><Link to="/fundamentals">Perusteet</Link></li>
-                        <li><Link to="/functions">Funktiot</Link></li>
-                        <li><Link to="/input">Syötteen lukeminen</Link></li>
-                        <li><Link to="/ifelse">Ehtolauseet</Link></li>
-                        <li><Link to="/loops">Toistolauseet eli silmukat</Link></li>
-                        <li><Link to="/math">Matikkaa</Link></li>
-                        <li><Link to="/algorithms">Algoritmit</Link></li>
-                        <li><Link to="/turtle">Loppukevennys: kilppari</Link></li>
+                       {linkItems}
                     </ul>
                 </nav>
+                </Segment>
                 <main>
-                    <h1>{pageTitle}</h1>
+                    <h1>{pageContext.title}</h1>
                     <MDXProvider components={{
                         h3: Task,
                         thematicBreak: () => <><br/><br></br></>,
@@ -53,5 +58,6 @@ const PageTemplate = ({ pageTitle, children }) => {
         </>
     )
 }
+
 
 export default PageTemplate

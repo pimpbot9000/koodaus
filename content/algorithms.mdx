@@ -1,5 +1,5 @@
 ---
-title: "Algoritmit"
+title: "7. Algoritmit"
 slug: "algorithms"
 ---
 
@@ -12,7 +12,7 @@ tulkita olevan algoritmi, tai oikeastaan minkä tahansa ohjelman, sillä jokaine
 <Obs>
 Käytännössä algoritmeilla tarkoitetaan jonkinlaista nokkelaa tapaa ratkaista jokin ongelma toistamalla jotain samaa proseduuria uudestaan ja uudestaan.
 Ehkä parhaiten yksinkertaista algoritmia kuvaa tilanne, jossa opettaja sanoo "Avaa kirja sivulta 58".
-<br/><br/>
+***
 Miten toimit tilanteessa? Yksinkertaisin tapa on tietysti alkaa selaamaan kirjaa alusta kunnes päädyt sivulle 58. Tämä on algoritmi, mutta ei kovin tehokas sellainen.
 Useimmiten algoritmin tulee suoriutua tehtävästä mahdollisimman nopeasti. Kuvittele että HSL:n reittihaku kokeilisi kaikki mahdolliset bussireitit, ennenkuin osaisi ehdottaa nopeinta
 vaihtoehtoa. Tähän kuluisi Helsingin kokoisessa joukkoliikennesysteemissä tietokoneeltakin aivan liian pitkän aika! Algoritmin siis tulee olla nokkela, jotta
@@ -46,8 +46,14 @@ mennessä nähty luku" (`max_value`) asetetaan muuttujan `max_value` arvoksi muu
 <Trinket id="b73ba4628c" height="300"/>
 
 ###  1.1
-Muokkaa ohjelmaa siten että se etsii listan pienimmän luvun. Ensimmäisenä tietysti nimetään muuttuja `max_value` uudestaan (`min_value`). Pohdi tarkkaan mikä
-nyt asetetaan muuttujan `min_value` alkuperäiseksi arvoksi.
+Muokkaa ohjelmaa siten että se etsii listan pienimmän luvun. Ensimmäisenä tietysti nimetään muuttuja `max_value` uudestaan (`min_value`). 
+Muuttujan `min_value` alkuperäisen arvon tulee olla isompi kuin mikään listassa oleva luku. Voit asettaa muuttujan `min_value` 
+alkuperäiseksi arvoksi `float('inf')` joka on hassua kyllä ääretön (vaikka sitä ei voikaan esittää lukuarvona).
+
+
+### 1.2
+Kokeile muokata ohjelmaa siten, että se käy listan läpi ja laskee kuinka monta kolmosta listassa on. Lopussa ohjelma
+tulostaa kolmosten lukumäärän.
 </Segment>
 
 <Segment title="2. Listan lukujen summa">
@@ -109,7 +115,9 @@ itseasiassa täysin kuutamolla. FizzBuzz on hyvin yksinkertainen: käy läpi luk
 * muuten tulosta luku.
 
 Toteuta FizzBuzz luvuille 1...100.
-<Obs>Ole tarkka if-elif-else-järjestyksen kanssa.</Obs>
+<Obs>
+Ole tarkka if-elif-else-järjestyksen kanssa.
+</Obs>
 
 <Trinket id="07fe0d3bb9" height="300"/>
 
@@ -118,7 +126,7 @@ Toteuta FizzBuzz luvuille 1...100.
 <Segment title="4. Neliöjuuri ja kuutiojuuri">
 Tiettyjen lukujen neliöjuuren päässä laskeminen on helppoa: tämä perustuu kertotaulun ulkoaosaamiseen. Esimerkiksi luvun <InlineMath>36</InlineMath> neliöjuuri on <InlineMath>6</InlineMath>, sillä <InlineMath>3\cdot 3 = 9</InlineMath>.
 Ongelmat tulevat vastaan kun pitää laskea neliöjuuri silloin, kun vastausta ei löydykään kertotaulusta. Esimerkiksi luvun <InlineMath>2</InlineMath> neliöjuuri on <InlineMath>1.41421356237...</InlineMath>.
-<br/><br/>
+
 Tällaisissa tilanteissa neliöjuuri lasketaan jonkinlaisen algoritmin avulla. Esimerkkinä käsitellään yksinkertaista algoritmia, jonka periaatteen
 ymmärtäminen ei vaadi suurta ponnistelua. Esimerkkinä on luvun 2 neliöjuuren laskeminen.
 

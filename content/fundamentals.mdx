@@ -1,5 +1,5 @@
 ---
-title: "Never send a human to do a machines job"
+title: "1. Never send a human to do a machines job"
 slug: "basics"
 ---
 (Agent Smith, *The Matrix*, 1999)
@@ -10,20 +10,24 @@ jotka tietokone suorittaa järjestyksessä alusta loppuun.
 
 Tietokone on aika tyhmä, eli se ei osaa tehdä muuta kuin mitä ihminen on ohjelmoinut tietokoneen
 tekemään. Toisaalta tietokone on hyvä ja uskollinen apuri, sillä se ei koskaan väsy eikä tee virheitä suorittaessaan käskyjä täysin orjallisesti.
-Niinkuin vuoden 1984 scifi-klassikkoelokuvassa *The Terminator* osuvasti todettiin:
+Niinkuin vuoden 1984 scifi-klassikkoelokuvassa *The Terminator* osuvasti kuvattiin tietokoneiden työmoraalia:
 
 <Quote>
 That terminator is out there, it can't be bargained with, it can't be reasoned with, it doesn't feel pity or remorse or fear, 
 and it absolutely will not stop... ever, untill you are dead!
 </Quote>
 
-Sen lisäksi että tietokone ei tee virheitä (ellei joku koodari ole mokannut), tietokone pystyy tekemään asioita uskomattoman nopeasti, joka oikeastaan
+Sen lisäksi että tietokone ei tee virheitä (ellei joku koodari ole mokannut, jolloin ohjelmassa on bugi), tietokone pystyy tekemään asioita uskomattoman nopeasti, joka oikeastaan
 tekee tietokoneesta niin hyödyllisen kapistuksen.
 
 Tällä kurssilla käytämme `Python`-nimistä ohjelmointikieltä, mutta samat periaatteet pätevät riippumatta ohjelmointikielestä ja riippumatta siitä
-ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajarobotteja. Pythonin tulkkaamisen
+ohjelmoiko pelejä, mikroaaltouunin mikropiirejä tai vaikkapa tappajadrooneja. Pythonin *tulkkaamisen* tietokoneen ymmärtämään muotoon
 hoitaa Python-tulkki, jolloin ihmisen ei tarvitse olla kiinnostunut siitä, minkälaista kieltä tietokone ymmärtää. Riittää kunhan osaamme "Pythonia".
-Python onkin nykypäivänä yksi käytetyimmästä ohjelmointikielestä koska se on niin "ihmisystävällinen".
+Python onkin nykypäivänä yksi käytetyimmästä ohjelmointikielestä. Python on suhteellisen helppo oppia mutta varsinaisen
+koodaamisen oppiminen onkin toinen juttu ja riippumaton ohjelmointikielestä.
+
+Tämän materiaalin puitteissa tutustutaan niin sanottuun imperatiiviseen ja/tai proseduraaliseen ohjelmointiparadigmaan.
+Suomeksi tämä tarkoittaa sitä että ohjelma koostuu peräkkäisistä käskyistä, jotka kuvaavat miten jokin asia suoritetaan askel askeleelta.
 
 <Obs>
 Jos ohjelma toimii jotenkin virheellisesti ohjelmointimokan vuoksi, tällöin sanotaan että koodissa on bugi. Nimitys tulee englannin kielen sanasta bug, 
@@ -54,7 +58,7 @@ Lisää edelliseen sovellukseen vielä kolmaskin `print`-käsky!
 Onneksi olkoon! Olet selvinnyt ensimmäisestä haasteesta. Tähän mennessä olet oppinut sekä hyödyllisen `print`-käskyn, että sen, että tietokone suorittaa annetut käskyt peräjälkeen alusta loppuun.
 Loppujen lopuksi tietokone ei osaa tehdä kovin montaa eri asiaa. Pääosin tietokone osaa suorittaa laskutoimituksia tietokoneen muistissa olevien arvojen
 avulla. Ohjelmointikielissä käytetään `muuttujia` kuvaamaan tietokoneen muistissa olevia asioita.
-<br/><br/>
+***
 Muuttuja ohjelmointikielessä on hieman eri asia kuin matematiikassa. Matematiikassa muuttuja kuvaa jotain "random" lukua, ohjelmointikielessä muuttuja
 taas on eräänlainen lokero, johon voidaan sijoittaa esimerkiksi luku tai vaikkapa tekstiä. Tietokone siis "muistaa" mikä luku tai teksti muuttujaan - tai lokeroon - on tallennettu, ja tietokone
 osaa suorittaa näiden muistissa olevien lukujen avulla esim. laskutoimituksia.

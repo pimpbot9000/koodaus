@@ -11,14 +11,15 @@ const Obs = ({ children }) => {
     }
     const style = {
         backgroundColor: "#d8edb4",
-        padding: "10px",
+        padding: "2px 10px 2px 10px",
         borderRadius: "3px",
-        marginBottom: "10px"
+        marginBottom: "10px",
+        fontFamily: "Roboto"
     }
     return (
         <div style={style} onClick={toggleVisibility}>
-            <h5>Huom!</h5>
-            <span style={hideWhenVisible}>...</span>
+            <h3>Huom!</h3>
+            <span style={hideWhenVisible}></span>
             <div style={showWhenVisible}>{children}</div>
         </div>
     )

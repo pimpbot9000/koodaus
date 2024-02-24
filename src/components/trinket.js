@@ -13,7 +13,7 @@ const Trinket = ({id, height}) => {
     const src = `https://trinket.io/embed/python3/${id}?runOption=run`
     return (
     <><div style={style}>  
-        <iframe src={src} width="100%" height={height} frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <iframe src={src} width="100%" height={height} frameborder="0" marginwidth="0" marginheight="0" allowFullScreen></iframe>
     </div>
     <br/>
     </>
