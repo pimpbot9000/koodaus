@@ -20,11 +20,6 @@ const UnitsDrill = () => {
         )
     }
 
-    //arvo oikea vastaus välillä 1000 ... 0.1
-    //esim. 100 m (oikea vastaus)
-    //yksikkö mistä mihin muunnetaan, esim m -> km
-    //muutetaan 100 m -> 0,1 km (tämä on siis muunnettava luku)
-    //oppilaan tulee siis muuntaa km -> m
 
     const checkAnswer = (textInput, currentTask) => {
         const floatInput = parseFloat(textInput)
@@ -59,7 +54,7 @@ const UnitsDrill = () => {
         } while (true)
     }
     const divStyle = {
-        fontSize: "20px"
+        fontSize: "15px"
     }
     return (
         <div className="Container">
@@ -73,10 +68,10 @@ const UnitsDrill = () => {
             </div>
             <br/>
             <div style={divStyle}>
-                {task["taskQuantity"]} <Unit unit={task["taskUnit"]} /> = <input type="text" value={inputAnswer} onChange={(e) => setInputAnswer(e.target.value)} /> <Unit unit={task["answerUnit"]} /><br />
+                {task["taskQuantity"]} <Unit unit={task["taskUnit"]} /> = <input size="10" type="text" value={inputAnswer} onChange={(e) => setInputAnswer(e.target.value)} /> <Unit unit={task["answerUnit"]} /><br />
+                <br/>
                 <input type="button" value="Tarkista" onClick={() => checkAnswer(inputAnswer, task)} />
             </div>
-            
             <div>
                 <h2>Drill Streak: {score}</h2>
             </div>
