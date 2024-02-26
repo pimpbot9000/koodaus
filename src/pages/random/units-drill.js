@@ -54,7 +54,8 @@ const UnitsDrill = () => {
         } while (true)
     }
     const divStyle = {
-        fontSize: "15px"
+        fontSize: "15px",
+        letterSpacing: "1px"
     }
     return (
         <div className="Container">
