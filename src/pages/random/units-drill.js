@@ -77,7 +77,7 @@ const UnitsDrill = () => {
                 <h2>Drill Streak: {score}</h2>
             </div>
 
-            <Streak emojiArray={scoreArray}/>
+            <h2><Streak emojiArray={scoreArray}/></h2>
         </div>)
 }
 
