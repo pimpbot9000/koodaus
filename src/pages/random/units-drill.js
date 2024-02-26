@@ -58,17 +58,21 @@ const UnitsDrill = () => {
             
         } while (true)
     }
-
+    const divStyle = {
+        fontSize: "20px"
+    }
     return (
         <div className="Container">
             <h1>Drill n' kill: Units</h1>
+            <hr/>
             <div>
 
                 <CheckBox label="Pituus" value={lengthSelection} onChange={setLengthSelection} />
                 <CheckBox label="Pinta-ala" value={areaSelection} onChange={setAreaSelection} />
 
             </div>
-            <div>
+            <br/>
+            <div style={divStyle}>
                 {task["taskQuantity"]} <Unit unit={task["taskUnit"]} /> = <input type="text" value={inputAnswer} onChange={(e) => setInputAnswer(e.target.value)} /> <Unit unit={task["answerUnit"]} /><br />
                 <input type="button" value="Tarkista" onClick={() => checkAnswer(inputAnswer, task)} />
             </div>
@@ -112,7 +116,7 @@ const createTaskLength = () => {
         "cm": -2,
         "mm": -3
     }
-    //const basenumber = _.sample([10,100,1000])
+
     const units = ["km", "hm", "dam", "m", "dm", "cm", "mm"]
     const from = _.sample(units)
     let to = ""
