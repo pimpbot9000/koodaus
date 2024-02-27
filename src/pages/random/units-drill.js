@@ -32,6 +32,7 @@ const UnitsDrill = () => {
             setScore(0)
         }
         setInputAnswer("")
+
         if (!lengthSelection && !areaSelection){
             setTask(createTaskLength())
             return
@@ -54,7 +55,7 @@ const UnitsDrill = () => {
         } while (true)
     }
     const divStyle = {
-        fontSize: "15px",
+        fontSize: "20px",
         letterSpacing: "1px"
     }
     return (
