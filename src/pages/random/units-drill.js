@@ -12,7 +12,12 @@ const UnitsDrill = () => {
     const [score, setScore] = useState(0)
     const [scoreArray, setScoreArray] = useState([])
 
-
+    const handleKeyDown = e => {
+        console.log(e)
+        if(e.key === "Enter"){
+            checkAnswer(inputAnswer, task)
+        }
+    }
     const checkAnswer = (textInput, currentTask) => {
         const floatInput = parseFloat(textInput)
 
@@ -67,9 +72,6 @@ const UnitsDrill = () => {
         letterSpacing: "1px"
     }
 
-    const buttonStyle = {
-        height: "50px"
-    }
     return (
         <div className="Container">
             <h1>Drill n' kill: Units</h1>
@@ -78,19 +80,20 @@ const UnitsDrill = () => {
 
                 <CheckBox label="Pituus" value={lengthSelection} onChange={setLengthSelection} />
                 <CheckBox label="Pinta-ala" value={areaSelection} onChange={setAreaSelection} />
+                <br/>
                 <CheckBox label="Tilavuus" value={volumeSelection} onChange={setVolumeSelection} />
                 <CheckBox label="Vetomitat" value={litresSelection} onChange={setLitresSelection} />
             </div>
             <br />
             <div style={divStyle}>
-                {task["taskQuantity"]} <Unit unit={task["taskUnit"]} /> = <input size="10" type="text" value={inputAnswer} onChange={(e) => setInputAnswer(e.target.value)} /> <Unit unit={task["answerUnit"]} /><br />
+                {task["taskQuantity"]} <Unit unit={task["taskUnit"]} /> = <input size="10" type="text" value={inputAnswer} onKeyDown={e => handleKeyDown(e)} onChange={e => setInputAnswer(e.target.value)} /> <Unit unit={task["answerUnit"]} /><br />
                 <br />
                 <div>
-                    <input type="button" class="button-7" value="Tarkista" onClick={() => checkAnswer(inputAnswer, task)} />
+                    <input type="button" className="button-7" value="Tarkista" onClick={() => checkAnswer(inputAnswer, task)} />
                 </div>
                 <br />
                 <div>
-                    <input type="button" class="button-red" value="Do not press this button!" onClick={() => redButton()} />
+                    <input type="button" className="button-red" value="Do not press this button!" onClick={() => redButton()} />
                 </div>
             </div>
             <div>
@@ -120,6 +123,7 @@ const Unit = ({ unit }) => {
     return <>{unit.slice(0, unit.length - 1)}<sup>{exponent}</sup></>
 
 }
+
 
 const createTaskLength = () => {
     const units = {
