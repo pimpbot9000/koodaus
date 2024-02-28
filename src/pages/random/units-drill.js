@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../components/layout.css'
 const _ = require('lodash');
 
 const UnitsDrill = () => {
