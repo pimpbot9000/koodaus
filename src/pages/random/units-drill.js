@@ -5,20 +5,11 @@ const UnitsDrill = () => {
     const [volumeSelection, setVolumeSelection] = useState(true)
     const [areaSelection, setAreaSelection] = useState(true)
     const [lengthSelection, setLengthSelection] = useState(true)
+    const [litresSelection, setLitresSelection] = useState(true)
     const [task, setTask] = useState(() => createTaskLength())
     const [inputAnswer, setInputAnswer] = useState("")
     const [score, setScore] = useState(0)
     const [scoreArray, setScoreArray] = useState([])
-
-    const CheckBox = ({ label, value, onChange }) => {
-
-        return (
-            <label>
-                <input type="checkbox" checked={value} onChange={() => onChange(!value)} />
-                {label}
-            </label>
-        )
-    }
 
 
     const checkAnswer = (textInput, currentTask) => {
@@ -33,14 +24,14 @@ const UnitsDrill = () => {
         }
         setInputAnswer("")
 
-        if (!lengthSelection && !areaSelection){
+        if (!lengthSelection && !areaSelection && !volumeSelection && !litresSelection) {
             setTask(createTaskLength())
             return
         }
 
         do {
-            
-            const choice = _.sample(["length", "area"])
+
+            const choice = _.sample(["length", "area", "volume", "litres"])
 
             if (choice === "length" && lengthSelection) {
                 setTask(createTaskLength())
@@ -51,39 +42,66 @@ const UnitsDrill = () => {
                 setTask(createTaskArea())
                 break
             }
-            
+
+            if (choice === "volume" && volumeSelection) {
+                setTask(createTaskVolume())
+                break
+            }
+
+            if (choice === "litres" && litresSelection) {
+                setTask(createTaskLitres())
+                break
+            }       
+            console.log(task)
         } while (true)
     }
+
+    const redButton = () => {
+        setScoreArray(scoreArray.map(e => "😭"))
+        setScore(0)
+    }
+
     const divStyle = {
         fontSize: "20px",
         letterSpacing: "1px"
     }
+
+    const buttonStyle = {
+        height: "50px"
+    }
     return (
         <div className="Container">
             <h1>Drill n' kill: Units</h1>
-            <hr/>
+            <hr />
             <div>
 
                 <CheckBox label="Pituus" value={lengthSelection} onChange={setLengthSelection} />
                 <CheckBox label="Pinta-ala" value={areaSelection} onChange={setAreaSelection} />
-
+                <CheckBox label="Tilavuus" value={volumeSelection} onChange={setVolumeSelection} />
+                <CheckBox label="Vetomitat" value={litresSelection} onChange={setLitresSelection} />
             </div>
-            <br/>
+            <br />
             <div style={divStyle}>
                 {task["taskQuantity"]} <Unit unit={task["taskUnit"]} /> = <input size="10" type="text" value={inputAnswer} onChange={(e) => setInputAnswer(e.target.value)} /> <Unit unit={task["answerUnit"]} /><br />
-                <br/>
-                <input type="button" value="Tarkista" onClick={() => checkAnswer(inputAnswer, task)} />
+                <br />
+                <div>
+                    <input type="button" class="button-7" value="Tarkista" onClick={() => checkAnswer(inputAnswer, task)} />
+                </div>
+                <br />
+                <div>
+                    <input type="button" class="button-red" value="Do not press this button!" onClick={() => redButton()} />
+                </div>
             </div>
             <div>
                 <h2>Drill Streak: {score}</h2>
             </div>
 
-            <h2><Streak emojiArray={scoreArray}/></h2>
+            <h2><Streak emojiArray={scoreArray} /></h2>
         </div>)
 }
 
 const createAnswerQuantity = () => {
-    let finalQuantity = Math.floor((Math.random() * _.sample([10, 100, 1000]))) * _.sample([10, 100])
+    let finalQuantity = Math.floor((Math.random() * _.sample([10, 100, 100]))) * _.sample([10, 100])
 
     finalQuantity = finalQuantity / _.sample([1, 10])
 
@@ -103,8 +121,7 @@ const Unit = ({ unit }) => {
 }
 
 const createTaskLength = () => {
-    console.log("Create task length called")
-    const lengthUnits = {
+    const units = {
         "km": 3,
         "hm": 2,
         "dam": 1,
@@ -113,42 +130,21 @@ const createTaskLength = () => {
         "cm": -2,
         "mm": -3
     }
+    return createTask(units, 1, 3, "length")
+}
 
-    const units = ["km", "hm", "dam", "m", "dm", "cm", "mm"]
-    const from = _.sample(units)
-    let to = ""
-
-    do {
-        to = _.sample(units)
-    } while (to === from)
-
-    const fromExponent = lengthUnits[from]
-    const toExponent = lengthUnits[to]
-    const diff = fromExponent - toExponent
-
-    const finalQuantity = createAnswerQuantity()
-    let originalQuantity = 0
-
-    console.log("finalquatity" + finalQuantity)
-    if (diff > 0) {
-        originalQuantity = finalQuantity * 10 ** (diff)
-    } else {
-
-        originalQuantity = finalQuantity / 10 ** (-diff)
+const createTaskLitres = () => {
+    const units = {
+        "L": 0,
+        "dL": -1,
+        "cL": -2,
+        "mL": -3
     }
-
-    return {
-        taskQuantity: originalQuantity,
-        taskUnit: to,
-        answer: finalQuantity,
-        answerUnit: from,
-        type: "length"
-    }
+    return createTask(units, 1, 3, "litres")
 }
 
 const createTaskArea = () => {
-    console.log("Create task length called")
-    const lengthUnits = {
+    const units = {
         "km2": 3,
         "ha": 2,
         "a": 1,
@@ -157,44 +153,70 @@ const createTaskArea = () => {
         "cm2": -2,
         "mm2": -3
     }
+    return createTask(units, 2, 3, "area")
+}
 
-    const units = ["km2", "ha", "a", "m2", "dm2", "cm2", "mm2"]
-    const from = _.sample(units)
+const createTaskVolume = () => {
+    const units = {
+        "m3": 0,
+        "dm3": -1,
+        "cm3": -2,
+        "mm3": -3
+    }
+    return createTask(units, 3, 2, "volume")
+
+}
+
+const createTask = (units, exponent, maxDiff, type) => {
+
+    const unitsList = Object.keys(units)
+    const from = _.sample(unitsList)
     let to = ""
     let diff = 0
     do {
         do {
-            to = _.sample(units)
+            to = _.sample(unitsList)
         } while (to === from)
 
-        const fromExponent = lengthUnits[from]
-        const toExponent = lengthUnits[to]
+        const fromExponent = units[from]
+        const toExponent = units[to]
         diff = fromExponent - toExponent
-    } while (Math.abs(diff) > 2)
+    } while (Math.abs(diff) > maxDiff)
 
     const finalQuantity = createAnswerQuantity()
     let originalQuantity = 0
 
-    console.log("finalquatity" + finalQuantity)
     if (diff > 0) {
-        originalQuantity = finalQuantity * 10 ** (diff * 2)
+        originalQuantity = finalQuantity * 10 ** (diff * exponent)
     } else {
 
-        originalQuantity = finalQuantity / 10 ** (-diff * 2)
+        originalQuantity = finalQuantity / 10 ** (-diff * exponent)
     }
-
-    return {
+    const task = {
         taskQuantity: originalQuantity,
         taskUnit: to,
         answer: finalQuantity,
         answerUnit: from,
-        type: "area"
+        type: type
     }
+    console.log(task)
+    return task
 }
 
-const Streak = ({emojiArray}) => {
-    const emojis = emojiArray.reduce( (acc, cur) => acc + cur, "")
+
+const Streak = ({ emojiArray }) => {
+    const emojis = emojiArray.reduce((acc, cur) => acc + cur, "")
     return <div>{emojis}</div>
+}
+
+const CheckBox = ({ label, value, onChange }) => {
+
+    return (
+        <label>
+            <input type="checkbox" checked={value} onChange={() => onChange(!value)} />
+            {label}
+        </label>
+    )
 }
 
 export default UnitsDrill
