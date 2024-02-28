@@ -23,7 +23,7 @@ const UnitsDrill = () => {
 
         if (floatInput === currentTask["answer"]) {
             setScore(score + 1)
-            setScoreArray(scoreArray.concat('😊'))
+            setScoreArray(scoreArray.concat('🤩'))
         } else {
             setScoreArray(scoreArray.concat('😭'))
             setScore(0)
