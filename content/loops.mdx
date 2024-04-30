@@ -33,7 +33,7 @@ Silmukan yhden kierroksen aikana suoritetaan 4 käskyä. Huomaa sisennykset rive
 <Trinket id="c470564e43" height="350"/>
 </Segment>
 
-<Segment title="3. For-lause, osa 3">
+<Segment title="3. For-lause: funktion arvojen laskeminen">
 
 ### 2.1 
 
@@ -53,4 +53,27 @@ Muista että sisennyksellä Pyhtonissa kerrotaan mitkä käskyt ovat osa silmukk
 </Obs>
 
 <Trinket id="2a9c9d5e77" height="350"/>
+</Segment>
+
+
+<Segment title="4. For-lause: ilkeä hakkeri">
+
+Salasanoja ei koskaan tallenneta tietojärjestelmiin ns. plaintextinä vaan ne ajetaan algoritmin läpi (hashäys), joka muuttaa salasanat
+täysin kummallisiksi kirjan-numero, rimpsuiksi. 
+
+Hash-algoritmeja on useampaa sorttia mutta niiden hienous on siinä että algoritmit eivät toimi käänteisesti. Jos ilkeä hakkeri saa selville että Aliisan salasanan hash-arvo on `441a51e3169e51e31ebca3292b2c89d9`,
+siitä ei mitenkään takaperoisesti saa selville Aliisan salasanaa... 
+
+Mutta toisaalta ihmisillä on tapana keksiä ei niin mielikuvituksellisia salasanoja, tai salasanat ovat liian lyhyitä, joten ns. sanakirjahyökkäyksellä tai
+muunlaisilla brute force -menetelmillä saadaan kenties osa salasanoista selville.
+
+Alla olevassa koodissa on hakkerien kaivamat Alice, Bobin, Charlien, Davidin ja Elizabethin salasanojen hashit.
+
+Tehtävänäsi on selvittää ainakin osa em. käyttäjien salasanoista. Huomaa että ohjelmassa on `kaksi sisäkkäistä silmukkaa`: Käytännössä siis
+jokaista kandidaattisalasanaa (tai tarkemmin salasanan hash-arvoa) testataan jokaisen käyttäjän salasanaa vastaan.
+
+Tätä siis kutsutaan sanakirjahyökkäykseksi. Menetelmä vaatii vain raakaa voimaa (laskentatehoa), josta nimi brute force tulee.
+
+<Trinket id="63c9fa387c" height="600"/>
+
 </Segment>
